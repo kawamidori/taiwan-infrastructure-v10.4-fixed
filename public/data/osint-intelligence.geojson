@@ -1,0 +1,197 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "CSIS (2023/05) 晶片科技戰與中國自主化戰略",
+        "short_note": "📌 竹科｜美鎖定16nm管制與防範5倍薪挖角",
+        "source_type": "PDF實驗報告",
+        "topic_category": "半導體與企業CapEx",
+        "ledger_axis": "企業資本支出",
+        "marker_hex": "#EF4444",
+        "target_node": "竹科新竹園區（含寶山擴建）",
+        "surrounding_towns": "新竹市東區、新竹縣寶山鄉、竹北市",
+        "capex_or_budget": "中國大基金560億美元＋地方250億美元補貼外溢壓力",
+        "heat_weight": 4.2,
+        "snippet": "美方鎖定16nm邏輯門檻並迫使中企去美化；中國以5倍薪資在台設空殼公司挖角設計人才，促使台灣強化營業秘密防護並加速竹科寶山2奈米研發與建廠。",
+        "ingested_at": "2026-11-16"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.0055,
+          24.7818
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "CSIS (2026/04) 稀土出口管制一週年評估",
+        "short_note": "🚢 高雄港｜重稀土去中化與2027國防禁令",
+        "source_type": "PDF實驗報告",
+        "topic_category": "公共基建與水電能源",
+        "ledger_axis": "公共基建支出",
+        "marker_hex": "#3B82F6",
+        "target_node": "高雄港",
+        "surrounding_towns": "高雄市鼓山區、前鎮區、小港區",
+        "capex_or_budget": "美方投入73億美元＋2027/01/01國防磁體禁令",
+        "heat_weight": 4.5,
+        "snippet": "中國於2026年曾對日動用稀土限制以嚇阻涉入台海；美日澳馬建立去中化重稀土供應軸線，台灣商港與特化物流走廊須強化關鍵材料儲備。",
+        "ingested_at": "2026-11-16"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.2865,
+          22.6175
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "CSIS (2026/05) 232條款關稅對AI資料中心衝擊",
+        "short_note": "✈️ 桃園航空城｜輸美AI伺服器860億美元空運樞紐",
+        "source_type": "PDF實驗報告",
+        "topic_category": "半導體與企業CapEx",
+        "ledger_axis": "企業資本支出",
+        "marker_hex": "#EF4444",
+        "target_node": "桃園航空城",
+        "surrounding_towns": "桃園市大園區、蘆竹區、中壢區",
+        "capex_or_budget": "2.7兆美元AI基建需求／台灣輸美伺服器860億美元",
+        "heat_weight": 4.8,
+        "snippet": "台灣占美邏輯晶片進口44.2%且輸美伺服器達860億美元；美國晶圓廠營運成本較台灣高35%、工期倍增（38 vs 19個月），鞏固桃園航空城AI伺服器空運樞紐地位。",
+        "ingested_at": "2026-11-16"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.228,
+          25.076
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "CSIS (2026/11) 技術聚落與國家實力：Albany與竹科比較",
+        "short_note": "🏘️ 嘉義太保｜全臺擴廠抗衡美日聚落與生活成本外溢",
+        "source_type": "PDF實驗報告",
+        "topic_category": "城市擴張與居住成本",
+        "ledger_axis": "生活成本外溢",
+        "marker_hex": "#F59E0B",
+        "target_node": "嘉義科學園區（台積電預定地）",
+        "surrounding_towns": "嘉義縣太保市、朴子市、水上鄉",
+        "capex_or_budget": "紐約州10億美元High-NA EUV／全臺先進廠擴建",
+        "heat_weight": 4.6,
+        "snippet": "美日透過Albany NanoTech與北海道Rapidus建立台積電第二供應源；台灣同步推進全臺先進廠擴建以維持聚落密度，帶動嘉義太保朴子周邊居住成本外溢。",
+        "ingested_at": "2026-11-16"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.285,
+          23.462
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "GTB (Vol.11 #17) 海事兵險與台灣LNG能源生命線（11天存量風險）",
+        "short_note": "⚡ 永安LNG｜11天天然氣存量與倫敦海事兵險斷鏈風險",
+        "source_type": "PDF實驗報告",
+        "topic_category": "公共基建與水電能源",
+        "ledger_axis": "公共基建支出",
+        "marker_hex": "#3B82F6",
+        "target_node": "高雄港（永安／洲際LNG與商港）",
+        "surrounding_towns": "高雄市永安區、鼓山區、前鎮區",
+        "capex_or_budget": "LNG存量11天（2027增至14天）／美DFC 400億美元再保機制",
+        "heat_weight": 4.9,
+        "snippet": "台灣96%能源進口、逾1/3天然氣經荷姆茲海峽且安全存量僅11天；若台海危機觸發倫敦JWC撤保或五常開戰自動終止條款，西海岸三座LNG接收站將面臨斷氣限電風險。",
+        "ingested_at": "2026-11-16"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.205,
+          22.815
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "GTB (Vol.11 #17) 花蓮光復鄉270億災後重建與觀光交通韌性評估",
+        "short_note": "🌄 花蓮光復｜270億災後重建與接駁運具／民生復甦落差",
+        "source_type": "PDF實驗報告",
+        "topic_category": "城市擴張與居住成本",
+        "ledger_axis": "生活成本外溢",
+        "marker_hex": "#F59E0B",
+        "target_node": "花蓮港與花東縱谷（光復鄉）",
+        "surrounding_towns": "花蓮縣光復鄉、花蓮市、新城鄉",
+        "capex_or_budget": "立法院270億元（8.59億美元）洪災特別重建預算",
+        "heat_weight": 3.8,
+        "snippet": "花蓮光復鄉歷經2024地震與2025洪災，雖獲270億元預算快速修復硬體，但因媒體災害印象固化與接駁運具不足，當地民宿商圈營收仍萎縮50%–80%。",
+        "ingested_at": "2026-11-16"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.423,
+          23.666
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "GTB (Vol.11 #17) 臺南玉井冷鏈中心與農產／半導體共通冷鏈空運走廊",
+        "short_note": "❄️ 南科玉井｜農產與半導體共通冷鏈溫控空運走廊",
+        "source_type": "PDF實驗報告",
+        "topic_category": "公共基建與水電能源",
+        "ledger_axis": "公共基建支出",
+        "marker_hex": "#3B82F6",
+        "target_node": "南科臺南園區（含玉井冷鏈中心）",
+        "surrounding_towns": "臺南市玉井區、新市區、善化區",
+        "capex_or_budget": "玉井冷鏈中心年處理800噸／對中港農產出口3.7億美元",
+        "heat_weight": 3.6,
+        "snippet": "工研院指出高階農產冷鏈與半導體物流在溫濕度、微粒潔淨度與溯源技術高度共通；2024啟用臺南玉井冷鏈中心支撐愛文芒果與荔枝空運拓銷英法市場。",
+        "ingested_at": "2026-11-16"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.4615,
+          23.1245
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "GTB (Vol.11 #17) 台灣水電環境承載極限（單廠日耗3,800萬公升水）與海外擴廠",
+        "short_note": "💧 竹科寶山｜單廠日耗3,800萬公升水與環境承載極限",
+        "source_type": "PDF實驗報告",
+        "topic_category": "環境污染與生活品質",
+        "ledger_axis": "環境與民生外溢",
+        "marker_hex": "#10B981",
+        "target_node": "竹科新竹園區（含寶山擴建）",
+        "surrounding_towns": "新竹市東區、新竹縣寶山鄉、竹北市",
+        "capex_or_budget": "單座先進廠日耗3,800萬公升水／美CHIPS補助66億美元",
+        "heat_weight": 4.4,
+        "snippet": "單座先進晶圓廠日耗水量達3,800萬公升（等同中型城市日用水）且加劇電網與地震停機風險，海外設廠有助緩解台灣島嶼環境承載壓力並分散地緣風險。",
+        "ingested_at": "2026-11-16"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.012,
+          24.775
+        ]
+      }
+    }
+  ]
+}

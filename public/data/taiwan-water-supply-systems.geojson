@@ -1,0 +1,1119 @@
+{
+  "type": "FeatureCollection",
+  "name": "Taiwan_Water_Supply_Systems",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "system_id": "TWD-01",
+        "name": "Taipei Metropolitan Water Supply System",
+        "chinese_name": "臺北自來水事業處供水系統",
+        "operator": "Taipei Water Department (臺北自來水事業處)",
+        "branch": "Taipei Water Department",
+        "region": "Northern Taiwan",
+        "primary_sources": [
+          "Feitsui Reservoir",
+          "Nanshi Creek",
+          "Beishi Creek"
+        ],
+        "major_wtps": [
+          "Zhitan WTP",
+          "Changxing WTP",
+          "Gongguan WTP",
+          "Shuangxi WTP",
+          "Yangming WTP"
+        ],
+        "service_areas": "Taipei City; New Taipei City (Sanchong, Zhonghe, Yonghe, Xindian, parts of Xizhi) and bulk support to Banqiao, Tamsui, Luzhou",
+        "daily_capacity_cmd": 3740000
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                121.45,
+                25.21
+              ],
+              [
+                121.66,
+                25.21
+              ],
+              [
+                121.66,
+                24.9
+              ],
+              [
+                121.45,
+                24.9
+              ],
+              [
+                121.45,
+                25.21
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "system_id": "TWC-01A",
+        "name": "Keelung & Northeast Coast Water Supply System",
+        "chinese_name": "基隆及東北角供水系統",
+        "operator": "Taiwan Water Corporation (台灣自來水公司)",
+        "branch": "1st Branch (第一區管理處)",
+        "region": "Northern Taiwan",
+        "primary_sources": [
+          "Xinshan Reservoir",
+          "Xishi Reservoir",
+          "Keelung River (Badu)",
+          "Shuangxi Creek (Gongliao Weir)"
+        ],
+        "major_wtps": [
+          "Xinshan WTP",
+          "Nuannuan WTP",
+          "Gongliao WTP",
+          "Ruifang WTP"
+        ],
+        "service_areas": "Keelung City; New Taipei City (Ruifang, Gongliao, Shuangxi, Pingxi, Wanli, Jinshan, parts of Xizhi)",
+        "daily_capacity_cmd": 420000
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              121.62,
+              25.29
+            ],
+            [
+              122.01,
+              25.1
+            ],
+            [
+              121.95,
+              24.96
+            ],
+            [
+              121.62,
+              25.04
+            ],
+            [
+              121.62,
+              25.29
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "system_id": "TWC-01B",
+        "name": "Tamsui & North Coast Water Supply System",
+        "chinese_name": "淡水及北海岸供水系統",
+        "operator": "Taiwan Water Corporation (台灣自來水公司)",
+        "branch": "1st Branch (第一區管理處)",
+        "region": "Northern Taiwan",
+        "primary_sources": [
+          "Local mountain streams",
+          "Taipei Water Department bulk transfer"
+        ],
+        "major_wtps": [
+          "Tamsui WTP",
+          "Sanzhi WTP",
+          "Shimen WTP (North Coast)"
+        ],
+        "service_areas": "New Taipei City (Tamsui, Sanzhi, Shimen)",
+        "daily_capacity_cmd": 150000
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              121.4,
+              25.3
+            ],
+            [
+              121.62,
+              25.29
+            ],
+            [
+              121.62,
+              25.14
+            ],
+            [
+              121.4,
+              25.14
+            ],
+            [
+              121.4,
+              25.3
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "system_id": "TWC-12",
+        "name": "Banxin Water Supply System",
+        "chinese_name": "板新供水系統",
+        "operator": "Taiwan Water Corporation (台灣自來水公司)",
+        "branch": "12th Branch (第十二區管理處)",
+        "region": "Northern Taiwan",
+        "primary_sources": [
+          "Dahan River (Yuanshan Weir)",
+          "Sanxia River",
+          "Shihmen Reservoir",
+          "Feitsui Reservoir (Banxin Improvement Project)"
+        ],
+        "major_wtps": [
+          "Banxin WTP",
+          "Guangxing WTP"
+        ],
+        "service_areas": "New Taipei City (Banqiao, Xinzhuang, Tucheng, Shulin, Sanxia, Yingge, Taishan, Wugu, Luzhou, Bali)",
+        "daily_capacity_cmd": 1100000
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              121.3,
+              25.17
+            ],
+            [
+              121.52,
+              25.17
+            ],
+            [
+              121.52,
+              24.83
+            ],
+            [
+              121.3,
+              24.83
+            ],
+            [
+              121.3,
+              25.17
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "system_id": "TWC-02",
+        "name": "Taoyuan & Shihmen Water Supply System",
+        "chinese_name": "桃園及石門供水系統",
+        "operator": "Taiwan Water Corporation (台灣自來水公司)",
+        "branch": "2nd Branch (第二區管理處)",
+        "region": "Northern Taiwan",
+        "primary_sources": [
+          "Shihmen Reservoir",
+          "Dahan River",
+          "Zhongzhuang Adjustment Reservoir"
+        ],
+        "major_wtps": [
+          "Pingzhen WTP",
+          "Danan WTP",
+          "Longtan WTP",
+          "Shihmen WTP"
+        ],
+        "service_areas": "Taoyuan City (all 13 districts); New Taipei City (Linkou); Hsinchu County (Hukou, Xinfeng)",
+        "daily_capacity_cmd": 1350000
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.98,
+              25.12
+            ],
+            [
+              121.48,
+              25.12
+            ],
+            [
+              121.48,
+              24.67
+            ],
+            [
+              120.98,
+              24.67
+            ],
+            [
+              120.98,
+              25.12
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "system_id": "TWC-03A",
+        "name": "Hsinchu Water Supply System",
+        "chinese_name": "新竹供水系統",
+        "operator": "Taiwan Water Corporation (台灣自來水公司)",
+        "branch": "3rd Branch (第三區管理處)",
+        "region": "Northern Taiwan",
+        "primary_sources": [
+          "Touqian River (Longen Weir)",
+          "Baoshan Reservoir",
+          "Baoshan Second Reservoir",
+          "Taoyuan-Hsinchu Auxiliary Pipeline",
+          "Hsinchu Desalination Plant"
+        ],
+        "major_wtps": [
+          "Hsinchu First WTP",
+          "Hsinchu Second WTP",
+          "Baoshan WTP",
+          "Zhudong WTP"
+        ],
+        "service_areas": "Hsinchu City; Hsinchu County (Zhubei, Zhudong, Baoshan, Xinpu, Guanxi, Qionglin, Hengshan, Beipu, Emei)",
+        "daily_capacity_cmd": 620000
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.9,
+              24.96
+            ],
+            [
+              121.32,
+              24.96
+            ],
+            [
+              121.32,
+              24.48
+            ],
+            [
+              120.9,
+              24.48
+            ],
+            [
+              120.9,
+              24.96
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "system_id": "TWC-03B",
+        "name": "Miaoli Water Supply System",
+        "chinese_name": "苗栗供水系統",
+        "operator": "Taiwan Water Corporation (台灣自來水公司)",
+        "branch": "3rd Branch (第三區管理處)",
+        "region": "Central Taiwan",
+        "primary_sources": [
+          "Yongheshan Reservoir",
+          "Mingde Reservoir",
+          "Zhonggang River",
+          "Houlong River",
+          "Liyutan Reservoir (Daan River)"
+        ],
+        "major_wtps": [
+          "Dongxing WTP",
+          "Mingde WTP",
+          "Miaoli WTP",
+          "Tongxiao WTP"
+        ],
+        "service_areas": "Miaoli County (Miaoli, Toufen, Zhunan, Houlong, Tongxiao, Yuanli, Gongguan, Zaoqiao, Sanwan, Nanzhuang, Sanyi)",
+        "daily_capacity_cmd": 380000
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.62,
+              24.74
+            ],
+            [
+              121.15,
+              24.74
+            ],
+            [
+              121.15,
+              24.33
+            ],
+            [
+              120.62,
+              24.33
+            ],
+            [
+              120.62,
+              24.74
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "system_id": "TWC-04A",
+        "name": "Greater Taichung Water Supply System",
+        "chinese_name": "大台中供水系統",
+        "operator": "Taiwan Water Corporation (台灣自來水公司)",
+        "branch": "4th Branch (第四區管理處)",
+        "region": "Central Taiwan",
+        "primary_sources": [
+          "Liyutan Reservoir",
+          "Dajia River (Shihgang Dam)",
+          "Daan River",
+          "Daan-Dajia Interconnection Pipeline"
+        ],
+        "major_wtps": [
+          "Fengyuan WTP",
+          "Liyutan WTP",
+          "Wuri WTP",
+          "Shalu WTP",
+          "Dajia WTP",
+          "Wufeng WTP"
+        ],
+        "service_areas": "Taichung City (urban districts, Fengyuan, Tanzi, Daya, Shengang, Houli, Dajia, Qingshui, Shalu, Wuqi, Longjing, Dadu, Wuri, Wufeng, Taiping, Dali, Dongshi)",
+        "daily_capacity_cmd": 1550000
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.47,
+              24.44
+            ],
+            [
+              121.35,
+              24.44
+            ],
+            [
+              121.35,
+              24.0
+            ],
+            [
+              120.47,
+              24.0
+            ],
+            [
+              120.47,
+              24.44
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "system_id": "TWC-04B",
+        "name": "Nantou Water Supply System",
+        "chinese_name": "南投供水系統",
+        "operator": "Taiwan Water Corporation (台灣自來水公司)",
+        "branch": "4th Branch (第四區管理處)",
+        "region": "Central Taiwan",
+        "primary_sources": [
+          "Wu River",
+          "Zhuoshui River",
+          "Nangang Creek",
+          "Groundwater wells"
+        ],
+        "major_wtps": [
+          "Nantou WTP",
+          "Caotun WTP",
+          "Puli WTP",
+          "Zhushan WTP",
+          "Jiji WTP"
+        ],
+        "service_areas": "Nantou County (Nantou, Caotun, Puli, Zhushan, Jiji, Mingjian, Lugu, Zhongliao, Guoxing, Yuchi, Shuili)",
+        "daily_capacity_cmd": 220000
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.62,
+              24.16
+            ],
+            [
+              121.35,
+              24.16
+            ],
+            [
+              121.35,
+              23.45
+            ],
+            [
+              120.62,
+              23.45
+            ],
+            [
+              120.62,
+              24.16
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "system_id": "TWC-11",
+        "name": "Changhua Water Supply System",
+        "chinese_name": "彰化供水系統",
+        "operator": "Taiwan Water Corporation (台灣自來水公司)",
+        "branch": "11th Branch (第十一區管理處)",
+        "region": "Central Taiwan",
+        "primary_sources": [
+          "Wu River (Niaozui Tan Artificial Lake)",
+          "Groundwater wells",
+          "Taichung & Yunlin bulk transfers"
+        ],
+        "major_wtps": [
+          "Niaozui Tan WTP",
+          "Changhua WTP",
+          "Yuanlin WTP",
+          "Lukang WTP",
+          "Beidou WTP",
+          "Erlin WTP"
+        ],
+        "service_areas": "Changhua County (all 26 townships/cities)",
+        "daily_capacity_cmd": 430000
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.26,
+              24.2
+            ],
+            [
+              120.68,
+              24.2
+            ],
+            [
+              120.68,
+              23.79
+            ],
+            [
+              120.26,
+              23.79
+            ],
+            [
+              120.26,
+              24.2
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "system_id": "TWC-05A",
+        "name": "Yunlin Water Supply System",
+        "chinese_name": "雲林供水系統",
+        "operator": "Taiwan Water Corporation (台灣自來水公司)",
+        "branch": "5th Branch (第五區管理處)",
+        "region": "Southern Taiwan",
+        "primary_sources": [
+          "Hushan Reservoir",
+          "Zhuoshui River (Jiji Weir)",
+          "Groundwater wells"
+        ],
+        "major_wtps": [
+          "Hushan WTP",
+          "Linnei WTP",
+          "Douliu WTP",
+          "Huwei WTP",
+          "Beigang WTP"
+        ],
+        "service_areas": "Yunlin County (all 20 townships/cities)",
+        "daily_capacity_cmd": 360000
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.13,
+              23.84
+            ],
+            [
+              120.72,
+              23.84
+            ],
+            [
+              120.72,
+              23.48
+            ],
+            [
+              120.13,
+              23.48
+            ],
+            [
+              120.13,
+              23.84
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "system_id": "TWC-05B",
+        "name": "Chiayi Water Supply System",
+        "chinese_name": "嘉義供水系統",
+        "operator": "Taiwan Water Corporation (台灣自來水公司)",
+        "branch": "5th Branch (第五區管理處)",
+        "region": "Southern Taiwan",
+        "primary_sources": [
+          "Renyitan Reservoir",
+          "Lantan Reservoir",
+          "Zengwen Reservoir",
+          "Bazhang River"
+        ],
+        "major_wtps": [
+          "Gongyuan WTP",
+          "Lantan WTP",
+          "Taibao WTP",
+          "Puzi WTP",
+          "Minxiong WTP"
+        ],
+        "service_areas": "Chiayi City; Chiayi County (all 18 townships/cities)",
+        "daily_capacity_cmd": 350000
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.12,
+              23.62
+            ],
+            [
+              120.95,
+              23.62
+            ],
+            [
+              120.95,
+              23.22
+            ],
+            [
+              120.12,
+              23.22
+            ],
+            [
+              120.12,
+              23.62
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "system_id": "TWC-06",
+        "name": "Greater Tainan Water Supply System",
+        "chinese_name": "大台南供水系統",
+        "operator": "Taiwan Water Corporation (台灣自來水公司)",
+        "branch": "6th Branch (第六區管理處)",
+        "region": "Southern Taiwan",
+        "primary_sources": [
+          "Zengwen Reservoir",
+          "Wushantou Reservoir",
+          "Nanhua Reservoir",
+          "Jingmian Reservoir",
+          "Gaoping River (Jiasian Weir)"
+        ],
+        "major_wtps": [
+          "Nanhua WTP",
+          "Tanshang WTP",
+          "Wushantou WTP",
+          "Shanshang WTP",
+          "Xinying WTP",
+          "Baihe WTP"
+        ],
+        "service_areas": "Tainan City (all 37 districts)",
+        "daily_capacity_cmd": 1150000
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.03,
+              23.41
+            ],
+            [
+              120.65,
+              23.41
+            ],
+            [
+              120.65,
+              22.88
+            ],
+            [
+              120.03,
+              22.88
+            ],
+            [
+              120.03,
+              23.41
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "system_id": "TWC-07A",
+        "name": "Greater Kaohsiung Water Supply System",
+        "chinese_name": "大高雄供水系統",
+        "operator": "Taiwan Water Corporation (台灣自來水公司)",
+        "branch": "7th Branch (第七區管理處)",
+        "region": "Southern Taiwan",
+        "primary_sources": [
+          "Gaoping River (Gaoping Weir)",
+          "Chengqing Lake Reservoir",
+          "Fengshan Reservoir",
+          "Agongdian Reservoir",
+          "Nanhua Reservoir (Zengwen-Nanhua-Gaoping Pipeline)"
+        ],
+        "major_wtps": [
+          "Chengqing Lake WTP",
+          "Pingding WTP",
+          "Kaohsiung WTP",
+          "Weng Gongyuan WTP",
+          "Linyuan WTP",
+          "Qishan WTP"
+        ],
+        "service_areas": "Kaohsiung City (all 38 districts)",
+        "daily_capacity_cmd": 1650000
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.17,
+              23.47
+            ],
+            [
+              121.05,
+              23.47
+            ],
+            [
+              121.05,
+              22.47
+            ],
+            [
+              120.17,
+              22.47
+            ],
+            [
+              120.17,
+              23.47
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "system_id": "TWC-13",
+        "name": "Pingtung Water Supply System",
+        "chinese_name": "屏東供水系統",
+        "operator": "Taiwan Water Corporation (台灣自來水公司)",
+        "branch": "13th Branch (第十三區管理處)",
+        "region": "Southern Taiwan",
+        "primary_sources": [
+          "Mudan Reservoir",
+          "Donggang River",
+          "Linbian River",
+          "Groundwater wells",
+          "Submarine pipeline to Xiaoliuqiu"
+        ],
+        "major_wtps": [
+          "Mudan WTP",
+          "Gangxi WTP",
+          "Pingtung WTP",
+          "Chaozhou WTP",
+          "Donggang WTP",
+          "Hengchun WTP"
+        ],
+        "service_areas": "Pingtung County (all 33 townships/cities including Liuqiu)",
+        "daily_capacity_cmd": 320000
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.34,
+              22.89
+            ],
+            [
+              120.9,
+              22.89
+            ],
+            [
+              120.9,
+              21.89
+            ],
+            [
+              120.34,
+              21.89
+            ],
+            [
+              120.34,
+              22.89
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "system_id": "TWC-08",
+        "name": "Yilan Water Supply System",
+        "chinese_name": "宜蘭供水系統",
+        "operator": "Taiwan Water Corporation (台灣自來水公司)",
+        "branch": "8th Branch (第八區管理處)",
+        "region": "Eastern Taiwan",
+        "primary_sources": [
+          "Lanyang River",
+          "Luodong Weir",
+          "Yuanshan groundwater & springs",
+          "Suao streams"
+        ],
+        "major_wtps": [
+          "Shen'gou WTP",
+          "Guangxing WTP (Luodong)",
+          "Suao WTP",
+          "Toucheng WTP",
+          "Sanxing WTP"
+        ],
+        "service_areas": "Yilan County (all 12 townships/cities)",
+        "daily_capacity_cmd": 260000
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              121.32,
+              24.99
+            ],
+            [
+              121.96,
+              24.99
+            ],
+            [
+              121.96,
+              24.31
+            ],
+            [
+              121.32,
+              24.31
+            ],
+            [
+              121.32,
+              24.99
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "system_id": "TWC-09",
+        "name": "Hualien Water Supply System",
+        "chinese_name": "花蓮供水系統",
+        "operator": "Taiwan Water Corporation (台灣自來水公司)",
+        "branch": "9th Branch (第九區管理處)",
+        "region": "Eastern Taiwan",
+        "primary_sources": [
+          "Shabodang Creek",
+          "Hualien River",
+          "Xiuguluan River",
+          "Liwu River"
+        ],
+        "major_wtps": [
+          "Shabodang WTP",
+          "Ji'an WTP",
+          "Shoufeng WTP",
+          "Fenglin WTP",
+          "Guangfu WTP",
+          "Ruisui WTP",
+          "Yuli WTP"
+        ],
+        "service_areas": "Hualien County (all 13 townships/cities)",
+        "daily_capacity_cmd": 190000
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              121.05,
+              24.37
+            ],
+            [
+              121.77,
+              24.37
+            ],
+            [
+              121.77,
+              23.09
+            ],
+            [
+              121.05,
+              23.09
+            ],
+            [
+              121.05,
+              24.37
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "system_id": "TWC-10",
+        "name": "Taitung Water Supply System",
+        "chinese_name": "台東供水系統",
+        "operator": "Taiwan Water Corporation (台灣自來水公司)",
+        "branch": "10th Branch (第十區管理處)",
+        "region": "Eastern Taiwan",
+        "primary_sources": [
+          "Beinan River",
+          "Lijia River",
+          "Zhiben River",
+          "Taimali River",
+          "Lanyu & Ludao island streams/desalination"
+        ],
+        "major_wtps": [
+          "Lijia WTP",
+          "Beinan WTP",
+          "Guanshan WTP",
+          "Chishang WTP",
+          "Chenggong WTP",
+          "Taimali WTP"
+        ],
+        "service_areas": "Taitung County (all 16 townships/cities including Green Island and Orchid Island)",
+        "daily_capacity_cmd": 135000
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.74,
+              23.44
+            ],
+            [
+              121.62,
+              23.44
+            ],
+            [
+              121.62,
+              22.0
+            ],
+            [
+              120.74,
+              22.0
+            ],
+            [
+              120.74,
+              23.44
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "system_id": "TWC-07B",
+        "name": "Penghu Offshore Water Supply System",
+        "chinese_name": "澎湖離島供水系統",
+        "operator": "Taiwan Water Corporation (台灣自來水公司)",
+        "branch": "7th Branch - Penghu Operations Office (澎湖營運所)",
+        "region": "Outlying Islands",
+        "primary_sources": [
+          "Seawater Desalination Plants (Magong, Xiyu, Wang'an, Qimei)",
+          "Chenggong Reservoir",
+          "Xingren Reservoir",
+          "Dongwei Reservoir"
+        ],
+        "major_wtps": [
+          "Chenggong WTP",
+          "Magong Desalination & WTP"
+        ],
+        "service_areas": "Penghu County (Magong, Huxi, Baisha, Xiyu, Wang'an, Qimei)",
+        "daily_capacity_cmd": 35000
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              119.3,
+              23.8
+            ],
+            [
+              119.75,
+              23.8
+            ],
+            [
+              119.75,
+              23.18
+            ],
+            [
+              119.3,
+              23.18
+            ],
+            [
+              119.3,
+              23.8
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "system_id": "KMW-01",
+        "name": "Kinmen Water Supply System",
+        "chinese_name": "金門縣自來水廠供水系統",
+        "operator": "Kinmen County Waterworks (金門縣自來水廠)",
+        "branch": "Kinmen County Government",
+        "region": "Outlying Islands",
+        "primary_sources": [
+          "Jinjiang-Kinmen Cross-Strait Water Pipeline",
+          "Taihu Reservoir",
+          "Tianpu Reservoir",
+          "Seawater Desalination"
+        ],
+        "major_wtps": [
+          "Taihu WTP",
+          "Ronghu WTP",
+          "Hongshan WTP",
+          "Kinmen Desalination Plant"
+        ],
+        "service_areas": "Kinmen County (Jincheng, Jinhu, Jinsha, Jinning, Lieyu)",
+        "daily_capacity_cmd": 42000
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              118.21,
+              24.54
+            ],
+            [
+              118.48,
+              24.54
+            ],
+            [
+              118.48,
+              24.38
+            ],
+            [
+              118.21,
+              24.38
+            ],
+            [
+              118.21,
+              24.54
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "system_id": "LCW-01",
+        "name": "Matsu (Lienchiang) Water Supply System",
+        "chinese_name": "連江縣自來水廠供水系統",
+        "operator": "Lienchiang County Waterworks (連江縣自來水廠)",
+        "branch": "Lienchiang County Government",
+        "region": "Outlying Islands",
+        "primary_sources": [
+          "Seawater Desalination Plants (Nangan, Beigan, Dongyin, Juguang)",
+          "Shengli Reservoir",
+          "Banli Reservoir"
+        ],
+        "major_wtps": [
+          "Shengli WTP",
+          "Banli WTP",
+          "Nangan Desalination Plant"
+        ],
+        "service_areas": "Lienchiang County (Nangan, Beigan, Juguang, Dongyin)",
+        "daily_capacity_cmd": 8500
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              119.9,
+              26.4
+            ],
+            [
+              120.53,
+              26.4
+            ],
+            [
+              120.53,
+              25.94
+            ],
+            [
+              119.9,
+              25.94
+            ],
+            [
+              119.9,
+              26.4
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

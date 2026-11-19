@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>taiwan-infra-v10.4-intelligence｜台灣關鍵基建、因果傳導與資源排擠空間情報系統</title>
+  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+  <link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", "Segoe UI", sans-serif; background: #f1f5f9; color: #1e293b; overflow: hidden; }
+    #map { width: 100vw; height: 100vh; }
+
+    /* 可一鍵收合的左右戰情面板 */
+    .panel {
+      position: absolute; top: 12px; width: 332px; background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px); border-radius: 12px; padding: 13px 15px;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.14); font-size: 12.5px; color: #1e293b; z-index: 10;
+      max-height: calc(100vh - 64px); display: flex; flex-direction: column; border: 1px solid #e2e8f0;
+      transition: width 0.25s ease, padding 0.25s ease;
+    }
+    .panel.collapsed { width: 46px; padding: 11px 8px; overflow: hidden; cursor: pointer; }
+    .panel.collapsed .panel-body { display: none; }
+    .panel.collapsed h3 span { display: none; }
+    #panel-infra { left: 12px; border-top: 4px solid #0284c7; }
+    #panel-osint { right: 12px; border-top: 4px solid #ef4444; }
+    .panel h3 { margin: 0 0 8px; font-size: 13.5px; display: flex; justify-content: space-between; align-items: center; color: #0f172a; white-space: nowrap; }
+    .collapse-btn { background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 5px; padding: 2px 7px; font-size: 10.5px; cursor: pointer; color: #334155; font-weight: 600; }
+    .collapse-btn:hover { background: #e2e8f0; }
+    .panel-body { overflow-y: auto; flex-grow: 1; padding-right: 3px; }
+
+    .badge { font-size: 10.5px; padding: 2px 7px; border-radius: 999px; background: #e0f2fe; color: #0369a1; font-weight: 600; }
+    .badge-red { background: #fee2e2; color: #b91c1c; }
+    .badge-new { background: #0284c7; color: #ffffff; font-size: 9.5px; padding: 1px 5px; border-radius: 4px; margin-left: 4px; }
+    .api-badge { font-size: 9.5px; padding: 1px 5px; border-radius: 4px; background: #ecfdf5; color: #059669; border: 1px solid #a7f3d0; margin-left: auto; font-weight: 600; flex-shrink: 0; }
+
+    .section-title { font-size: 11px; font-weight: 700; color: #64748b; letter-spacing: 0.03em; margin: 10px 0 5px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; user-select: none; }
+    .section-title:hover { color: #0f172a; }
+    .control-row { display: flex; align-items: center; justify-content: space-between; margin: 5px 0; gap: 6px; }
+    .control-row label { cursor: pointer; display: flex; align-items: center; gap: 7px; font-size: 12px; color: #1e293b; }
+    .legend-dot { display: inline-block; width: 11px; height: 11px; border-radius: 3px; border: 1px solid #94a3b8; flex-shrink: 0; }
+    .legend-circle { display: inline-block; width: 10px; height: 10px; border-radius: 50%; border: 1.5px solid #fff; box-shadow: 0 0 0 1px #64748b; flex-shrink: 0; }
+    .line-swatch { display: inline-block; width: 18px; height: 3.5px; border-radius: 2px; flex-shrink: 0; }
+    .zoning-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3px 6px; padding-left: 18px; font-size: 11px; color: #475569; margin-top: 4px; }
+    .zoning-item { display: flex; align-items: center; gap: 5px; }
+    .metric-strip { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 7px 9px; margin-bottom: 8px; font-size: 11px; }
+    .metric-val { font-weight: 700; color: #0f172a; font-size: 12.5px; }
+
+    .note-list { margin-top: 6px; border-top: 1px solid #e2e8f0; padding-top: 8px; max-height: 240px; overflow-y: auto; }
+    .note-card {
+      padding: 7px 9px; border-radius: 7px; background: #f8fafc; border: 1px solid #e2e8f0;
+      margin-bottom: 6px; cursor: pointer; transition: all 0.15s ease;
+    }
+    .note-card:hover { background: #eff6ff; border-color: #93c5fd; transform: translateY(-1px); }
+    .note-card-title { font-weight: 700; font-size: 11.5px; color: #0f172a; line-height: 1.35; }
+    .note-card-meta { font-size: 10.5px; color: #64748b; margin-top: 2px; }
+    .squeeze-pill { display: inline-block; font-size: 9.5px; background: #fee2e2; color: #b91c1c; padding: 1px 6px; border-radius: 4px; font-weight: 600; margin-top: 3px; }
+
+    .zoom-indicator {
+      position: absolute; bottom: 18px; left: 50%; transform: translateX(-50%);
+      background: rgba(255, 255, 255, 0.95); color: #0f172a; padding: 6px 16px;
+      border-radius: 20px; font-size: 12px; font-weight: 600; z-index: 10;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.12); border: 1px solid #cbd5e1;
+      transition: opacity 0.25s ease;
+    }
+    .api-status { font-size: 11px; color: #059669; background: #ecfdf5; padding: 4px 8px; border-radius: 6px; margin-bottom: 8px; border: 1px solid #a7f3d0; }
+
+    /* 底部資料來源與預算計算公式驗證列 */
+    #validation-bar {
+      position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%) translateY(140%);
+      background: rgba(15, 23, 42, 0.96); color: #f8fafc; padding: 11px 16px;
+      border-radius: 12px; font-size: 11.5px; z-index: 12; width: 650px; max-width: 92vw;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.35); border: 1px solid #38bdf8;
+      transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    #validation-bar.active { transform: translateX(-50%) translateY(0); }
+    .val-header { display: flex; justify-content: space-between; align-items: center; font-weight: 700; color: #38bdf8; font-size: 12.5px; margin-bottom: 5px; border-bottom: 1px solid #334155; padding-bottom: 4px; }
+    .val-formula { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: #1e293b; padding: 5px 8px; border-radius: 5px; color: #a7f3d0; margin-bottom: 6px; font-size: 11px; }
+    .val-list { margin: 0; padding-left: 14px; max-height: 110px; overflow-y: auto; color: #cbd5e1; line-height: 1.45; }
+    .val-list li { margin-bottom: 4px; }
+
+    /* ETL 堆疊條、互動膠囊與走廊狀態燈樣式 */
+    .v102-box { background: #f8fafc; padding: 10px 11px; border-radius: 9px; border: 1px solid #cbd5e1; margin-top: 8px; }
+    .stacked-bar { display: flex; height: 15px; width: 100%; border-radius: 4px; overflow: hidden; background: #e2e8f0; margin-top: 4px; border: 1px solid #cbd5e1; }
+    .bar-segment { height: 100%; transition: width 0.4s ease; display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 700; color: #fff; overflow: hidden; white-space: nowrap; }
+    .legend-container { display: flex; gap: 7px; margin-top: 4px; font-size: 10.5px; flex-wrap: wrap; color: #475569; }
+    .pills-container { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 6px; }
+    .pill-btn { padding: 3px 9px; border-radius: 999px; background: #ffffff; border: 1px solid #cbd5e1; color: #334155; cursor: pointer; transition: all 0.15s ease; font-size: 11px; font-weight: 600; }
+    .pill-btn:hover { background: #e0f2fe; border-color: #38bdf8; color: #0369a1; }
+    .pill-btn.active { background: #0f172a; border-color: #0f172a; color: #ffffff; box-shadow: 0 2px 6px rgba(15, 23, 42, 0.25); }
+    .tracing-paper-control { display: flex; align-items: center; gap: 10px; padding: 8px 10px; background: #ffffff; border: 1px solid #93c5fd; border-radius: 8px; margin-top: 9px; box-shadow: 0 2px 6px rgba(2, 132, 199, 0.1); }
+    .toggle-switch { position: relative; width: 36px; height: 20px; flex-shrink: 0; }
+    .toggle-switch input { opacity: 0; width: 0; height: 0; }
+    .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #cbd5e1; transition: .3s; border-radius: 20px; }
+    .slider:before { position: absolute; content: ""; height: 14px; width: 14px; left: 3px; bottom: 3px; background-color: white; transition: .3s; border-radius: 50%; box-shadow: 0 1px 2px rgba(0,0,0,0.2); }
+    input:checked + .slider { background-color: #0284c7; }
+    input:checked + .slider:before { transform: translateX(16px); }
+    .toggle-label { font-size: 11.5px; color: #0f172a; font-weight: 700; line-height: 1.3; }
+    .legend-mini { font-size: 10px; margin-top: 2px; display: flex; gap: 8px; font-weight: 600; }
+    .matrix-container { display: flex; flex-direction: column; gap: 5px; margin-top: 6px; max-height: 175px; overflow-y: auto; }
+    .corridor-item { display: flex; justify-content: space-between; align-items: center; background: #ffffff; padding: 6px 8px; border-radius: 6px; border: 1px solid #e2e8f0; border-left: 3.5px solid transparent; cursor: pointer; transition: all 0.15s ease; }
+    .corridor-item:hover { background: #eff6ff; border-color: #93c5fd; transform: translateY(-1px); }
+    .corridor-info { display: flex; flex-direction: column; gap: 1px; max-width: 195px; }
+    .corridor-name { font-size: 11px; font-weight: 700; color: #0f172a; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .corridor-cargo { font-size: 9.5px; color: #64748b; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .status-indicator { display: flex; align-items: center; gap: 4px; font-size: 10px; font-weight: 700; flex-shrink: 0; }
+    .status-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .status-green .status-dot { background-color: #10b981; box-shadow: 0 0 5px rgba(16, 185, 129, 0.5); }
+    .status-green { border-left-color: #10b981; color: #047857; }
+    .status-yellow .status-dot { background-color: #f59e0b; box-shadow: 0 0 5px rgba(245, 158, 11, 0.5); }
+    .status-yellow { border-left-color: #f59e0b; color: #b45309; }
+    .status-red .status-dot { background-color: #ef4444; box-shadow: 0 0 7px rgba(239, 68, 68, 0.7); animation: pulse-red 1.5s infinite; }
+    .status-red { border-left-color: #ef4444; color: #b91c1c; }
+    @keyframes pulse-red { 0% { opacity: 1; transform: scale(1); } 50% { opacity: 0.65; transform: scale(1.25); } 100% { opacity: 1; transform: scale(1); } }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+
+  <!-- 左側獨立面板：台灣都計分區色彩基準、主要交通動脈、海空運與電力再生能源實測圖層 -->
+  <div id="panel-infra" class="panel">
+    <h3>
+      <span>🏗️ 台灣關鍵基建與分區圖層 <span class="badge">v10.4</span></span>
+      <button class="collapse-btn" onclick="togglePanel('panel-infra', event)">◀ 收合</button>
+    </h3>
+    <div class="panel-body">
+      <div id="api-status-box" class="api-status">🔄 正在連線交通、電力與海空運 API...</div>
+
+      <div class="metric-strip" id="infra-metrics">
+        <div>再生能源總裝置<div class="metric-val" id="m-renew">-- MW</div></div>
+        <div>超高壓/一次變電所<div class="metric-val" id="m-subs">-- 座</div></div>
+        <div>高鐵與軌道骨幹<div class="metric-val" id="m-rail">352.2 km</div></div>
+        <div>商港／工業港節點<div class="metric-val" id="m-ports">-- 處</div></div>
+      </div>
+
+      <div class="section-title" onclick="toggleSection('sec-1')">1. 土地使用分區色彩基準（43%～53%） <span>▼</span></div>
+      <div id="sec-1">
+        <div class="control-row">
+          <label><input type="checkbox" id="toggle-buildings" checked /> 2D 建物使用分區（Zoom ≥ 9.5 展開 / ≥ 13.5 擠出 60° 3D）</label>
+        </div>
+        <div class="zoning-grid">
+          <div class="zoning-item"><span class="legend-dot" style="background:#FDE047;"></span>住宅區 (45%)</div>
+          <div class="zoning-item"><span class="legend-dot" style="background:#FCA5A5;"></span>商業區 (50%)</div>
+          <div class="zoning-item"><span class="legend-dot" style="background:#FDBA74;"></span>住商混合 (50%)</div>
+          <div class="zoning-item"><span class="legend-dot" style="background:#D6B49C;"></span>工業科技 (53%)</div>
+          <div class="zoning-item"><span class="legend-dot" style="background:#93C5FD;"></span>行政文教 (50%)</div>
+          <div class="zoning-item"><span class="legend-dot" style="background:#86EFAC;"></span>公園綠地 (43%)</div>
+          <div class="zoning-item"><span class="legend-dot" style="background:#CBD5E1;"></span>交通水利 (45%)</div>
+        </div>
+      </div>
+
+      <hr style="border:none; border-top:1px solid #e2e8f0; margin:9px 0;" />
+
+      <div class="section-title" onclick="toggleSection('sec-2')">2. 主要陸路交通幹線（高鐵・國道・臺鐵） <span>▼</span></div>
+      <div id="sec-2">
+        <div class="control-row">
+          <label><input type="checkbox" id="toggle-thsr" checked /> <span class="line-swatch" style="background:#ea580c;"></span>台灣高鐵全線實測曲線＋12站</label>
+          <span class="api-badge" id="badge-land">🟢 TDX</span>
+        </div>
+        <div class="control-row">
+          <label><input type="checkbox" id="toggle-highways" checked /> <span class="line-swatch" style="background:#334155;"></span>國道・快速公路與省道全網（5,482 段）</label>
+        </div>
+        <div class="control-row">
+          <label><input type="checkbox" id="toggle-tra" /> <span class="line-swatch" style="background:#64748b; height:2px;"></span>臺鐵／林鐵全線軌道（2,607 段）</label>
+        </div>
+      </div>
+
+      <hr style="border:none; border-top:1px solid #e2e8f0; margin:9px 0;" />
+
+      <div class="section-title" onclick="toggleSection('sec-3')">3. 海空運樞紐、聯外走廊與即時閃光節點 <span>▼</span></div>
+      <div id="sec-3">
+        <div class="control-row">
+          <label><input type="checkbox" id="toggle-ports" checked /> <span class="legend-circle" style="background:#0284c7;"></span>商港／工業專用港（192 處）</label>
+          <label style="font-size:11px; color:#64748b;"><input type="checkbox" id="toggle-fishing-ports" /> 含漁港</label>
+          <span class="api-badge" id="badge-sea">🟡 AIS</span>
+        </div>
+        <div class="control-row">
+          <label><input type="checkbox" id="toggle-air-sea-corridors" checked /> <span class="line-swatch" style="background:#0ea5e9;"></span>航空城空運幹線與全臺 29 座機場</label>
+          <span class="api-badge" id="badge-air">🟢 ADS-B</span>
+        </div>
+        <div class="control-row" style="background:#f0f9ff; padding:5px 8px; border-radius:6px; border:1px solid #bae6fd;">
+          <label><input type="checkbox" id="toggle-pulsing-dots" checked /> <b>✨ 陸海空即時動態閃光節點（點擊看遙測）</b></label>
+        </div>
+      </div>
+
+      <hr style="border:none; border-top:1px solid #e2e8f0; margin:9px 0;" />
+
+      <div class="section-title" onclick="toggleSection('sec-4')">4. 高壓電網、再生能源與全臺水利系統 <span>▼</span></div>
+      <div id="sec-4">
+        <div class="control-row">
+          <label><input type="checkbox" id="toggle-power-grid" checked /> <span class="line-swatch" style="background:#dc2626;"></span>345kV / 161kV 輸電幹線與 791 變電所</label>
+        </div>
+        <div class="control-row">
+          <label><input type="checkbox" id="toggle-renewables" checked /> <span class="legend-circle" style="background:#16a34a;"></span>太陽光電・風電・地熱（98 站）</label>
+        </div>
+        <div class="control-row">
+          <label><input type="checkbox" id="toggle-power-plants" checked /> <span class="legend-circle" style="background:#dc2626;"></span>主力燃煤／燃氣／核能電廠（48 廠）</label>
+        </div>
+        <div class="control-row">
+          <label><input type="checkbox" id="toggle-lng" checked /> <span class="legend-circle" style="background:#7c3aed;"></span>LNG 天然氣接收站（一接～七接）</label>
+        </div>
+        <div class="control-row">
+          <label><input type="checkbox" id="toggle-water-systems" checked /> <span class="legend-circle" style="background:#0284c7;"></span>水庫・淨水・再生・海淡與水回收中心</label>
+        </div>
+        <div class="control-row">
+          <label><input type="checkbox" id="toggle-water-supply-zones" /> <span class="legend-dot" style="background:#bae6fd; border-color:#0284c7;"></span>全臺 21 處自來水供水系統轄區範圍面</label>
+        </div>
+      </div>
+
+      <div class="v102-box">
+        <div class="section-title" style="margin-top:0; color:#0f172a;" onclick="toggleSection('sec-etl')">
+          <span>📊 資源排擠與供應鏈壓力 <span class="badge badge-red" style="font-size:9px;">ETL</span></span>
+          <span>▼</span>
+        </div>
+        <div id="sec-etl">
+          <div style="margin-bottom:8px;">
+            <div style="font-size:10.5px; font-weight:700; color:#475569;">全臺電力結構 (Operational MW)</div>
+            <div id="energy-bar" class="stacked-bar"></div>
+            <div id="energy-legend" class="legend-container"></div>
+          </div>
+
+          <div style="margin-bottom:8px;">
+            <div style="font-size:10.5px; font-weight:700; color:#475569;">關鍵水資源供給結構</div>
+            <div id="water-bar" class="stacked-bar"></div>
+            <div id="water-legend" class="legend-container"></div>
+          </div>
+
+          <div>
+            <div style="font-size:10.5px; font-weight:700; color:#475569;">戰略基建互動高亮膠囊（點擊篩選）</div>
+            <div id="interactive-pills" class="pills-container"></div>
+          </div>
+
+          <div class="tracing-paper-control">
+            <label class="toggle-switch">
+              <input type="checkbox" id="budget-3d-toggle" />
+              <span class="slider"></span>
+            </label>
+            <div class="toggle-label">
+              📐 外溢預算 3D 描圖紙 <span class="badge-new">NEW</span>
+              <div class="legend-mini">
+                <span style="color:#ef4444;">■ 企業 CapEx</span>
+                <span style="color:#3b82f6;">■ 公共基建補貼</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:9px;">
+            <div style="font-size:10.5px; font-weight:700; color:#475569;">戰略走廊健康度狀態燈（點擊飛往）</div>
+            <div id="corridor-matrix" class="matrix-container"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 右側獨立面板：多源語意情報、EveryNote 分層顯隱控制與報告匯出 -->
+  <div id="panel-osint" class="panel">
+    <h3>
+      <span>📡 空間情報與外溢帳本 <span class="badge badge-red">OSINT</span></span>
+      <button class="collapse-btn" onclick="togglePanel('panel-osint', event)">收合 ▶</button>
+    </h3>
+    <div class="panel-body">
+      <div class="section-title">情報註記（Every Note）分層顯隱控制</div>
+      <div class="control-row">
+        <label><input type="checkbox" id="toggle-all-notes" checked /> <b>👁️ 顯示全部情報註記（Every Note）</b></label>
+      </div>
+      <div class="control-row">
+        <label><input type="checkbox" id="toggle-heatmap" checked /> 顯示輿情熱力暈染底層</label>
+      </div>
+
+      <hr style="border:none; border-top:1px solid #e2e8f0; margin:9px 0;" />
+
+      <div class="section-title">四維空間擠壓主題圖層（可分層隱藏／顯示）</div>
+      <div class="control-row">
+        <label><input type="checkbox" class="osint-filter" data-group="capex" checked /> <span class="legend-dot" style="background:#EF4444;"></span>水電與資本排擠 (CapEx / 搶水跳電)</label>
+      </div>
+      <div class="control-row">
+        <label><input type="checkbox" class="osint-filter" data-group="infra" checked /> <span class="legend-dot" style="background:#3B82F6;"></span>公共基建與水電承載 (再生水 / 電網)</label>
+      </div>
+      <div class="control-row">
+        <label><input type="checkbox" class="osint-filter" data-group="spillover" checked /> <span class="legend-dot" style="background:#F59E0B;"></span>城市擴張與居住空間外溢 (房價 / 交通)</label>
+      </div>
+      <div class="control-row">
+        <label><input type="checkbox" class="osint-filter" data-group="risk" checked /> <span class="legend-dot" style="background:#7C3AED;"></span>環境民生與地緣斷鏈 (美中台雙語)</label>
+      </div>
+
+      <div style="margin-top:7px;">
+        <select id="source-filter" style="width:100%; padding:6px; border-radius:6px; border:1px solid #cbd5e1; font-size:12px;">
+          <option value="ALL">全部來源（智庫 PDF + 七大美中台 RSS + 公報）</option>
+          <option value="PDF">PDF 智庫報告（CSIS / GTI）</option>
+          <option value="新聞RSS">台灣國內新聞 RSS（即時）</option>
+          <option value="政府公報">行政院政府公報（環評 / 都計 / 水權）</option>
+          <option value="國際情資(US)">國際地緣與晶片法案（US RSS）</option>
+          <option value="官方反制(CN)">中國官方與商務部反制（CN RSS）</option>
+        </select>
+      </div>
+
+      <div class="section-title"><span>情報註記清單（點擊飛往節點）</span><span>共 <b id="note-count">0</b> 筆</span></div>
+      <div id="note-list" class="note-list"></div>
+
+      <a href="/api/report?format=md" target="_blank" style="display:block; text-align:center; background:#0f172a; color:#ffffff; text-decoration:none; padding:9px; border-radius:8px; font-weight:600; font-size:12px; margin-top:10px;">
+        📄 一鍵匯出本期空間擠壓驗證報告 (.md)
+      </a>
+    </div>
+  </div>
+
+  <div id="zoom-mode" class="zoom-indicator">Zoom 7.6｜白色底圖骨幹 ＋ 全臺 20 份實測基建圖資 ＋ Every Note 總覽</div>
+
+  <!-- 底部資料來源與金額計算公式驗證列（開啟 3D 描圖紙時自動滑出） -->
+  <div id="validation-bar">
+    <div class="val-header">
+      <span>📐 外溢預算 3D 描圖紙：資料來源與公共空間擠壓驗證公式</span>
+      <span style="font-size:10.5px; color:#94a3b8;">非寫死數據 • 動態讀取 spillover-budget-ledger.json</span>
+    </div>
+    <div class="val-formula">
+      柱體高度 (m) = 核定預算金額 (億 TWD) × 2.2 ｜ 財政外部化比 = 公共基建補貼 (藍柱) ÷ 企業私人 CapEx (紅柱)
+    </div>
+    <ul class="val-list" id="val-list-content"></ul>
+  </div>
+
+  <script>
+    const map = new maplibregl.Map({
+      container: 'map',
+      style: 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json',
+      center: [120.82, 23.82],
+      zoom: 7.6,
+      minZoom: 6,
+      maxZoom: 18
+    });
+
+    map.addControl(new maplibregl.NavigationControl(), 'bottom-left');
+    map.setLight({ anchor: 'viewport', color: '#ffffff', intensity: 0.45, position: [1.5, 180, 45] });
+
+    let allOsintData = { type: 'FeatureCollection', features: [] };
+
+    function togglePanel(id, ev) {
+      if (ev) ev.stopPropagation();
+      const p = document.getElementById(id);
+      p.classList.toggle('collapsed');
+      const btn = p.querySelector('.collapse-btn');
+      if (p.classList.contains('collapsed')) {
+        btn.textContent = id === 'panel-infra' ? '▶' : '◀';
+        p.title = '點擊展開面板';
+      } else {
+        btn.textContent = id === 'panel-infra' ? '◀ 收合' : '收合 ▶';
+        p.title = '';
+      }
+    }
+    document.querySelectorAll('.panel').forEach(p => {
+      p.addEventListener('click', () => {
+        if (p.classList.contains('collapsed')) togglePanel(p.id);
+      });
+    });
+
+    function toggleSection(id) {
+      const el = document.getElementById(id);
+      if (el) el.style.display = el.style.display === 'none' ? 'block' : 'none';
+    }
+
+    function getTopicGroup(topicCategory = '') {
+      const t = topicCategory.toLowerCase();
+      if (t.includes('capex') || t.includes('resource_crowding') || t.includes('排擠')) return 'capex';
+      if (t.includes('infra_status') || t.includes('公共基建') || t.includes('承載')) return 'infra';
+      if (t.includes('spillover') || t.includes('城市擴張') || t.includes('居住')) return 'spillover';
+      return 'risk';
+    }
+
+    function createPulsingDot(rgbColor) {
+      const size = 90;
+      return {
+        width: size, height: size, data: new Uint8Array(size * size * 4),
+        onAdd() {
+          const canvas = document.createElement('canvas');
+          canvas.width = this.width; canvas.height = this.height;
+          this.context = canvas.getContext('2d');
+        },
+        render() {
+          const t = (performance.now() % 1400) / 1400;
+          const radius = (size / 2) * 0.24;
+          const outerRadius = (size / 2) * 0.76 * t + radius;
+          const ctx = this.context;
+          ctx.clearRect(0, 0, this.width, this.height);
+          ctx.beginPath(); ctx.arc(size / 2, size / 2, outerRadius, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(${rgbColor}, ${1 - t})`; ctx.fill();
+          ctx.beginPath(); ctx.arc(size / 2, size / 2, radius, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(${rgbColor}, 1)`;
+          ctx.strokeStyle = '#ffffff'; ctx.lineWidth = 2.5;
+          ctx.fill(); ctx.stroke();
+          this.data = ctx.getImageData(0, 0, this.width, this.height).data;
+          map.triggerRepaint();
+          return true;
+        }
+      };
+    }
+
+    function renderNoteList(features) {
+      const container = document.getElementById('note-list');
+      document.getElementById('note-count').textContent = features.length;
+      container.innerHTML = features.map((f, idx) => {
+        const p = f.properties || {};
+        return `
+          <div class="note-card" data-idx="${idx}">
+            <div class="note-card-title" style="border-left: 3px solid ${p.marker_hex || '#ef4444'}; padding-left: 6px;">
+              ${p.short_note || p.title}
+            </div>
+            <div class="note-card-meta">${p.target_node || '全臺'} ｜ ${p.source_type || 'OSINT'}</div>
+            ${p.ledger_axis ? `<div class="squeeze-pill">${p.ledger_axis}</div>` : ''}
+          </div>
+        `;
+      }).join('');
+
+      container.querySelectorAll('.note-card').forEach(card => {
+        card.addEventListener('click', () => {
+          const feat = features[Number(card.dataset.idx)];
+          if (!feat) return;
+          const coords = feat.geometry.coordinates;
+          map.flyTo({ center: coords, zoom: 13.8, speed: 1.2 });
+          showOsintPopup(coords, feat.properties);
+        });
+      });
+    }
+
+    function showOsintPopup(lngLat, p) {
+      new maplibregl.Popup({ maxWidth: '320px', closeButton: true })
+        .setLngLat(lngLat)
+        .setHTML(`
+          <div style="font-size:13px; line-height:1.6; color:#0f172a;">
+            <span style="background:${p.marker_hex || '#ef4444'}; color:#fff; padding:2px 7px; border-radius:4px; font-size:11px; font-weight:600;">${p.topic_category || '戰略情資'}</span>
+            <span style="background:#f1f5f9; color:#334155; padding:2px 7px; border-radius:4px; font-size:11px; margin-left:4px; border:1px solid #cbd5e1;">${p.source_type || 'OSINT'}</span>
+            <div style="font-weight:700; font-size:14px; margin:8px 0 4px;">${p.title}</div>
+            <div style="background:#f8fafc; padding:6px 8px; border-radius:6px; margin-bottom:6px; font-size:12px;">
+              <div><b>帳本歸戶：</b>${p.ledger_axis || '-'}（${p.capex_or_budget || '空間追蹤'}）</div>
+              <div><b>空間節點：</b>${p.target_node || '-'}${p.surrounding_towns ? `（${p.surrounding_towns}）` : ''}</div>
+            </div>
+            <p style="color:#334155; font-size:12px; margin:0;">${p.snippet || ''}</p>
+          </div>
+        `)
+        .addTo(map);
+    }
+
+    map.on('load', async () => {
+      // === 0. 非破壞性「描圖紙半透明遮罩層」 ===
+      map.addSource('tracing-veil-src', {
+        type: 'geojson',
+        data: { type: 'Feature', geometry: { type: 'Polygon', coordinates: [[[118, 21], [124, 21], [124, 26.5], [118, 26.5], [118, 21]]] } }
+      });
+      map.addLayer({
+        id: 'tracing-paper-veil',
+        type: 'fill',
+        source: 'tracing-veil-src',
+        layout: { visibility: 'none' },
+        paint: { 'fill-color': '#ffffff', 'fill-opacity': 0.72 }
+      });
+
+      // === 0.5 全臺 21 處自來水供水系統轄區範圍面 (taiwan-water-supply-systems.geojson) ===
+      map.addSource('water-supply-zones', { type: 'geojson', data: '/data/taiwan-water-supply-systems.geojson' });
+      map.addLayer({
+        id: 'water-supply-zones-fill',
+        type: 'fill',
+        source: 'water-supply-zones',
+        layout: { visibility: 'none' },
+        paint: { 'fill-color': '#38bdf8', 'fill-opacity': 0.14 }
+      }, 'tracing-paper-veil');
+      map.addLayer({
+        id: 'water-supply-zones-outline',
+        type: 'line',
+        source: 'water-supply-zones',
+        layout: { visibility: 'none' },
+        paint: { 'line-color': '#0284c7', 'line-width': 1.5, 'line-dasharray': [3, 2] }
+      }, 'tracing-paper-veil');
+
+      // === 1. 土地使用分區色彩分層基準（22,642 筆 2D 建物底圖） ===
+      map.addSource('buildings-2d', { type: 'geojson', data: '/data/buildings-landuse-2d.geojson' });
+      map.addLayer({
+        id: 'buildings-fill-layer',
+        type: 'fill',
+        source: 'buildings-2d',
+        minzoom: 9.5,
+        paint: {
+          'fill-color': [
+            'coalesce',
+            ['get', 'fill_hex'],
+            [
+              'match',
+              ['get', 'zone_category'],
+              '住宅區', '#FDE047',
+              '商業區', '#FCA5A5',
+              '住商混合區', '#FDBA74',
+              '工業/科技園區', '#D6B49C',
+              '文教/機關/公設', '#93C5FD',
+              '綠地/保育/農業', '#86EFAC',
+              '交通/水利用地', '#CBD5E1',
+              '#E2E8F0'
+            ]
+          ],
+          'fill-opacity': [
+            'match',
+            ['get', 'zone_category'],
+            '工業/科技園區', 0.53,
+            '商業區', 0.50,
+            '住商混合區', 0.50,
+            '文教/機關/公設', 0.50,
+            '住宅區', 0.45,
+            '交通/水利用地', 0.45,
+            '綠地/保育/農業', 0.43,
+            0.44
+          ]
+        }
+      }, 'tracing-paper-veil');
+
+      map.addLayer({
+        id: 'buildings-outline-layer',
+        type: 'line',
+        source: 'buildings-2d',
+        minzoom: 13.5,
+        paint: { 'line-color': '#64748b', 'line-width': 0.5, 'line-opacity': 0.45 }
+      }, 'tracing-paper-veil');
+
+      // === 2. 高壓輸電幹線與變電所 (1,875 段 / 791 座) ===
+      map.addSource('power-lines', { type: 'geojson', data: '/data/official-power-lines.geojson' });
+      map.addLayer({
+        id: 'power-lines-layer',
+        type: 'line',
+        source: 'power-lines',
+        filter: ['in', ['get', 'voltage_tier'], ['literal', ['345kV', '161kV']]],
+        paint: {
+          'line-color': ['match', ['get', 'voltage_tier'], '345kV', '#dc2626', '161kV', '#f59e0b', '#94a3b8'],
+          'line-width': ['match', ['get', 'voltage_tier'], '345kV', 2.2, 1.3],
+          'line-opacity': 0.72
+        }
+      }, 'tracing-paper-veil');
+
+      map.addSource('power-substations', { type: 'geojson', data: '/data/official-power-substations.geojson' });
+      map.addLayer({
+        id: 'power-substations-layer',
+        type: 'circle',
+        source: 'power-substations',
+        minzoom: 8.5,
+        filter: ['in', ['get', 'voltage_tier'], ['literal', ['345kV', '161kV']]],
+        paint: {
+          'circle-color': ['match', ['get', 'voltage_tier'], '345kV', '#b91c1c', '#d97706'],
+          'circle-radius': ['match', ['get', 'voltage_tier'], '345kV', 5.5, 3.8],
+          'circle-stroke-width': 1.2,
+          'circle-stroke-color': '#ffffff'
+        }
+      }, 'tracing-paper-veil');
+
+      // === 3. 再生能源設施（太陽能 71、風力 26、地熱 1） ===
+      map.addSource('solar-power', { type: 'geojson', data: '/data/official-solar-power.geojson' });
+      map.addSource('wind-power', { type: 'geojson', data: '/data/official-wind-power.geojson' });
+      map.addSource('geothermal-power', { type: 'geojson', data: '/data/official-geothermal-power.geojson' });
+
+      map.addLayer({
+        id: 'solar-layer',
+        type: 'circle',
+        source: 'solar-power',
+        paint: { 'circle-color': '#eab308', 'circle-radius': 4.5, 'circle-stroke-width': 1.2, 'circle-stroke-color': '#ffffff' }
+      }, 'tracing-paper-veil');
+      map.addLayer({
+        id: 'wind-layer',
+        type: 'circle',
+        source: 'wind-power',
+        paint: { 'circle-color': '#16a34a', 'circle-radius': 5.5, 'circle-stroke-width': 1.5, 'circle-stroke-color': '#ffffff' }
+      }, 'tracing-paper-veil');
+      map.addLayer({
+        id: 'geothermal-layer',
+        type: 'circle',
+        source: 'geothermal-power',
+        paint: { 'circle-color': '#ea580c', 'circle-radius': 6.5, 'circle-stroke-width': 1.5, 'circle-stroke-color': '#ffffff' }
+      }, 'tracing-paper-veil');
+
+      // === 4. 全臺國道、快速公路與省道公路網 (5,482 段) ===
+      map.addSource('highways', { type: 'geojson', data: '/data/official-highways.geojson' });
+      map.addLayer({
+        id: 'highways-layer',
+        type: 'line',
+        source: 'highways',
+        filter: ['in', ['get', 'category'], ['literal', ['freeway', 'expressway']]],
+        layout: { 'line-join': 'round', 'line-cap': 'round' },
+        paint: {
+          'line-color': ['match', ['get', 'category'], 'freeway', '#1e293b', '#475569'],
+          'line-width': ['interpolate', ['linear'], ['zoom'], 6, 1.9, 12, 3.8],
+          'line-opacity': 0.82
+        }
+      }, 'tracing-paper-veil');
+      map.addLayer({
+        id: 'provincial-highways-layer',
+        type: 'line',
+        source: 'highways',
+        minzoom: 8.5,
+        filter: ['==', ['get', 'category'], 'provincial_highway'],
+        layout: { 'line-join': 'round', 'line-cap': 'round' },
+        paint: {
+          'line-color': '#94a3b8',
+          'line-width': ['interpolate', ['linear'], ['zoom'], 8.5, 0.9, 13, 2.4],
+          'line-opacity': 0.65
+        }
+      }, 'highways-layer');
+
+      // === 5. 臺鐵全線鐵路網 (2,607 段) ===
+      map.addSource('tra-rail', { type: 'geojson', data: '/data/official-rail.geojson' });
+      map.addLayer({
+        id: 'tra-rail-layer',
+        type: 'line',
+        source: 'tra-rail',
+        filter: ['==', ['geometry-type'], 'LineString'],
+        layout: { 'visibility': 'none' },
+        paint: { 'line-color': '#475569', 'line-width': 1.6, 'line-dasharray': [2, 2], 'line-opacity': 0.78 }
+      }, 'tracing-paper-veil');
+      map.addLayer({
+        id: 'tra-stations-layer',
+        type: 'circle',
+        source: 'tra-rail',
+        minzoom: 10,
+        filter: ['==', ['geometry-type'], 'Point'],
+        layout: { 'visibility': 'none' },
+        paint: {
+          'circle-color': '#334155',
+          'circle-radius': ['interpolate', ['linear'], ['zoom'], 10, 2.5, 14, 5],
+          'circle-stroke-width': 1,
+          'circle-stroke-color': '#ffffff'
+        }
+      }, 'tracing-paper-veil');
+
+      // === 6. 台灣高鐵全線實測曲線＋12車站 ===
+      map.addSource('thsr', { type: 'geojson', data: '/data/official-thsr-complete.geojson' });
+      map.addLayer({
+        id: 'thsr-line-layer',
+        type: 'line',
+        source: 'thsr',
+        filter: ['==', ['get', 'feature_type'], 'route'],
+        layout: { 'line-join': 'round', 'line-cap': 'round' },
+        paint: {
+          'line-color': '#ea580c',
+          'line-width': ['interpolate', ['linear'], ['zoom'], 6, 3.2, 12, 5.5],
+          'line-opacity': 0.92
+        }
+      }, 'tracing-paper-veil');
+      map.addLayer({
+        id: 'thsr-stations-layer',
+        type: 'circle',
+        source: 'thsr',
+        filter: ['==', ['get', 'feature_type'], 'station'],
+        paint: {
+          'circle-color': '#ffffff',
+          'circle-radius': ['interpolate', ['linear'], ['zoom'], 6, 4.5, 12, 7.5],
+          'circle-stroke-width': 2.5,
+          'circle-stroke-color': '#ea580c'
+        }
+      }, 'tracing-paper-veil');
+
+      // === 7. 商港、工業專用港與漁港 (192 座) ===
+      map.addSource('ports', { type: 'geojson', data: '/data/official-ports.geojson' });
+      map.addLayer({
+        id: 'ports-major-layer',
+        type: 'circle',
+        source: 'ports',
+        filter: ['in', ['get', 'category'], ['literal', ['commercial_port', 'industrial_port']]],
+        paint: {
+          'circle-color': ['match', ['get', 'category'], 'commercial_port', '#0284c7', '#7c3aed'],
+          'circle-radius': 6.5,
+          'circle-stroke-width': 2,
+          'circle-stroke-color': '#ffffff'
+        }
+      }, 'tracing-paper-veil');
+      map.addLayer({
+        id: 'ports-fishing-layer',
+        type: 'circle',
+        source: 'ports',
+        filter: ['!', ['in', ['get', 'category'], ['literal', ['commercial_port', 'industrial_port']]]],
+        layout: { 'visibility': 'none' },
+        paint: { 'circle-color': '#38bdf8', 'circle-radius': 3.5, 'circle-opacity': 0.75 }
+      }, 'tracing-paper-veil');
+
+      // === 8. 離島航空站 (8) ＋ API 動態海空貨運走廊 ===
+      map.addSource('offshore-airports', { type: 'geojson', data: '/data/official-airports-offshore.geojson' });
+      map.addLayer({
+        id: 'offshore-airports-layer',
+        type: 'circle',
+        source: 'offshore-airports',
+        paint: { 'circle-color': '#0ea5e9', 'circle-radius': 5.5, 'circle-stroke-width': 1.8, 'circle-stroke-color': '#ffffff' }
+      }, 'tracing-paper-veil');
+
+      let dynamicBudgetData = { type: 'FeatureCollection', features: [] };
+
+      try {
+        const infraRes = await fetch('/api/infra-dynamic');
+        if (infraRes.ok) {
+          const infraPayload = await infraRes.json();
+          document.getElementById('api-status-box').innerHTML = '🟢 自動化交通・電力・海空運 API 已連線';
+          const m = infraPayload.metrics;
+          if (m) {
+            document.getElementById('m-renew').textContent = `${m.power_and_energy.total_renewable_mw} MW`;
+            document.getElementById('m-subs').textContent = `${m.power_and_energy.substations_total} 座`;
+            document.getElementById('m-ports').textContent = `${m.transport.commercial_ports + m.transport.industrial_ports} 處主要港`;
+          }
+          if (infraPayload.budget_pillars_geojson) {
+            dynamicBudgetData = infraPayload.budget_pillars_geojson;
+          }
+          map.addSource('air-sea-corridors', { type: 'geojson', data: infraPayload.air_and_maritime_corridors });
+          map.addLayer({
+            id: 'air-sea-lines-layer',
+            type: 'line',
+            source: 'air-sea-corridors',
+            filter: ['==', ['geometry-type'], 'LineString'],
+            paint: {
+              'line-color': ['match', ['get', 'category'], 'air_freight_line', '#0284c7', '#0d9488'],
+              'line-width': 3,
+              'line-dasharray': [2, 1.5],
+              'line-opacity': 0.9
+            }
+          }, 'tracing-paper-veil');
+          map.addLayer({
+            id: 'main-air-hubs-layer',
+            type: 'circle',
+            source: 'air-sea-corridors',
+            filter: ['==', ['geometry-type'], 'Point'],
+            paint: {
+              'circle-color': '#0369a1',
+              'circle-radius': 7,
+              'circle-stroke-width': 2,
+              'circle-stroke-color': '#ffffff'
+            }
+          }, 'tracing-paper-veil');
+        }
+      } catch (e) {
+        document.getElementById('api-status-box').innerHTML = '🟡 本地離線模式：已載入全臺實測圖資';
+      }
+
+      // === 9. 實體基礎設施圖層（水資源 140 站 + 水資源回收中心 17 站 + LNG 7 站 + 主力電廠 48 廠 + 全臺機場 21 站） ===
+      map.addSource('water-systems', { type: 'geojson', data: '/data/taiwan-master-water-systems.geojson' });
+      map.addLayer({
+        id: 'water-systems-layer',
+        type: 'circle',
+        source: 'water-systems',
+        paint: {
+          'circle-color': [
+            'match', ['get', 'category'],
+            'Reservoir', '#2563eb',
+            'Water Reclamation Plant', '#10b981',
+            'Seawater Desalination Plant', '#f59e0b',
+            '#38bdf8'
+          ],
+          'circle-radius': ['interpolate', ['linear'], ['zoom'], 6, 4.5, 13, 8],
+          'circle-stroke-width': 1.5,
+          'circle-stroke-color': '#ffffff'
+        }
+      }, 'tracing-paper-veil');
+
+      map.addSource('water-treatment', { type: 'geojson', data: '/data/taiwan-water-treatment-systems.geojson' });
+      map.addLayer({
+        id: 'water-treatment-layer',
+        type: 'circle',
+        source: 'water-treatment',
+        paint: {
+          'circle-color': '#0d9488',
+          'circle-radius': ['interpolate', ['linear'], ['zoom'], 6, 3.8, 13, 7],
+          'circle-stroke-width': 1.2,
+          'circle-stroke-color': '#ffffff'
+        }
+      }, 'tracing-paper-veil');
+
+      map.addSource('lng-terminals', { type: 'geojson', data: '/data/taiwan-lng-terminals.geojson' });
+      map.addLayer({
+        id: 'lng-terminals-layer',
+        type: 'circle',
+        source: 'lng-terminals',
+        paint: {
+          'circle-color': '#7c3aed',
+          'circle-radius': ['interpolate', ['linear'], ['zoom'], 6, 6.5, 13, 10],
+          'circle-stroke-width': 2.2,
+          'circle-stroke-color': '#ffffff'
+        }
+      }, 'tracing-paper-veil');
+
+      map.addSource('power-plants', { type: 'geojson', data: '/data/taiwan-power-plants.geojson' });
+      map.addLayer({
+        id: 'power-plants-layer',
+        type: 'circle',
+        source: 'power-plants',
+        paint: {
+          'circle-color': [
+            'match', ['get', 'fuel_type'],
+            'Coal', '#dc2626',
+            'Natural Gas', '#f59e0b',
+            'Coal / Natural Gas', '#ea580c',
+            'Nuclear', '#4f46e5',
+            '#16a34a'
+          ],
+          'circle-radius': ['interpolate', ['linear'], ['zoom'], 6, 5.5, 13, 9],
+          'circle-stroke-width': 1.8,
+          'circle-stroke-color': '#ffffff'
+        }
+      }, 'tracing-paper-veil');
+
+      map.addSource('taiwan-airports', { type: 'geojson', data: '/data/taiwan-airports.geojson' });
+      map.addLayer({
+        id: 'taiwan-airports-layer',
+        type: 'circle',
+        source: 'taiwan-airports',
+        paint: {
+          'circle-color': '#0284c7',
+          'circle-radius': ['interpolate', ['linear'], ['zoom'], 6, 5, 13, 8.5],
+          'circle-stroke-width': 1.8,
+          'circle-stroke-color': '#ffffff'
+        }
+      }, 'tracing-paper-veil');
+
+      // === 10. 3D 建物分區量體 + 外溢預算 3D 描圖紙 ===
+      map.addLayer({
+        id: 'buildings-3d-context-layer',
+        type: 'fill-extrusion',
+        source: 'buildings-2d',
+        minzoom: 9.5,
+        layout: { visibility: 'none' },
+        paint: {
+          'fill-extrusion-color': [
+            'coalesce',
+            ['get', 'fill_hex'],
+            [
+              'match', ['get', 'zone_category'],
+              '住宅區', '#FDE047',
+              '商業區', '#FCA5A5',
+              '住商混合區', '#FDBA74',
+              '工業/科技園區', '#D6B49C',
+              '文教/機關/公設', '#93C5FD',
+              '綠地/保育/農業', '#86EFAC',
+              '交通/水利用地', '#CBD5E1',
+              '#E2E8F0'
+            ]
+          ],
+          'fill-extrusion-height': [
+            'coalesce',
+            ['get', 'floors'],
+            [
+              'match', ['get', 'zone_category'],
+              '商業區', 55,
+              '工業/科技園區', 40,
+              '住商混合區', 35,
+              '住宅區', 20,
+              12
+            ]
+          ],
+          'fill-extrusion-base': 0,
+          'fill-extrusion-opacity': 0.78
+        }
+      });
+
+      map.addSource('budget-extrusion-source', { type: 'geojson', data: dynamicBudgetData });
+      map.addLayer({
+        id: 'budget-extrusion-layer',
+        type: 'fill-extrusion',
+        source: 'budget-extrusion-source',
+        layout: { visibility: 'none' },
+        paint: {
+          'fill-extrusion-color': ['match', ['get', 'type'], 'capex', '#ef4444', 'public', '#3b82f6', '#94a3b8'],
+          'fill-extrusion-height': ['coalesce', ['get', 'height'], ['*', ['get', 'amount'], 2.2]],
+          'fill-extrusion-base': 0,
+          'fill-extrusion-opacity': 0.92,
+          'fill-extrusion-vertical-gradient': true
+        }
+      });
+
+      const valListEl = document.getElementById('val-list-content');
+      const capexNodes = (dynamicBudgetData.features || []).filter(f => f.properties?.type === 'capex');
+      valListEl.innerHTML = capexNodes.map(f => {
+        const p = f.properties;
+        return `<li><b>${p.node}</b>：${p.formula_desc}（補貼/投資比 <b>${p.subsidy_ratio_pct}%</b>）｜ 擠壓實證：${p.squeeze_summary} ｜ 來源：<i>${p.source_doc}</i></li>`;
+      }).join('');
+
+      const budgetToggle = document.getElementById('budget-3d-toggle');
+      if (budgetToggle) {
+        budgetToggle.addEventListener('change', (e) => {
+          const active = e.target.checked;
+          const vis = active ? 'visible' : 'none';
+          if (map.getLayer('tracing-paper-veil')) map.setLayoutProperty('tracing-paper-veil', 'visibility', vis);
+          if (map.getLayer('budget-extrusion-layer')) map.setLayoutProperty('budget-extrusion-layer', 'visibility', vis);
+          if (map.getLayer('buildings-3d-context-layer')) map.setLayoutProperty('buildings-3d-context-layer', 'visibility', vis);
+          document.getElementById('validation-bar').classList.toggle('active', active);
+          document.getElementById('zoom-mode').style.opacity = active ? '0' : '1';
+          map.easeTo({
+            pitch: active ? 60 : 0,
+            bearing: active ? -18 : 0,
+            duration: 1400,
+            essential: true
+          });
+        });
+      }
+
+      // === 11. In-Memory ETL 堆疊長條圖、互動膠囊與戰略走廊狀態燈 ===
+      function renderStackedBar(type, mixData, config) {
+        const barEl = document.getElementById(`${type}-bar`);
+        const legEl = document.getElementById(`${type}-legend`);
+        if (!barEl || !legEl) return;
+        barEl.innerHTML = '';
+        legEl.innerHTML = '';
+        const total = Object.values(mixData).reduce((a, b) => a + b, 0);
+        if (total === 0) return;
+        for (const [key, val] of Object.entries(mixData)) {
+          if (!val || !config[key]) continue;
+          const pct = ((val / total) * 100).toFixed(1);
+          const seg = document.createElement('div');
+          seg.className = 'bar-segment';
+          seg.style.width = `${pct}%`;
+          seg.style.backgroundColor = config[key].color;
+          seg.title = `${config[key].label}: ${val} (${pct}%)`;
+          if (Number(pct) >= 12) seg.textContent = `${pct}%`;
+          barEl.appendChild(seg);
+
+          const leg = document.createElement('div');
+          leg.innerHTML = `<span style="color:${config[key].color}">■</span> ${config[key].label} ${pct}%`;
+          legEl.appendChild(leg);
+        }
+      }
+
+      function renderPills(pills) {
+        const container = document.getElementById('interactive-pills');
+        if (!container) return;
+        container.innerHTML = '';
+        let activeId = null;
+        const targetLayers = ['lng-terminals-layer', 'water-systems-layer', 'power-plants-layer', 'taiwan-airports-layer'];
+
+        pills.forEach(p => {
+          const btn = document.createElement('button');
+          btn.className = 'pill-btn';
+          btn.textContent = p.label;
+          btn.onclick = () => {
+            if (activeId === p.id) {
+              btn.classList.remove('active');
+              activeId = null;
+              targetLayers.forEach(lid => {
+                if (map.getLayer(lid)) {
+                  map.setFilter(lid, null);
+                  map.setPaintProperty(lid, 'circle-opacity', 1);
+                }
+              });
+            } else {
+              document.querySelectorAll('.pill-btn').forEach(b => b.classList.remove('active'));
+              btn.classList.add('active');
+              activeId = p.id;
+              targetLayers.forEach(lid => {
+                if (!map.getLayer(lid)) return;
+                if (lid === p.layer) {
+                  map.setFilter(lid, p.filter || null);
+                  map.setPaintProperty(lid, 'circle-opacity', 1);
+                } else {
+                  map.setPaintProperty(lid, 'circle-opacity', 0.15);
+                }
+              });
+            }
+          };
+          container.appendChild(btn);
+        });
+      }
+
+      (async () => {
+        try {
+          const r = await fetch('/api/infra-dynamic');
+          const d = r.ok ? await r.json() : null;
+          const energyMix = (d?.energyMix && (d.energyMix.coal + d.energyMix.gas + d.energyMix.green > 0))
+            ? d.energyMix
+            : { coal: 13910, gas: 16448, green: 5117, nuclear: 0 };
+          const waterMix = (d?.waterMix && (d.waterMix.reservoir + d.waterMix.reclaimed + d.waterMix.desalination > 0))
+            ? d.waterMix
+            : { reservoir: 28, reclaimed: 13, desalination: 14 };
+          const pills = d?.pills || [
+            { id: 'lng', label: 'LNG接收站: 7座', layer: 'lng-terminals-layer', filter: null },
+            { id: 'water_reclaimed', label: '再生水廠: 13座', layer: 'water-systems-layer', filter: ['==', ['get', 'category'], 'Water Reclamation Plant'] },
+            { id: 'water_desal', label: '海淡廠: 14座', layer: 'water-systems-layer', filter: ['==', ['get', 'category'], 'Seawater Desalination Plant'] },
+            { id: 'power_gas', label: '燃氣電廠', layer: 'power-plants-layer', filter: ['in', 'Gas', ['get', 'fuel_type']] },
+            { id: 'power_coal', label: '燃煤電廠', layer: 'power-plants-layer', filter: ['in', 'Coal', ['get', 'fuel_type']] }
+          ];
+          renderStackedBar('energy', energyMix, {
+            coal: { color: '#dc2626', label: '燃煤' },
+            gas: { color: '#f59e0b', label: '燃氣' },
+            green: { color: '#16a34a', label: '綠能' },
+            nuclear: { color: '#4f46e5', label: '核能' }
+          });
+          renderStackedBar('water', waterMix, {
+            reservoir: { color: '#2563eb', label: '水庫' },
+            reclaimed: { color: '#10b981', label: '再生水' },
+            desalination: { color: '#f59e0b', label: '海淡廠' }
+          });
+          renderPills(pills);
+        } catch (err) {
+          console.warn('ETL fallback:', err);
+        }
+      })();
+
+      // 戰略走廊健康度狀態燈 & 國際海空運航線 (104 features)
+      (async () => {
+        try {
+          const routeRes = await fetch('/data/taiwan-air-ocean-freight-routes.geojson');
+          if (!routeRes.ok) return;
+          const routesData = await routeRes.json();
+          map.addSource('freight-routes-v102', { type: 'geojson', data: routesData });
+          map.addLayer({
+            id: 'freight-routes-v102-layer',
+            type: 'line',
+            source: 'freight-routes-v102',
+            layout: { 'line-join': 'round', 'line-cap': 'round' },
+            paint: {
+              'line-color': ['match', ['get', 'mode'], 'Air Freight', '#0284c7', 'Ocean Freight', '#0d9488', '#64748b'],
+              'line-width': 2.2,
+              'line-opacity': 0.35,
+              'line-dasharray': ['match', ['get', 'mode'], 'Air Freight', [2, 2], ['literal', [1]]]
+            }
+          }, 'tracing-paper-veil');
+
+          const riskMap = {
+            'AIR-INT-01': { status: 'green', msg: '暢通' },
+            'SEA-INT-01': { status: 'yellow', msg: '壅塞警戒' },
+            'SEA-INT-03': { status: 'red', msg: '斷鏈高風險' },
+            'MULTI-SEA-AIR-01': { status: 'green', msg: '海空聯運正常' }
+          };
+
+          const matrixEl = document.getElementById('corridor-matrix');
+          const keyRoutes = (routesData.features || []).filter(f => riskMap[f.properties?.route_id]);
+          keyRoutes.forEach(rt => {
+            const p = rt.properties;
+            const rk = riskMap[p.route_id];
+            const card = document.createElement('div');
+            card.className = `corridor-item status-${rk.status}`;
+            card.innerHTML = `
+              <div class="corridor-info">
+                <div class="corridor-name">${p.chinese_name || p.name}</div>
+                <div class="corridor-cargo">${p.mode}｜${p.cargo_profile}</div>
+              </div>
+              <div class="status-indicator"><div class="status-dot"></div><span>${rk.msg}</span></div>
+            `;
+            card.onclick = () => {
+              map.setPaintProperty('freight-routes-v102-layer', 'line-opacity', ['case', ['==', ['get', 'route_id'], p.route_id], 0.95, 0.12]);
+              map.setPaintProperty('freight-routes-v102-layer', 'line-width', ['case', ['==', ['get', 'route_id'], p.route_id], 4.5, 1.5]);
+              const c0 = rt.geometry?.coordinates?.[0];
+              if (Array.isArray(c0) && typeof c0[0] === 'number') {
+                map.flyTo({ center: c0, zoom: 5.5, pitch: 40, speed: 1.2 });
+              }
+            };
+            matrixEl.appendChild(card);
+          });
+        } catch (err) {
+          console.warn('Corridor routes load warning:', err);
+        }
+      })();
+
+      // === 12. 陸海空即時動態 API 與 WebGL 呼吸閃光節點 (Pulsing Dots) ===
+      map.addImage('pulse-land', createPulsingDot('234, 88, 12'), { pixelRatio: 2 });
+      map.addImage('pulse-air', createPulsingDot('2, 132, 199'), { pixelRatio: 2 });
+      map.addImage('pulse-sea', createPulsingDot('13, 148, 136'), { pixelRatio: 2 });
+
+      map.addSource('traffic-live-src', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
+      map.addLayer({
+        id: 'traffic-pulsing-layer',
+        type: 'symbol',
+        source: 'traffic-live-src',
+        layout: {
+          'icon-image': ['match', ['get', 'mode'], 'land', 'pulse-land', 'air', 'pulse-air', 'pulse-sea'],
+          'icon-allow-overlap': true
+        }
+      });
+
+      async function refreshTrafficLive() {
+        if (!document.getElementById('toggle-pulsing-dots').checked) return;
+        try {
+          const r = await fetch('/api/traffic-live');
+          if (r.ok) {
+            const payload = await r.json();
+            map.getSource('traffic-live-src').setData(payload.geojson);
+            if (payload.summary) {
+              document.getElementById('badge-land').textContent = `🟢 TDX • ${payload.summary.land_active}節點`;
+              document.getElementById('badge-air').textContent = `🟢 ADS-B • ${payload.summary.air_active}班`;
+              document.getElementById('badge-sea').textContent = `🟡 AIS • ${payload.summary.sea_active}輪`;
+            }
+          }
+        } catch (e) {}
+      }
+      refreshTrafficLive();
+      setInterval(refreshTrafficLive, 15000);
+
+      // === 13. 多源語意情報與「Every Note 全註記分層顯隱」系統 ===
+      try {
+        const liveRes = await fetch('/api/osint-live');
+        if (liveRes.ok) {
+          allOsintData = await liveRes.json();
+        } else {
+          const staticRes = await fetch('/data/osint-intelligence.geojson');
+          allOsintData = await staticRes.json();
+        }
+      } catch (e) {
+        const staticRes = await fetch('/data/osint-intelligence.geojson');
+        allOsintData = await staticRes.json();
+      }
+
+      map.addSource('osint-events', { type: 'geojson', data: allOsintData });
+      renderNoteList(allOsintData.features || []);
+
+      map.addLayer({
+        id: 'osint-heatmap-layer',
+        type: 'heatmap',
+        source: 'osint-events',
+        maxzoom: 11.5,
+        paint: {
+          'heatmap-weight': ['coalesce', ['get', 'heat_weight'], 1],
+          'heatmap-intensity': ['interpolate', ['linear'], ['zoom'], 6, 0.65, 11, 1.3],
+          'heatmap-radius': ['interpolate', ['linear'], ['zoom'], 6, 22, 11, 36],
+          'heatmap-opacity': 0.55
+        }
+      });
+
+      map.addLayer({
+        id: 'osint-pins-layer',
+        type: 'circle',
+        source: 'osint-events',
+        paint: {
+          'circle-color': ['coalesce', ['get', 'marker_hex'], '#ef4444'],
+          'circle-radius': ['interpolate', ['linear'], ['zoom'], 6, 6.5, 13, 9],
+          'circle-stroke-width': 2.2,
+          'circle-stroke-color': '#ffffff'
+        }
+      });
+
+      map.addLayer({
+        id: 'osint-notes-label-layer',
+        type: 'symbol',
+        source: 'osint-events',
+        layout: {
+          'text-field': [
+            'step',
+            ['zoom'],
+            ['coalesce', ['get', 'short_note'], ['get', 'title']],
+            12,
+            ['concat', ['coalesce', ['get', 'target_node'], ''], '\n', ['get', 'title']]
+          ],
+          'text-size': ['interpolate', ['linear'], ['zoom'], 6, 11.5, 13, 13],
+          'text-anchor': 'left',
+          'text-offset': [0.9, 0],
+          'text-max-width': 18,
+          'text-allow-overlap': true
+        },
+        paint: {
+          'text-color': '#0f172a',
+          'text-halo-color': 'rgba(255, 255, 255, 0.95)',
+          'text-halo-width': 2.2
+        }
+      });
+
+      // === 14. 縮放狀態列 ＋ Zoom >= 13.5 自動傾斜 60° 檢視 3D 建築量體 ===
+      let auto3dActive = false;
+      map.on('zoom', () => {
+        const z = map.getZoom();
+        const zStr = z.toFixed(1);
+        const label = z < 9.5 ? '全島戰略視角：高鐵國道電網 ＋ Every Note 註記總覽'
+                    : z < 13.5 ? '區域走廊視角：低飽和都計分區（45%）＋ 變電所與海空走廊'
+                    : '街區微觀視角（60° 3D 量體）：單棟建物分區 ＋ 空間擠壓情報';
+        document.getElementById('zoom-mode').textContent = `Zoom ${zStr}｜${label}`;
+
+        if (z >= 13.5 && !auto3dActive) {
+          auto3dActive = true;
+          if (map.getLayer('buildings-3d-context-layer')) map.setLayoutProperty('buildings-3d-context-layer', 'visibility', 'visible');
+          if (map.getPitch() < 35) map.easeTo({ pitch: 60, duration: 900 });
+        } else if (z < 13.0 && auto3dActive) {
+          auto3dActive = false;
+          if (!document.getElementById('budget-3d-toggle').checked) {
+            if (map.getLayer('buildings-3d-context-layer')) map.setLayoutProperty('buildings-3d-context-layer', 'visibility', 'none');
+            map.easeTo({ pitch: 0, duration: 800 });
+          }
+        }
+      });
+
+      // === 15. 所有圖層獨立開關綁定 ===
+      const bindToggle = (id, layerIds) => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        el.addEventListener('change', (e) => {
+          const vis = e.target.checked ? 'visible' : 'none';
+          layerIds.forEach(lid => { if (map.getLayer(lid)) map.setLayoutProperty(lid, 'visibility', vis); });
+        });
+      };
+
+      bindToggle('toggle-buildings', ['buildings-fill-layer', 'buildings-outline-layer']);
+      bindToggle('toggle-thsr', ['thsr-line-layer', 'thsr-stations-layer']);
+      bindToggle('toggle-highways', ['highways-layer', 'provincial-highways-layer']);
+      bindToggle('toggle-tra', ['tra-rail-layer', 'tra-stations-layer']);
+      bindToggle('toggle-ports', ['ports-major-layer']);
+      bindToggle('toggle-fishing-ports', ['ports-fishing-layer']);
+      bindToggle('toggle-power-grid', ['power-lines-layer', 'power-substations-layer']);
+      bindToggle('toggle-renewables', ['solar-layer', 'wind-layer', 'geothermal-layer']);
+      bindToggle('toggle-power-plants', ['power-plants-layer']);
+      bindToggle('toggle-lng', ['lng-terminals-layer']);
+      bindToggle('toggle-water-systems', ['water-systems-layer', 'water-treatment-layer']);
+      bindToggle('toggle-water-supply-zones', ['water-supply-zones-fill', 'water-supply-zones-outline']);
+      bindToggle('toggle-air-sea-corridors', ['air-sea-lines-layer', 'main-air-hubs-layer', 'offshore-airports-layer', 'taiwan-airports-layer', 'freight-routes-v102-layer']);
+      bindToggle('toggle-pulsing-dots', ['traffic-pulsing-layer']);
+      bindToggle('toggle-all-notes', ['osint-notes-label-layer']);
+      bindToggle('toggle-heatmap', ['osint-heatmap-layer']);
+
+      // === 16. 四維空間擠壓 OSINT 過濾 ===
+      function updateOsintFilters() {
+        const activeGroups = Array.from(document.querySelectorAll('.osint-filter:checked')).map(el => el.dataset.group);
+        const srcVal = document.getElementById('source-filter').value;
+
+        const filteredList = (allOsintData.features || []).filter(f => {
+          const p = f.properties || {};
+          const grp = getTopicGroup(p.topic_category);
+          const matchTopic = activeGroups.includes(grp);
+          const matchSrc = srcVal === 'ALL' || (p.source_type || '').includes(srcVal);
+          return matchTopic && matchSrc;
+        });
+
+        const filteredFC = { type: 'FeatureCollection', features: filteredList };
+        if (map.getSource('osint-events')) {
+          map.getSource('osint-events').setData(filteredFC);
+        }
+        renderNoteList(filteredList);
+      }
+
+      document.querySelectorAll('.osint-filter').forEach(cb => cb.addEventListener('change', updateOsintFilters));
+      document.getElementById('source-filter').addEventListener('change', updateOsintFilters);
+
+      // === 17. 全地圖重要節點即時點擊資訊卡 (Popup) ===
+      ['osint-pins-layer', 'osint-notes-label-layer'].forEach(lid => {
+        map.on('click', lid, (e) => showOsintPopup(e.features[0].geometry.coordinates, e.features[0].properties));
+        map.on('mouseenter', lid, () => map.getCanvas().style.cursor = 'pointer');
+        map.on('mouseleave', lid, () => map.getCanvas().style.cursor = '');
+      });
+
+      map.on('click', 'traffic-pulsing-layer', (e) => {
+        const p = e.features[0].properties;
+        new maplibregl.Popup({ maxWidth: '280px' })
+          .setLngLat(e.lngLat)
+          .setHTML(`
+            <div style="font-size:12.5px; line-height:1.55;">
+              <span style="background:#0284c7; color:#fff; padding:2px 6px; border-radius:4px; font-size:10.5px;">✨ ${p.category}</span>
+              <div style="font-weight:700; margin-top:4px;">${p.title}</div>
+              <div><b>即時狀態：</b>${p.status}</div>
+              <div style="color:#475569; font-size:11.5px; margin-top:2px;">${p.detail}</div>
+              <div style="color:#64748b; font-size:10.5px; margin-top:4px;">遙測來源：${p.source}</div>
+            </div>
+          `)
+          .addTo(map);
+      });
+      map.on('mouseenter', 'traffic-pulsing-layer', () => map.getCanvas().style.cursor = 'pointer');
+      map.on('mouseleave', 'traffic-pulsing-layer', () => map.getCanvas().style.cursor = '');
+
+      map.on('click', 'budget-extrusion-layer', (e) => {
+        const p = e.features[0].properties;
+        const isCapex = p.type === 'capex';
+        new maplibregl.Popup({ maxWidth: '310px' })
+          .setLngLat(e.lngLat)
+          .setHTML(`
+            <div style="font-size:12.5px; line-height:1.6;">
+              <span style="background:${isCapex ? '#ef4444' : '#3b82f6'}; color:#fff; padding:2px 7px; border-radius:4px; font-size:11px; font-weight:700;">
+                ${isCapex ? '🔴 企業私人資本支出 (CapEx)' : '🔵 公共財政基建補貼'}
+              </span>
+              <div style="font-weight:700; font-size:14px; margin:6px 0 4px;">${p.node}</div>
+              <div><b>單柱金額：</b>${p.amount} 億 TWD（高度 ${(Number(p.amount) * 2.2).toFixed(0)} m）</div>
+              <div><b>財政外部化比：</b>公共補貼 ${p.subsidy_billion} 億 ÷ 私人 CapEx ${p.capex_billion} 億 = <b>${p.subsidy_ratio_pct}%</b></div>
+              <div style="background:#fef2f2; border-left:3px solid #ef4444; padding:5px 7px; margin-top:6px; font-size:11.5px; color:#7f1d1d;">
+                <b>公共空間與資源擠壓實證：</b><br/>${p.squeeze_summary}
+              </div>
+              <div style="color:#64748b; font-size:11px; margin-top:5px;"><b>文獻溯源：</b>${p.source_doc}</div>
+            </div>
+          `)
+          .addTo(map);
+      });
+      map.on('mouseenter', 'budget-extrusion-layer', () => map.getCanvas().style.cursor = 'pointer');
+      map.on('mouseleave', 'budget-extrusion-layer', () => map.getCanvas().style.cursor = '');
+
+      const genericPopupLayers = [
+        'thsr-stations-layer', 'tra-stations-layer', 'highways-layer', 'provincial-highways-layer',
+        'ports-major-layer', 'ports-fishing-layer',
+        'power-substations-layer', 'solar-layer', 'wind-layer', 'geothermal-layer',
+        'main-air-hubs-layer', 'offshore-airports-layer', 'air-sea-lines-layer',
+        'water-systems-layer', 'water-treatment-layer', 'lng-terminals-layer', 'power-plants-layer', 'taiwan-airports-layer'
+      ];
+      genericPopupLayers.forEach(lid => {
+        map.on('click', lid, (e) => {
+          const p = e.features[0].properties;
+          const title = p.chinese_name || p.name_zh || p.name || p.station_name || p.road_num || '基礎設施節點';
+          const sub = p.terminal_number || p.voltage_label || p.energy_label || p.fuel_type || p.sub_category || p.category || p.type || '';
+          const detail = [
+            p.road_num, p.county, p.bridge_tunnel, p.capacity_or_output,
+            (p.design_capacity_cmd ? `設計處理量：${Number(p.design_capacity_cmd).toLocaleString()} CMD` : ''),
+            p.cargo_profile, p.status, p.address, p.location, p.cargo,
+            (p.capacity_mw ? `裝置容量：${p.capacity_mw} MW` : '')
+          ].filter(Boolean).join(' ｜ ');
+          new maplibregl.Popup({ maxWidth: '290px' })
+            .setLngLat(e.lngLat)
+            .setHTML(`
+              <div style="font-size:13px; line-height:1.55;">
+                ${sub ? `<span style="background:#0284c7; color:#fff; padding:2px 6px; border-radius:4px; font-size:11px;">${sub}</span>` : ''}
+                <div style="font-weight:700; margin-top:4px;">${title}</div>
+                ${p.operator ? `<div><b>營運單位：</b>${p.operator}</div>` : ''}
+                ${p.capacity_mw ? `<div><b>裝置容量：</b>${p.capacity_mw} MW</div>` : ''}
+                ${detail ? `<div style="color:#475569; font-size:12px; margin-top:2px;">${detail}</div>` : ''}
+              </div>
+            `)
+            .addTo(map);
+        });
+        map.on('mouseenter', lid, () => map.getCanvas().style.cursor = 'pointer');
+        map.on('mouseleave', lid, () => map.getCanvas().style.cursor = '');
+      });
+
+      map.on('click', 'water-supply-zones-fill', (e) => {
+        const p = e.features[0].properties;
+        new maplibregl.Popup({ maxWidth: '300px' })
+          .setLngLat(e.lngLat)
+          .setHTML(`
+            <div style="font-size:12.5px; line-height:1.55;">
+              <span style="background:#0284c7; color:#fff; padding:2px 6px; border-radius:4px; font-size:10.5px;">自來水供水系統轄區</span>
+              <div style="font-weight:700; font-size:14px; margin-top:4px;">${p.chinese_name || p.name}</div>
+              <div><b>營運單位：</b>${p.operator || '-'}</div>
+              ${p.daily_capacity_cmd ? `<div><b>每日供水能力：</b>${Number(p.daily_capacity_cmd).toLocaleString()} CMD</div>` : ''}
+              ${p.service_areas ? `<div style="color:#475569; font-size:11.5px; margin-top:3px;"><b>供水轄區：</b>${p.service_areas}</div>` : ''}
+            </div>
+          `)
+          .addTo(map);
+      });
+
+      ['buildings-fill-layer', 'buildings-3d-context-layer'].forEach(lid => {
+        map.on('click', lid, (e) => {
+          const p = e.features[0].properties;
+          new maplibregl.Popup({ maxWidth: '280px' })
+            .setLngLat(e.lngLat)
+            .setHTML(`
+              <div style="font-size:13px; line-height:1.6;">
+                <div style="font-weight:700; border-bottom:1px solid #e2e8f0; padding-bottom:4px; margin-bottom:4px;">
+                  ${p.name || '未命名建築物'}
+                </div>
+                <div><b>使用分區：</b>${p.zone_category || '-'}${p.zone_raw ? `（${p.zone_raw}）` : ''}</div>
+                ${p.important_node ? `<div><b>戰略節點：</b>${p.important_node} ${p.node_type ? `[${p.node_type}]` : ''}</div>` : ''}
+                ${p.surrounding_towns ? `<div><b>周邊城鎮：</b>${p.surrounding_towns}</div>` : ''}
+              </div>
+            `)
+            .addTo(map);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

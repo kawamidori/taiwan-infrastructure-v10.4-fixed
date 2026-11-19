@@ -1,0 +1,1468 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Feitsui Reservoir",
+        "chinese_name": "翡翠水庫",
+        "category": "Reservoir",
+        "status": "Operational",
+        "capacity_or_output": "335.5 million m3 (effective storage)",
+        "operator": "Taipei Feitsui Reservoir Administration",
+        "location": "Shiding District, New Taipei City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5808,
+          24.9089
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Shihmen Reservoir",
+        "chinese_name": "石門水庫",
+        "category": "Reservoir",
+        "status": "Operational",
+        "capacity_or_output": "205.26 million m3 (effective storage)",
+        "operator": "Northern Region Water Resources Branch, WRA",
+        "location": "Daxi / Longtan / Fuxing, Taoyuan City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.2467,
+          24.8117
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Xinshan Reservoir",
+        "chinese_name": "新山水庫",
+        "category": "Reservoir",
+        "status": "Operational",
+        "capacity_or_output": "10.02 million m3 (effective storage)",
+        "operator": "Taiwan Water Corporation",
+        "location": "Anle District, Keelung City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.7161,
+          25.1286
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Baoshan Reservoir",
+        "chinese_name": "寶山水庫",
+        "category": "Reservoir",
+        "status": "Operational",
+        "capacity_or_output": "5.03 million m3 (effective storage)",
+        "operator": "Taiwan Water Corporation",
+        "location": "Baoshan Township, Hsinchu County"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.0369,
+          24.7564
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Baoshan Second Reservoir",
+        "chinese_name": "寶山第二水庫",
+        "category": "Reservoir",
+        "status": "Operational",
+        "capacity_or_output": "31.47 million m3 (effective storage)",
+        "operator": "Northern Region Water Resources Branch, WRA",
+        "location": "Baoshan Township, Hsinchu County"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.0442,
+          24.7269
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Yongheshan Reservoir",
+        "chinese_name": "永和山水庫",
+        "category": "Reservoir",
+        "status": "Operational",
+        "capacity_or_output": "29.93 million m3 (effective storage)",
+        "operator": "Taiwan Water Corporation",
+        "location": "Sanwan / Toufen, Miaoli County"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.9231,
+          24.6611
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mingde Reservoir",
+        "chinese_name": "明德水庫",
+        "category": "Reservoir",
+        "status": "Operational",
+        "capacity_or_output": "12.39 million m3 (effective storage)",
+        "operator": "Irrigation Agency, MOA",
+        "location": "Touwu Township, Miaoli County"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.8925,
+          24.5858
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Liyutan Reservoir",
+        "chinese_name": "鯉魚潭水庫",
+        "category": "Reservoir",
+        "status": "Operational",
+        "capacity_or_output": "115.56 million m3 (effective storage)",
+        "operator": "Central Region Water Resources Branch, WRA",
+        "location": "Sanyi / Zhuolan, Miaoli County"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.7831,
+          24.3414
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Deji Reservoir",
+        "chinese_name": "德基水庫",
+        "category": "Reservoir",
+        "status": "Operational",
+        "capacity_or_output": "186.42 million m3 (effective storage)",
+        "operator": "Taiwan Power Company",
+        "location": "Heping District, Taichung City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.1619,
+          24.2544
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sun Moon Lake Reservoir",
+        "chinese_name": "日月潭水庫",
+        "category": "Reservoir",
+        "status": "Operational",
+        "capacity_or_output": "128.45 million m3 (effective storage)",
+        "operator": "Taiwan Power Company",
+        "location": "Yuchi Township, Nantou County"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.9158,
+          23.8583
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wushe Reservoir",
+        "chinese_name": "霧社水庫",
+        "category": "Reservoir",
+        "status": "Operational",
+        "capacity_or_output": "37.45 million m3 (effective storage)",
+        "operator": "Taiwan Power Company",
+        "location": "Ren'ai Township, Nantou County"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.1353,
+          23.9794
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hushan Reservoir",
+        "chinese_name": "湖山水庫",
+        "category": "Reservoir",
+        "status": "Operational",
+        "capacity_or_output": "50.85 million m3 (effective storage)",
+        "operator": "Central Region Water Resources Branch, WRA",
+        "location": "Douliu / Gukeng, Yunlin County"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.6258,
+          23.6797
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Renyitan Reservoir",
+        "chinese_name": "仁義潭水庫",
+        "category": "Reservoir",
+        "status": "Operational",
+        "capacity_or_output": "24.80 million m3 (effective storage)",
+        "operator": "Taiwan Water Corporation",
+        "location": "Fanlu Township, Chiayi County"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.5117,
+          23.4658
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lantan Reservoir",
+        "chinese_name": "蘭潭水庫",
+        "category": "Reservoir",
+        "status": "Operational",
+        "capacity_or_output": "9.24 million m3 (effective storage)",
+        "operator": "Taiwan Water Corporation",
+        "location": "East District, Chiayi City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.4839,
+          23.4689
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Zengwen Reservoir",
+        "chinese_name": "曾文水庫",
+        "category": "Reservoir",
+        "status": "Operational",
+        "capacity_or_output": "506.85 million m3 (effective storage)",
+        "operator": "Southern Region Water Resources Branch, WRA",
+        "location": "Dapu Township, Chiayi County / Nanxi, Tainan City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.5364,
+          23.2492
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wushantou Reservoir",
+        "chinese_name": "烏山頭水庫",
+        "category": "Reservoir",
+        "status": "Operational",
+        "capacity_or_output": "78.58 million m3 (effective storage)",
+        "operator": "Irrigation Agency, MOA",
+        "location": "Guantian District, Tainan City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.3683,
+          23.2044
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Baihe Reservoir",
+        "chinese_name": "白河水庫",
+        "category": "Reservoir",
+        "status": "Operational",
+        "capacity_or_output": "13.87 million m3 (effective storage)",
+        "operator": "Irrigation Agency, MOA",
+        "location": "Baihe District, Tainan City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.4789,
+          23.3519
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nanhua Reservoir",
+        "chinese_name": "南化水庫",
+        "category": "Reservoir",
+        "status": "Operational",
+        "capacity_or_output": "89.49 million m3 (effective storage)",
+        "operator": "Taiwan Water Corporation",
+        "location": "Nanhua District, Tainan City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.5336,
+          23.0914
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Agongdian Reservoir",
+        "chinese_name": "阿公店水庫",
+        "category": "Reservoir",
+        "status": "Operational",
+        "capacity_or_output": "15.20 million m3 (effective storage)",
+        "operator": "Southern Region Water Resources Branch, WRA",
+        "location": "Yanchao District, Kaohsiung City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.3622,
+          22.8153
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Chengqing Lake Reservoir",
+        "chinese_name": "澄清湖水庫",
+        "category": "Reservoir",
+        "status": "Operational",
+        "capacity_or_output": "2.63 million m3 (effective storage)",
+        "operator": "Taiwan Water Corporation",
+        "location": "Niaosong District, Kaohsiung City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.3514,
+          22.6589
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fengshan Reservoir",
+        "chinese_name": "鳳山水庫",
+        "category": "Reservoir",
+        "status": "Operational",
+        "capacity_or_output": "7.28 million m3 (effective storage)",
+        "operator": "Taiwan Water Corporation",
+        "location": "Xiaogang / Linyuan, Kaohsiung City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.3917,
+          22.5367
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mudan Reservoir",
+        "chinese_name": "牡丹水庫",
+        "category": "Reservoir",
+        "status": "Operational",
+        "capacity_or_output": "26.53 million m3 (effective storage)",
+        "operator": "Southern Region Water Resources Branch, WRA",
+        "location": "Mudan Township, Pingtung County"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.785,
+          22.1336
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Chenggong Reservoir",
+        "chinese_name": "成功水庫",
+        "category": "Reservoir",
+        "status": "Operational",
+        "capacity_or_output": "1.21 million m3 (effective storage)",
+        "operator": "Taiwan Water Corporation",
+        "location": "Huxi Township, Penghu County"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.6203,
+          23.5681
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Zhitan Water Purification Plant",
+        "chinese_name": "直潭淨水場",
+        "category": "Water Treatment Plant (WTP)",
+        "status": "Operational",
+        "capacity_or_output": "2,700,000 CMD (largest in Taiwan)",
+        "operator": "Taipei Water Department",
+        "location": "Xindian District, New Taipei City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5397,
+          24.9389
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Changxing Water Purification Plant",
+        "chinese_name": "長興淨水場",
+        "category": "Water Treatment Plant (WTP)",
+        "status": "Operational",
+        "capacity_or_output": "540,000 CMD",
+        "operator": "Taipei Water Department",
+        "location": "Da'an District, Taipei City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5478,
+          25.0169
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gongguan Water Purification Plant",
+        "chinese_name": "公館淨水場",
+        "category": "Water Treatment Plant (WTP)",
+        "status": "Operational",
+        "capacity_or_output": "320,000 CMD",
+        "operator": "Taipei Water Department",
+        "location": "Zhongzheng District, Taipei City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5297,
+          25.0125
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Banxin Water Treatment Plant",
+        "chinese_name": "板新給水廠",
+        "category": "Water Treatment Plant (WTP)",
+        "status": "Operational",
+        "capacity_or_output": "1,100,000 CMD",
+        "operator": "Taiwan Water Corporation",
+        "location": "Sanxia District, New Taipei City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3853,
+          24.9408
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Xinshan Water Treatment Plant",
+        "chinese_name": "新山淨水場",
+        "category": "Water Treatment Plant (WTP)",
+        "status": "Operational",
+        "capacity_or_output": "180,000 CMD",
+        "operator": "Taiwan Water Corporation",
+        "location": "Anle District, Keelung City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.7186,
+          25.1344
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pingzhen Water Treatment Plant",
+        "chinese_name": "平鎮給水廠",
+        "category": "Water Treatment Plant (WTP)",
+        "status": "Operational",
+        "capacity_or_output": "600,000 CMD",
+        "operator": "Taiwan Water Corporation",
+        "location": "Pingzhen District, Taoyuan City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.2131,
+          24.9169
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Danan Water Treatment Plant",
+        "chinese_name": "大湳給水廠",
+        "category": "Water Treatment Plant (WTP)",
+        "status": "Operational",
+        "capacity_or_output": "450,000 CMD",
+        "operator": "Taiwan Water Corporation",
+        "location": "Bade District, Taoyuan City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3094,
+          24.9547
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Longtan Water Treatment Plant",
+        "chinese_name": "龍潭淨水場",
+        "category": "Water Treatment Plant (WTP)",
+        "status": "Operational",
+        "capacity_or_output": "200,000 CMD",
+        "operator": "Taiwan Water Corporation",
+        "location": "Longtan District, Taoyuan City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.2356,
+          24.8322
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hsinchu Second Water Treatment Plant",
+        "chinese_name": "新竹第二淨水場",
+        "category": "Water Treatment Plant (WTP)",
+        "status": "Operational",
+        "capacity_or_output": "250,000 CMD",
+        "operator": "Taiwan Water Corporation",
+        "location": "East District, Hsinchu City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.9942,
+          24.7931
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Baoshan Water Treatment Plant",
+        "chinese_name": "寶山淨水場",
+        "category": "Water Treatment Plant (WTP)",
+        "status": "Operational",
+        "capacity_or_output": "240,000 CMD",
+        "operator": "Taiwan Water Corporation",
+        "location": "Baoshan Township, Hsinchu County"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.0289,
+          24.7547
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dongxing Water Treatment Plant",
+        "chinese_name": "東興淨水場",
+        "category": "Water Treatment Plant (WTP)",
+        "status": "Operational",
+        "capacity_or_output": "230,000 CMD",
+        "operator": "Taiwan Water Corporation",
+        "location": "Toufen City, Miaoli County"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.9164,
+          24.6753
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fengyuan Water Treatment Plant",
+        "chinese_name": "豐原給水廠",
+        "category": "Water Treatment Plant (WTP)",
+        "status": "Operational",
+        "capacity_or_output": "750,000 CMD",
+        "operator": "Taiwan Water Corporation",
+        "location": "Fengyuan District, Taichung City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.7444,
+          24.2681
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Liyutan Water Treatment Plant",
+        "chinese_name": "鯉魚潭淨水場",
+        "category": "Water Treatment Plant (WTP)",
+        "status": "Operational",
+        "capacity_or_output": "700,000 CMD",
+        "operator": "Taiwan Water Corporation",
+        "location": "Houli District, Taichung City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.7589,
+          24.3247
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Linnei Water Treatment Plant",
+        "chinese_name": "林內淨水場",
+        "category": "Water Treatment Plant (WTP)",
+        "status": "Operational",
+        "capacity_or_output": "250,000 CMD",
+        "operator": "Taiwan Water Corporation",
+        "location": "Linnei Township, Yunlin County"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.6186,
+          23.7664
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hushan Water Treatment Plant",
+        "chinese_name": "湖山淨水場",
+        "category": "Water Treatment Plant (WTP)",
+        "status": "Operational",
+        "capacity_or_output": "200,000 CMD",
+        "operator": "Taiwan Water Corporation",
+        "location": "Douliu City, Yunlin County"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.6131,
+          23.6928
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gongyuan Water Treatment Plant",
+        "chinese_name": "公園淨水場",
+        "category": "Water Treatment Plant (WTP)",
+        "status": "Operational",
+        "capacity_or_output": "180,000 CMD",
+        "operator": "Taiwan Water Corporation",
+        "location": "East District, Chiayi City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.4675,
+          23.4839
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tanding Water Treatment Plant",
+        "chinese_name": "潭頂淨水場",
+        "category": "Water Treatment Plant (WTP)",
+        "status": "Operational",
+        "capacity_or_output": "320,000 CMD",
+        "operator": "Taiwan Water Corporation",
+        "location": "Xinshi District, Tainan City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.3119,
+          23.0642
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nanhua Water Treatment Plant",
+        "chinese_name": "南化淨水場",
+        "category": "Water Treatment Plant (WTP)",
+        "status": "Operational",
+        "capacity_or_output": "550,000 CMD",
+        "operator": "Taiwan Water Corporation",
+        "location": "Nanhua District, Tainan City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.5186,
+          23.0761
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wushantou Water Treatment Plant",
+        "chinese_name": "烏山頭淨水場",
+        "category": "Water Treatment Plant (WTP)",
+        "status": "Operational",
+        "capacity_or_output": "280,000 CMD",
+        "operator": "Taiwan Water Corporation",
+        "location": "Guantian District, Tainan City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.3611,
+          23.1997
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Chengqing Lake Water Treatment Plant",
+        "chinese_name": "澄清湖高級淨水場",
+        "category": "Water Treatment Plant (WTP)",
+        "status": "Operational",
+        "capacity_or_output": "450,000 CMD",
+        "operator": "Taiwan Water Corporation",
+        "location": "Niaosong District, Kaohsiung City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.3489,
+          22.6625
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pingding Water Treatment Plant",
+        "chinese_name": "坪頂給水廠",
+        "category": "Water Treatment Plant (WTP)",
+        "status": "Operational",
+        "capacity_or_output": "550,000 CMD",
+        "operator": "Taiwan Water Corporation",
+        "location": "Dashu District, Kaohsiung City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.4158,
+          22.6889
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kaotan Water Treatment Plant",
+        "chinese_name": "拷潭淨水場",
+        "category": "Water Treatment Plant (WTP)",
+        "status": "Operational",
+        "capacity_or_output": "300,000 CMD",
+        "operator": "Taiwan Water Corporation",
+        "location": "Daliao District, Kaohsiung City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.3883,
+          22.6031
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wengpark (Wenggongyuan) Water Treatment Plant",
+        "chinese_name": "翁公園淨水場",
+        "category": "Water Treatment Plant (WTP)",
+        "status": "Operational",
+        "capacity_or_output": "200,000 CMD",
+        "operator": "Taiwan Water Corporation",
+        "location": "Daliao District, Kaohsiung City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.4192,
+          22.6256
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mudan Water Treatment Plant",
+        "chinese_name": "牡丹淨水場",
+        "category": "Water Treatment Plant (WTP)",
+        "status": "Operational",
+        "capacity_or_output": "90,000 CMD",
+        "operator": "Taiwan Water Corporation",
+        "location": "Checheng Township, Pingtung County"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.7336,
+          22.0831
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Shengou Water Treatment Plant",
+        "chinese_name": "深溝淨水場",
+        "category": "Water Treatment Plant (WTP)",
+        "status": "Operational",
+        "capacity_or_output": "120,000 CMD",
+        "operator": "Taiwan Water Corporation",
+        "location": "Yuanshan Township, Yilan County"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.7208,
+          24.7364
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Shabou Water Treatment Plant",
+        "chinese_name": "娑婆礑淨水場",
+        "category": "Water Treatment Plant (WTP)",
+        "status": "Operational",
+        "capacity_or_output": "85,000 CMD",
+        "operator": "Taiwan Water Corporation",
+        "location": "Xiulin Township, Hualien County"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5567,
+          23.9986
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Liji Water Treatment Plant",
+        "chinese_name": "利吉淨水場",
+        "category": "Water Treatment Plant (WTP)",
+        "status": "Operational",
+        "capacity_or_output": "45,000 CMD",
+        "operator": "Taiwan Water Corporation",
+        "location": "Beinan Township, Taitung County"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.1369,
+          22.8014
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Taoyuan North District Water Reclamation Plant",
+        "chinese_name": "桃園北區水資源回收中心再生水廠",
+        "category": "Water Reclamation Plant",
+        "status": "Operational",
+        "capacity_or_output": "40,000 CMD (Phase 1)",
+        "operator": "Taoyuan City Government / Bao Ding Reclaimed Water",
+        "location": "Luzhu District, Taoyuan City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.2683,
+          25.0439
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Zhubei Water Reclamation Plant",
+        "chinese_name": "竹北水資源回收中心再生水廠",
+        "category": "Water Reclamation Plant",
+        "status": "Under Construction / Planned",
+        "capacity_or_output": "10,000 CMD",
+        "operator": "Hsinchu County Government",
+        "location": "Zhubei City, Hsinchu County"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.9856,
+          24.8353
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Taichung Futian Water Reclamation Plant",
+        "chinese_name": "台中福田水資源回收中心再生水廠",
+        "category": "Water Reclamation Plant",
+        "status": "Operational",
+        "capacity_or_output": "58,000 CMD",
+        "operator": "Taichung City Government",
+        "location": "South District, Taichung City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.6481,
+          24.1044
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Taichung Shuinan Water Reclamation Plant",
+        "chinese_name": "台中水湳水資源回收中心再生水廠",
+        "category": "Water Reclamation Plant",
+        "status": "Operational",
+        "capacity_or_output": "10,000 CMD",
+        "operator": "Taichung City Government",
+        "location": "Xitun District, Taichung City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.6547,
+          24.1806
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Taichung Fengyuan Water Reclamation Plant",
+        "chinese_name": "台中豐原水資源回收中心再生水廠",
+        "category": "Water Reclamation Plant",
+        "status": "Under Construction / Planned",
+        "capacity_or_output": "10,000 CMD",
+        "operator": "Taichung City Government",
+        "location": "Fengyuan District, Taichung City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.7019,
+          24.2492
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tainan Yongkang Water Reclamation Plant",
+        "chinese_name": "台南永康水資源回收中心及再生水廠",
+        "category": "Water Reclamation Plant",
+        "status": "Operational",
+        "capacity_or_output": "15,500 CMD",
+        "operator": "Tainan City Government / Shinfox Energy",
+        "location": "Yongkang District, Tainan City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.2439,
+          23.0467
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tainan Anping Water Reclamation Plant",
+        "chinese_name": "台南安平水資源回收中心再生水廠",
+        "category": "Water Reclamation Plant",
+        "status": "Operational",
+        "capacity_or_output": "37,500 CMD",
+        "operator": "Tainan City Government / HDEC",
+        "location": "Anping District, Tainan City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.1583,
+          22.9867
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tainan Rende Water Reclamation Plant",
+        "chinese_name": "台南仁德水資源回收中心再生水廠",
+        "category": "Water Reclamation Plant",
+        "status": "Operational",
+        "capacity_or_output": "10,000 CMD",
+        "operator": "Tainan City Government",
+        "location": "Rende District, Tainan City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.2286,
+          22.9369
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "TSMC STSP Industrial Water Reclamation Plant",
+        "chinese_name": "台積電南科再生水廠",
+        "category": "Water Reclamation Plant",
+        "status": "Operational",
+        "capacity_or_output": "20,000 CMD",
+        "operator": "TSMC",
+        "location": "Shanhua District, Tainan City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.2789,
+          23.1128
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kaohsiung Fengshan River Water Reclamation Plant",
+        "chinese_name": "高雄鳳山溪污水處理廠暨再生水廠",
+        "category": "Water Reclamation Plant",
+        "status": "Operational",
+        "capacity_or_output": "45,000 CMD",
+        "operator": "Kaohsiung City Government / HDEC",
+        "location": "Fengshan District, Kaohsiung City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.3547,
+          22.6083
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kaohsiung Linhai Water Reclamation Plant",
+        "chinese_name": "高雄臨海污水處理廠暨再生水廠",
+        "category": "Water Reclamation Plant",
+        "status": "Operational",
+        "capacity_or_output": "33,000 CMD",
+        "operator": "Kaohsiung City Government / HDEC",
+        "location": "Xiaogang District, Kaohsiung City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.3406,
+          22.5414
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kaohsiung Nanzih Water Reclamation Plant",
+        "chinese_name": "高雄楠梓再生水廠",
+        "category": "Water Reclamation Plant",
+        "status": "Operational / Expanding",
+        "capacity_or_output": "70,000 CMD (full target)",
+        "operator": "Kaohsiung City Government / HDEC",
+        "location": "Nanzih District, Kaohsiung City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.2964,
+          22.7161
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kaohsiung Qiaotou Water Reclamation Plant",
+        "chinese_name": "高雄橋頭再生水廠",
+        "category": "Water Reclamation Plant",
+        "status": "Operational / Expanding",
+        "capacity_or_output": "35,000 CMD",
+        "operator": "Kaohsiung City Government",
+        "location": "Qiaotou District, Kaohsiung City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.3014,
+          22.7525
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hsinchu Seawater Desalination Plant",
+        "chinese_name": "新竹海水淡化廠",
+        "category": "Seawater Desalination Plant",
+        "status": "Under Construction / Commissioning",
+        "capacity_or_output": "100,000 CMD",
+        "operator": "Water Resources Agency (WRA) / CTCI",
+        "location": "North District (Nanliao), Hsinchu City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.9169,
+          24.8461
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Taichung Emergency Seawater Desalination Plant",
+        "chinese_name": "台中緊急海淡廠",
+        "category": "Seawater Desalination Plant",
+        "status": "Standby / Contingency",
+        "capacity_or_output": "15,000 CMD",
+        "operator": "Water Resources Agency (WRA)",
+        "location": "Longjing District (Taichung Power Plant), Taichung City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.4831,
+          24.2125
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mailiao Industrial Seawater Desalination Plant",
+        "chinese_name": "麥寮六輕海水淡化廠",
+        "category": "Seawater Desalination Plant",
+        "status": "Operational",
+        "capacity_or_output": "100,000 CMD",
+        "operator": "Formosa Plastics Group",
+        "location": "Mailiao Township, Yunlin County"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.1917,
+          23.7914
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Chiayi Seawater Desalination Plant",
+        "chinese_name": "嘉義海水淡化廠",
+        "category": "Seawater Desalination Plant",
+        "status": "Planned / Approved",
+        "capacity_or_output": "100,000 CMD",
+        "operator": "Water Resources Agency (WRA)",
+        "location": "Budai Township, Chiayi County"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.1419,
+          23.3761
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tainan Seawater Desalination Plant",
+        "chinese_name": "台南海水淡化廠",
+        "category": "Seawater Desalination Plant",
+        "status": "Under Construction",
+        "capacity_or_output": "100,000 CMD (Phase 1)",
+        "operator": "Water Resources Agency (WRA)",
+        "location": "Jiangjun District, Tainan City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0819,
+          23.2164
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Magong Seawater Desalination Plant",
+        "chinese_name": "馬公海水淡化廠",
+        "category": "Seawater Desalination Plant",
+        "status": "Operational",
+        "capacity_or_output": "13,000 CMD",
+        "operator": "Taiwan Water Corporation",
+        "location": "Magong City, Penghu County"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.5892,
+          23.5414
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Xiyu Seawater Desalination Plant",
+        "chinese_name": "西嶼海水淡化廠",
+        "category": "Seawater Desalination Plant",
+        "status": "Operational",
+        "capacity_or_output": "750 CMD",
+        "operator": "Taiwan Water Corporation",
+        "location": "Xiyu Township, Penghu County"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.5142,
+          23.6067
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wangan Seawater Desalination Plant",
+        "chinese_name": "望安海水淡化廠",
+        "category": "Seawater Desalination Plant",
+        "status": "Operational",
+        "capacity_or_output": "400 CMD",
+        "operator": "Taiwan Water Corporation",
+        "location": "Wangan Township, Penghu County"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.5008,
+          23.3686
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Qimei Seawater Desalination Plant",
+        "chinese_name": "七美海水淡化廠",
+        "category": "Seawater Desalination Plant",
+        "status": "Operational",
+        "capacity_or_output": "900 CMD",
+        "operator": "Taiwan Water Corporation",
+        "location": "Qimei Township, Penghu County"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.4239,
+          23.2081
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kinmen Dajinhu Seawater Desalination Plant",
+        "chinese_name": "金門大金門海水淡化廠",
+        "category": "Seawater Desalination Plant",
+        "status": "Operational",
+        "capacity_or_output": "4,000 CMD",
+        "operator": "Kinmen County Waterworks",
+        "location": "Jinhu Township, Kinmen County"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.4319,
+          24.4322
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lieyu Seawater Desalination Plant",
+        "chinese_name": "烈嶼(小金門)海水淡化廠",
+        "category": "Seawater Desalination Plant",
+        "status": "Operational",
+        "capacity_or_output": "1,450 CMD",
+        "operator": "Kinmen County Waterworks",
+        "location": "Lieyu Township, Kinmen County"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.2325,
+          24.4228
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nangan Seawater Desalination Plant",
+        "chinese_name": "南竿海水淡化廠",
+        "category": "Seawater Desalination Plant",
+        "status": "Operational",
+        "capacity_or_output": "3,950 CMD",
+        "operator": "Lienchiang County Waterworks",
+        "location": "Nangan Township, Lienchiang County (Matsu)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.9383,
+          26.1517
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Beigan Seawater Desalination Plant",
+        "chinese_name": "北竿海水淡化廠",
+        "category": "Seawater Desalination Plant",
+        "status": "Operational",
+        "capacity_or_output": "1,000 CMD",
+        "operator": "Lienchiang County Waterworks",
+        "location": "Beigan Township, Lienchiang County (Matsu)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.9917,
+          26.2236
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dongyin Seawater Desalination Plant",
+        "chinese_name": "東引海水淡化廠",
+        "category": "Seawater Desalination Plant",
+        "status": "Operational",
+        "capacity_or_output": "950 CMD",
+        "operator": "Lienchiang County Waterworks",
+        "location": "Dongyin Township, Lienchiang County (Matsu)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.4919,
+          26.3653
+        ]
+      }
+    }
+  ]
+}

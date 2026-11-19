@@ -1,0 +1,13 @@
+{
+  "name": "taiwan-infra-v10.4",
+  "version": "10.4.0",
+  "description": "Taiwan Critical Infrastructure, Power Grid, Transport & OSINT Spatial Intelligence Platform",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Static build ready'",
+    "deploy": "vercel --prod"
+  }
+}

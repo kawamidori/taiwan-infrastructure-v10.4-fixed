@@ -1,0 +1,924 @@
+{
+  "type": "FeatureCollection",
+  "name": "Taiwan_Power_Plants",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "properties": {
+        "name": "Hoping Power Plant",
+        "chinese_name": "和平電廠",
+        "fuel_type": "Coal",
+        "status": "Operational",
+        "capacity_mw": 1320,
+        "location": "Xiulin, Hualien"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.76389,
+          24.30667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "properties": {
+        "name": "Hsinta Power Plant",
+        "chinese_name": "興達發電廠",
+        "fuel_type": "Coal / Natural Gas",
+        "status": "Operational",
+        "capacity_mw": 4326,
+        "location": "Yong'an and Qieding, Kaohsiung"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.19694,
+          22.85722
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "properties": {
+        "name": "Linkou Power Plant",
+        "chinese_name": "林口發電廠",
+        "fuel_type": "Coal",
+        "status": "Operational",
+        "capacity_mw": 2400,
+        "location": "Linkou, New Taipei"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.29833,
+          25.12083
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "properties": {
+        "name": "Mailiao Power Plant",
+        "chinese_name": "麥寮電廠",
+        "fuel_type": "Coal",
+        "status": "Operational",
+        "capacity_mw": 4200,
+        "location": "Mailiao, Yunlin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.183,
+          23.8
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "properties": {
+        "name": "Taichung Power Plant",
+        "chinese_name": "台中發電廠",
+        "fuel_type": "Coal",
+        "status": "Operational",
+        "capacity_mw": 5824,
+        "location": "Longjing, Taichung"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.48111,
+          24.21278
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "properties": {
+        "name": "Changsheng Power Plant",
+        "chinese_name": "長生發電廠",
+        "fuel_type": "Natural Gas",
+        "status": "Operational",
+        "capacity_mw": 900,
+        "location": "Luzhu, Taoyuan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.25833,
+          25.11639
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "properties": {
+        "name": "Chiahui Power Plant",
+        "chinese_name": "嘉惠電廠",
+        "fuel_type": "Natural Gas",
+        "status": "Operational",
+        "capacity_mw": 535,
+        "location": "Minxiong, Chiayi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.47528,
+          23.53389
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "properties": {
+        "name": "Hsingneng Power Plant",
+        "chinese_name": "星能電廠",
+        "fuel_type": "Natural Gas",
+        "status": "Operational",
+        "capacity_mw": 490,
+        "location": "Lukang, Changhua"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.43361,
+          24.12722
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "properties": {
+        "name": "Hsingyuan Power Plant",
+        "chinese_name": "星元電廠",
+        "fuel_type": "Natural Gas",
+        "status": "Operational",
+        "capacity_mw": 490,
+        "location": "Lukang, Changhua"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.4125,
+          24.07972
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "properties": {
+        "name": "Hsintao Power Plant",
+        "chinese_name": "新桃電廠",
+        "fuel_type": "Natural Gas",
+        "status": "Operational",
+        "capacity_mw": 600,
+        "location": "Guanxi, Hsinchu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.1753,
+          24.8153
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "properties": {
+        "name": "Kuokuang Power Plant",
+        "chinese_name": "國光發電廠",
+        "fuel_type": "Natural Gas",
+        "status": "Operational",
+        "capacity_mw": 480,
+        "location": "Guishan, Taoyuan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.34194,
+          25.0425
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "properties": {
+        "name": "Nanpu Power Plant",
+        "chinese_name": "南部發電廠",
+        "fuel_type": "Natural Gas",
+        "status": "Operational",
+        "capacity_mw": 1118,
+        "location": "Cianjhen, Kaohsiung"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.30056,
+          22.60083
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "properties": {
+        "name": "Sun Ba Power Plant",
+        "chinese_name": "森霸電廠",
+        "fuel_type": "Natural Gas",
+        "status": "Operational",
+        "capacity_mw": 980,
+        "location": "Shanshang, Tainan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.35722,
+          23.08222
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "properties": {
+        "name": "Tatan Power Plant",
+        "chinese_name": "大潭發電廠",
+        "fuel_type": "Natural Gas",
+        "status": "Operational",
+        "capacity_mw": 4384,
+        "location": "Guanyin, Taoyuan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.04722,
+          25.02611
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "properties": {
+        "name": "Tunghsiao Power Plant",
+        "chinese_name": "通霄發電廠",
+        "fuel_type": "Natural Gas",
+        "status": "Operational",
+        "capacity_mw": 1815,
+        "location": "Tongxiao, Miaoli"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.67111,
+          24.48992
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "properties": {
+        "name": "Hsieh-ho Power Plant",
+        "chinese_name": "協和發電廠",
+        "fuel_type": "Fuel Oil",
+        "status": "Operational / Transitioning",
+        "capacity_mw": 2000,
+        "location": "Zhongshan, Keelung"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.73933,
+          25.15733
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "properties": {
+        "name": "Talin Power Plant",
+        "chinese_name": "大林發電廠",
+        "fuel_type": "Mixed (Coal / Gas / Oil)",
+        "status": "Operational",
+        "capacity_mw": 2400,
+        "location": "Siaogang, Kaohsiung"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.33553,
+          22.53611
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "properties": {
+        "name": "Chienshan Power Plant",
+        "chinese_name": "尖山發電廠",
+        "fuel_type": "Diesel",
+        "status": "Operational",
+        "capacity_mw": 140,
+        "location": "Huxi, Penghu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.66111,
+          23.56306
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "properties": {
+        "name": "Dongyin Power Plant",
+        "chinese_name": "東引發電廠",
+        "fuel_type": "Diesel",
+        "status": "Operational",
+        "capacity_mw": 6,
+        "location": "Dongyin, Lienchiang"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.49747,
+          26.36861
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 20,
+      "properties": {
+        "name": "Hsiahsing Power Plant",
+        "chinese_name": "夏興發電廠",
+        "fuel_type": "Diesel",
+        "status": "Operational",
+        "capacity_mw": 20,
+        "location": "Jinhu, Kinmen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.39889,
+          24.44056
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 21,
+      "properties": {
+        "name": "Lanyu Power Plant",
+        "chinese_name": "蘭嶼發電廠",
+        "fuel_type": "Diesel",
+        "status": "Operational",
+        "capacity_mw": 6.5,
+        "location": "Orchid Island, Taitung"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.53997,
+          22.02594
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 22,
+      "properties": {
+        "name": "Qimei Power Plant",
+        "chinese_name": "七美發電廠",
+        "fuel_type": "Diesel",
+        "status": "Operational",
+        "capacity_mw": 4,
+        "location": "Cimei, Penghu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.42861,
+          23.20806
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 23,
+      "properties": {
+        "name": "Tashan Power Plant",
+        "chinese_name": "塔山發電廠",
+        "fuel_type": "Diesel",
+        "status": "Operational",
+        "capacity_mw": 91,
+        "location": "Jincheng, Kinmen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.28807,
+          24.41479
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 24,
+      "properties": {
+        "name": "Xiju Power Plant",
+        "chinese_name": "西莒發電廠",
+        "fuel_type": "Diesel",
+        "status": "Operational",
+        "capacity_mw": 5,
+        "location": "Juguang, Lienchiang"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.9355,
+          25.97372
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 25,
+      "properties": {
+        "name": "Zhushan Power Plant",
+        "chinese_name": "珠山發電廠",
+        "fuel_type": "Diesel",
+        "status": "Operational",
+        "capacity_mw": 15.4,
+        "location": "Nangan, Lienchiang"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.93924,
+          26.15382
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 26,
+      "properties": {
+        "name": "Bihai Power Plant",
+        "chinese_name": "碧海發電廠",
+        "fuel_type": "Hydroelectric",
+        "status": "Operational",
+        "capacity_mw": 61.2,
+        "location": "Xiulin, Hualien"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.67667,
+          24.33583
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 27,
+      "properties": {
+        "name": "Cholan Power Plant",
+        "chinese_name": "卓蘭發電廠",
+        "fuel_type": "Hydroelectric",
+        "status": "Operational",
+        "capacity_mw": 80,
+        "location": "Zhuolan, Miaoli"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.8403,
+          24.3106
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 28,
+      "properties": {
+        "name": "Minghu Pumped Storage Hydro Power Station (Daguan II)",
+        "chinese_name": "大觀發電廠 (明湖)",
+        "fuel_type": "Pumped Storage Hydro",
+        "status": "Operational",
+        "capacity_mw": 1008,
+        "location": "Shuili, Nantou"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.87028,
+          23.85444
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 29,
+      "properties": {
+        "name": "Techi Power Plant",
+        "chinese_name": "德基發電廠",
+        "fuel_type": "Hydroelectric",
+        "status": "Operational",
+        "capacity_mw": 234,
+        "location": "Heping, Taichung"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.1675,
+          24.25528
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 30,
+      "properties": {
+        "name": "Gueishan Power Plant",
+        "chinese_name": "桂山發電廠",
+        "fuel_type": "Hydroelectric",
+        "status": "Operational",
+        "capacity_mw": 111,
+        "location": "Wulai, New Taipei"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.58,
+          24.90917
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 31,
+      "properties": {
+        "name": "Kaoping Power Plant",
+        "chinese_name": "高屏發電廠",
+        "fuel_type": "Hydroelectric",
+        "status": "Operational",
+        "capacity_mw": 7,
+        "location": "Meinong, Kaohsiung"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.5319,
+          22.8681
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 32,
+      "properties": {
+        "name": "Kukuan Power Plant",
+        "chinese_name": "谷關發電廠",
+        "fuel_type": "Hydroelectric",
+        "status": "Operational",
+        "capacity_mw": 180,
+        "location": "Heping, Taichung"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.07614,
+          24.23359
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 33,
+      "properties": {
+        "name": "Lanyang Power Plant",
+        "chinese_name": "蘭陽發電廠",
+        "fuel_type": "Hydroelectric",
+        "status": "Operational",
+        "capacity_mw": 26,
+        "location": "Sanxing, Yilan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.61639,
+          24.65458
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 34,
+      "properties": {
+        "name": "Maan Power Plant",
+        "chinese_name": "馬鞍發電廠",
+        "fuel_type": "Hydroelectric",
+        "status": "Operational",
+        "capacity_mw": 133,
+        "location": "Heping, Taichung"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.91389,
+          24.18417
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 35,
+      "properties": {
+        "name": "Mingtan Pumped Storage Hydro Power Plant",
+        "chinese_name": "明潭發電廠",
+        "fuel_type": "Pumped Storage Hydro",
+        "status": "Operational",
+        "capacity_mw": 1602,
+        "location": "Shuili, Nantou"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.86778,
+          23.83639
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36,
+      "properties": {
+        "name": "Qingshan Power Plant",
+        "chinese_name": "青山發電廠",
+        "fuel_type": "Hydroelectric",
+        "status": "Operational",
+        "capacity_mw": 360,
+        "location": "Heping, Taichung"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.16028,
+          24.25319
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 37,
+      "properties": {
+        "name": "Shihmen Power Plant",
+        "chinese_name": "石門發電廠",
+        "fuel_type": "Hydroelectric",
+        "status": "Operational",
+        "capacity_mw": 130,
+        "location": "Longtan, Taoyuan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.24417,
+          24.81056
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 38,
+      "properties": {
+        "name": "Tienlun Power Plant",
+        "chinese_name": "天輪發電廠",
+        "fuel_type": "Hydroelectric",
+        "status": "Operational",
+        "capacity_mw": 195,
+        "location": "Heping, Taichung"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.01581,
+          24.21068
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 39,
+      "properties": {
+        "name": "Zengwen Power Plant",
+        "chinese_name": "曾文發電廠",
+        "fuel_type": "Hydroelectric",
+        "status": "Operational",
+        "capacity_mw": 50,
+        "location": "Dapu, Chiayi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.53639,
+          23.24806
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40,
+      "properties": {
+        "name": "Tungpu (Eastern) Power Plant",
+        "chinese_name": "東部發電廠",
+        "fuel_type": "Hydroelectric",
+        "status": "Operational",
+        "capacity_mw": 183,
+        "location": "Xiulin / Shoufeng, Hualien"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5647,
+          23.9875
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 41,
+      "properties": {
+        "name": "Wanta Power Plant",
+        "chinese_name": "萬大發電廠",
+        "fuel_type": "Hydroelectric",
+        "status": "Operational",
+        "capacity_mw": 36,
+        "location": "Ren'ai, Nantou"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.13556,
+          23.97611
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 42,
+      "properties": {
+        "name": "Qingshui Geothermal Power Plant",
+        "chinese_name": "清水地熱發電廠",
+        "fuel_type": "Geothermal",
+        "status": "Operational",
+        "capacity_mw": 4.2,
+        "location": "Datong, Yilan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.63697,
+          24.61231
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43,
+      "properties": {
+        "name": "Jinshan Nuclear Power Plant (First NPP)",
+        "chinese_name": "第一核能發電廠 (核一)",
+        "fuel_type": "Nuclear",
+        "status": "Decommissioned",
+        "capacity_mw": 1272,
+        "location": "Shimen, New Taipei"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.58611,
+          25.28583
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 44,
+      "properties": {
+        "name": "Kuosheng Nuclear Power Plant (Second NPP)",
+        "chinese_name": "第二核能發電廠 (核二)",
+        "fuel_type": "Nuclear",
+        "status": "Decommissioned",
+        "capacity_mw": 1970,
+        "location": "Wanli, New Taipei"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6625,
+          25.20278
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 45,
+      "properties": {
+        "name": "Maanshan Nuclear Power Plant (Third NPP)",
+        "chinese_name": "第三核能發電廠 (核三)",
+        "fuel_type": "Nuclear",
+        "status": "Decommissioned",
+        "capacity_mw": 1902,
+        "location": "Hengchun, Pingtung"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.75139,
+          21.95833
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 46,
+      "properties": {
+        "name": "Lungmen Nuclear Power Plant (Fourth NPP)",
+        "chinese_name": "第四核能發電廠 (核四)",
+        "fuel_type": "Nuclear",
+        "status": "Construction Halted",
+        "capacity_mw": 2700,
+        "location": "Gongliao, New Taipei"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.92417,
+          25.03861
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 47,
+      "properties": {
+        "name": "Beigan Power Plant",
+        "chinese_name": "北竿發電廠",
+        "fuel_type": "Diesel",
+        "status": "Decommissioned",
+        "capacity_mw": 4.98,
+        "location": "Beigan, Lienchiang"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.98444,
+          26.21944
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 48,
+      "properties": {
+        "name": "Shen'ao Power Plant",
+        "chinese_name": "深澳發電廠",
+        "fuel_type": "Coal",
+        "status": "Decommissioned",
+        "capacity_mw": 160,
+        "location": "Ruifang, New Taipei"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.81497,
+          25.12733
+        ]
+      }
+    }
+  ]
+}

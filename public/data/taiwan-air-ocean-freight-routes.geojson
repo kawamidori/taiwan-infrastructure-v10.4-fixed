@@ -1,0 +1,5032 @@
+{
+  "type": "FeatureCollection",
+  "name": "Taiwan International and Domestic Air & Ocean Freight Routes",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "AIR-INT-01",
+        "name": "TPE - Anchorage - Los Angeles Trans-Pacific Mainline Freighter",
+        "chinese_name": "桃園 - 安克拉治 - 洛杉磯 跨太平洋全貨機航線",
+        "mode": "Air Freight",
+        "scope": "International",
+        "corridor_type": "Trans-Pacific All-Cargo",
+        "origin_code": "TPE",
+        "origin_name": "Taiwan Taoyuan International Airport",
+        "destination_code": "LAX",
+        "destination_name": "Los Angeles International Airport",
+        "via": "ANC (Anchorage)",
+        "carriers": "China Airlines Cargo, EVA Air Cargo, FedEx, UPS",
+        "cargo_profile": "Semiconductors, AI Servers, High-Tech Electronics"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.2328,
+            25.0777
+          ],
+          [
+            122.88785,
+            27.47295
+          ],
+          [
+            124.61617,
+            29.84777
+          ],
+          [
+            126.42831,
+            32.19899
+          ],
+          [
+            128.33606,
+            34.523
+          ],
+          [
+            130.35259,
+            36.81566
+          ],
+          [
+            132.49268,
+            39.07218
+          ],
+          [
+            134.77284,
+            41.28701
+          ],
+          [
+            137.21147,
+            43.45372
+          ],
+          [
+            139.82895,
+            45.56479
+          ],
+          [
+            142.6476,
+            47.61147
+          ],
+          [
+            145.69151,
+            49.58354
+          ],
+          [
+            148.98596,
+            51.46917
+          ],
+          [
+            152.55652,
+            53.25467
+          ],
+          [
+            156.4275,
+            54.92441
+          ],
+          [
+            160.61957,
+            56.46079
+          ],
+          [
+            165.14657,
+            57.8444
+          ],
+          [
+            170.01141,
+            59.0545
+          ],
+          [
+            175.20155,
+            60.06982
+          ],
+          [
+            -179.31502,
+            60.86982
+          ],
+          [
+            -173.59217,
+            61.43625
+          ],
+          [
+            -167.70486,
+            61.75497
+          ],
+          [
+            -161.7443,
+            61.81753
+          ],
+          [
+            -155.80942,
+            61.62221
+          ],
+          [
+            -149.9964,
+            61.1743
+          ],
+          [
+            -147.77684,
+            60.26946
+          ],
+          [
+            -145.67897,
+            59.32961
+          ],
+          [
+            -143.69587,
+            58.35789
+          ],
+          [
+            -141.82054,
+            57.35717
+          ],
+          [
+            -140.04603,
+            56.33006
+          ],
+          [
+            -138.36557,
+            55.27893
+          ],
+          [
+            -136.77268,
+            54.20593
+          ],
+          [
+            -135.26116,
+            53.11298
+          ],
+          [
+            -133.82518,
+            52.00185
+          ],
+          [
+            -132.45928,
+            50.87411
+          ],
+          [
+            -131.15835,
+            49.73118
+          ],
+          [
+            -129.91763,
+            48.57436
+          ],
+          [
+            -128.73272,
+            47.40481
+          ],
+          [
+            -127.59954,
+            46.22358
+          ],
+          [
+            -126.51431,
+            45.03162
+          ],
+          [
+            -125.47355,
+            43.82981
+          ],
+          [
+            -124.47403,
+            42.61893
+          ],
+          [
+            -123.51277,
+            41.3997
+          ],
+          [
+            -122.58703,
+            40.17276
+          ],
+          [
+            -121.69426,
+            38.9387
+          ],
+          [
+            -120.83213,
+            37.69809
+          ],
+          [
+            -119.99844,
+            36.4514
+          ],
+          [
+            -119.19118,
+            35.1991
+          ],
+          [
+            -118.4085,
+            33.9416
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "AIR-INT-02",
+        "name": "TPE - Anchorage - Chicago O'Hare Midwest Freighter",
+        "chinese_name": "桃園 - 安克拉治 - 芝加哥 美中全貨機航線",
+        "mode": "Air Freight",
+        "scope": "International",
+        "corridor_type": "Trans-Pacific All-Cargo",
+        "origin_code": "TPE",
+        "origin_name": "Taiwan Taoyuan International Airport",
+        "destination_code": "ORD",
+        "destination_name": "Chicago O'Hare International Airport",
+        "via": "ANC (Anchorage)",
+        "carriers": "China Airlines Cargo, EVA Air Cargo",
+        "cargo_profile": "ICT Hardware, Industrial Machinery, Pharmaceuticals"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.2328,
+            25.0777
+          ],
+          [
+            122.88785,
+            27.47295
+          ],
+          [
+            124.61617,
+            29.84777
+          ],
+          [
+            126.42831,
+            32.19899
+          ],
+          [
+            128.33606,
+            34.523
+          ],
+          [
+            130.35259,
+            36.81566
+          ],
+          [
+            132.49268,
+            39.07218
+          ],
+          [
+            134.77284,
+            41.28701
+          ],
+          [
+            137.21147,
+            43.45372
+          ],
+          [
+            139.82895,
+            45.56479
+          ],
+          [
+            142.6476,
+            47.61147
+          ],
+          [
+            145.69151,
+            49.58354
+          ],
+          [
+            148.98596,
+            51.46917
+          ],
+          [
+            152.55652,
+            53.25467
+          ],
+          [
+            156.4275,
+            54.92441
+          ],
+          [
+            160.61957,
+            56.46079
+          ],
+          [
+            165.14657,
+            57.8444
+          ],
+          [
+            170.01141,
+            59.0545
+          ],
+          [
+            175.20155,
+            60.06982
+          ],
+          [
+            -179.31502,
+            60.86982
+          ],
+          [
+            -173.59217,
+            61.43625
+          ],
+          [
+            -167.70486,
+            61.75497
+          ],
+          [
+            -161.7443,
+            61.81753
+          ],
+          [
+            -155.80942,
+            61.62221
+          ],
+          [
+            -149.9964,
+            61.1743
+          ],
+          [
+            -146.44533,
+            61.1736
+          ],
+          [
+            -142.90484,
+            61.0801
+          ],
+          [
+            -139.39538,
+            60.89471
+          ],
+          [
+            -135.93625,
+            60.61917
+          ],
+          [
+            -132.54489,
+            60.25601
+          ],
+          [
+            -129.23645,
+            59.8084
+          ],
+          [
+            -126.02342,
+            59.28008
+          ],
+          [
+            -122.91553,
+            58.67515
+          ],
+          [
+            -119.9198,
+            57.998
+          ],
+          [
+            -117.04069,
+            57.25314
+          ],
+          [
+            -114.28036,
+            56.44514
+          ],
+          [
+            -111.63901,
+            55.57849
+          ],
+          [
+            -109.11522,
+            54.65755
+          ],
+          [
+            -106.70624,
+            53.68653
+          ],
+          [
+            -104.40836,
+            52.66938
+          ],
+          [
+            -102.21714,
+            51.60984
+          ],
+          [
+            -100.12766,
+            50.5114
+          ],
+          [
+            -98.13469,
+            49.37727
+          ],
+          [
+            -96.23289,
+            48.21045
+          ],
+          [
+            -94.41688,
+            47.01367
+          ],
+          [
+            -92.68137,
+            45.78945
+          ],
+          [
+            -91.02122,
+            44.54009
+          ],
+          [
+            -89.43144,
+            43.2677
+          ],
+          [
+            -87.9073,
+            41.9742
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "AIR-INT-03",
+        "name": "TPE - Anchorage - Dallas Fort Worth Southern US Freighter",
+        "chinese_name": "桃園 - 安克拉治 - 達拉斯 美南全貨機航線",
+        "mode": "Air Freight",
+        "scope": "International",
+        "corridor_type": "Trans-Pacific All-Cargo",
+        "origin_code": "TPE",
+        "origin_name": "Taiwan Taoyuan International Airport",
+        "destination_code": "DFW",
+        "destination_name": "Dallas Fort Worth International Airport",
+        "via": "ANC (Anchorage)",
+        "carriers": "EVA Air Cargo, China Airlines Cargo",
+        "cargo_profile": "Data Center Servers, Semiconductors, Electronics"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.2328,
+            25.0777
+          ],
+          [
+            122.88785,
+            27.47295
+          ],
+          [
+            124.61617,
+            29.84777
+          ],
+          [
+            126.42831,
+            32.19899
+          ],
+          [
+            128.33606,
+            34.523
+          ],
+          [
+            130.35259,
+            36.81566
+          ],
+          [
+            132.49268,
+            39.07218
+          ],
+          [
+            134.77284,
+            41.28701
+          ],
+          [
+            137.21147,
+            43.45372
+          ],
+          [
+            139.82895,
+            45.56479
+          ],
+          [
+            142.6476,
+            47.61147
+          ],
+          [
+            145.69151,
+            49.58354
+          ],
+          [
+            148.98596,
+            51.46917
+          ],
+          [
+            152.55652,
+            53.25467
+          ],
+          [
+            156.4275,
+            54.92441
+          ],
+          [
+            160.61957,
+            56.46079
+          ],
+          [
+            165.14657,
+            57.8444
+          ],
+          [
+            170.01141,
+            59.0545
+          ],
+          [
+            175.20155,
+            60.06982
+          ],
+          [
+            -179.31502,
+            60.86982
+          ],
+          [
+            -173.59217,
+            61.43625
+          ],
+          [
+            -167.70486,
+            61.75497
+          ],
+          [
+            -161.7443,
+            61.81753
+          ],
+          [
+            -155.80942,
+            61.62221
+          ],
+          [
+            -149.9964,
+            61.1743
+          ],
+          [
+            -146.38697,
+            60.64729
+          ],
+          [
+            -142.9038,
+            60.02643
+          ],
+          [
+            -139.55797,
+            59.31745
+          ],
+          [
+            -136.35652,
+            58.52634
+          ],
+          [
+            -133.30287,
+            57.6592
+          ],
+          [
+            -130.39735,
+            56.72201
+          ],
+          [
+            -127.63782,
+            55.72059
+          ],
+          [
+            -125.02016,
+            54.66046
+          ],
+          [
+            -122.5389,
+            53.54682
+          ],
+          [
+            -120.18754,
+            52.38449
+          ],
+          [
+            -117.95904,
+            51.17792
+          ],
+          [
+            -115.84605,
+            49.93121
+          ],
+          [
+            -113.84113,
+            48.64806
+          ],
+          [
+            -111.93695,
+            47.33186
+          ],
+          [
+            -110.12641,
+            45.98566
+          ],
+          [
+            -108.40269,
+            44.61224
+          ],
+          [
+            -106.75932,
+            43.2141
+          ],
+          [
+            -105.19019,
+            41.7935
+          ],
+          [
+            -103.6896,
+            40.35248
+          ],
+          [
+            -102.25219,
+            38.89288
+          ],
+          [
+            -100.87302,
+            37.41637
+          ],
+          [
+            -99.54744,
+            35.92446
+          ],
+          [
+            -98.2712,
+            34.41852
+          ],
+          [
+            -97.0403,
+            32.8998
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "AIR-INT-04",
+        "name": "TPE - Frankfurt European Air Cargo Trunk",
+        "chinese_name": "桃園 - 法蘭克福 歐洲全貨機航線",
+        "mode": "Air Freight",
+        "scope": "International",
+        "corridor_type": "Asia-Europe All-Cargo",
+        "origin_code": "TPE",
+        "origin_name": "Taiwan Taoyuan International Airport",
+        "destination_code": "FRA",
+        "destination_name": "Frankfurt Airport",
+        "via": "Direct / Technical Stop",
+        "carriers": "China Airlines Cargo, Lufthansa Cargo",
+        "cargo_profile": "Precision Machinery, Auto Electronics, Semiconductors"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.2328,
+            25.0777
+          ],
+          [
+            118.86873,
+            27.87754
+          ],
+          [
+            116.38011,
+            30.63494
+          ],
+          [
+            113.74678,
+            33.34219
+          ],
+          [
+            110.94631,
+            35.99033
+          ],
+          [
+            107.95389,
+            38.5689
+          ],
+          [
+            104.74232,
+            41.06569
+          ],
+          [
+            101.2823,
+            43.46638
+          ],
+          [
+            97.54311,
+            45.75426
+          ],
+          [
+            93.49393,
+            47.90995
+          ],
+          [
+            89.10606,
+            49.91123
+          ],
+          [
+            84.35627,
+            51.73306
+          ],
+          [
+            79.23138,
+            53.34796
+          ],
+          [
+            73.73397,
+            54.72688
+          ],
+          [
+            67.88823,
+            55.84072
+          ],
+          [
+            61.74455,
+            56.6625
+          ],
+          [
+            55.38075,
+            57.16997
+          ],
+          [
+            48.89802,
+            57.34832
+          ],
+          [
+            42.4114,
+            57.1921
+          ],
+          [
+            36.03635,
+            56.70609
+          ],
+          [
+            29.87538,
+            55.90454
+          ],
+          [
+            24.00801,
+            54.80927
+          ],
+          [
+            18.48648,
+            53.44704
+          ],
+          [
+            13.33661,
+            51.84688
+          ],
+          [
+            8.5622,
+            50.0379
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "AIR-INT-05",
+        "name": "TPE - Amsterdam Schiphol European Air Cargo Trunk",
+        "chinese_name": "桃園 - 阿姆斯特丹 歐洲全貨機航線",
+        "mode": "Air Freight",
+        "scope": "International",
+        "corridor_type": "Asia-Europe All-Cargo",
+        "origin_code": "TPE",
+        "origin_name": "Taiwan Taoyuan International Airport",
+        "destination_code": "AMS",
+        "destination_name": "Amsterdam Airport Schiphol",
+        "via": "Direct / Technical Stop",
+        "carriers": "China Airlines Cargo, EVA Air Cargo",
+        "cargo_profile": "Semiconductor Lithography Parts, High-Tech Equipment"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.2328,
+            25.0777
+          ],
+          [
+            119.03144,
+            28.01743
+          ],
+          [
+            116.70724,
+            30.92012
+          ],
+          [
+            114.23862,
+            33.77867
+          ],
+          [
+            111.60108,
+            36.5847
+          ],
+          [
+            108.76677,
+            39.32826
+          ],
+          [
+            105.70418,
+            41.99754
+          ],
+          [
+            102.378,
+            44.57837
+          ],
+          [
+            98.74942,
+            47.05382
+          ],
+          [
+            94.77702,
+            49.4037
+          ],
+          [
+            90.41874,
+            51.60412
+          ],
+          [
+            85.63556,
+            53.62719
+          ],
+          [
+            80.39721,
+            55.44105
+          ],
+          [
+            74.69025,
+            57.01059
+          ],
+          [
+            68.52799,
+            58.29901
+          ],
+          [
+            61.96002,
+            59.27052
+          ],
+          [
+            55.0778,
+            59.89413
+          ],
+          [
+            48.01186,
+            60.14785
+          ],
+          [
+            40.9184,
+            60.02222
+          ],
+          [
+            33.95769,
+            59.52195
+          ],
+          [
+            27.27097,
+            58.66513
+          ],
+          [
+            20.96375,
+            57.48017
+          ],
+          [
+            15.0995,
+            56.00167
+          ],
+          [
+            9.70286,
+            54.26648
+          ],
+          [
+            4.7683,
+            52.3105
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "AIR-INT-06",
+        "name": "TPE - Luxembourg European All-Cargo Corridor",
+        "chinese_name": "桃園 - 盧森堡 歐洲全貨機航線",
+        "mode": "Air Freight",
+        "scope": "International",
+        "corridor_type": "Asia-Europe All-Cargo",
+        "origin_code": "TPE",
+        "origin_name": "Taiwan Taoyuan International Airport",
+        "destination_code": "LUX",
+        "destination_name": "Luxembourg Airport",
+        "via": "Middle East Technical Stop",
+        "carriers": "Cargolux, China Airlines Cargo",
+        "cargo_profile": "Industrial Equipment, High-Value Electronics"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.2328,
+            25.0777
+          ],
+          [
+            118.85413,
+            27.9457
+          ],
+          [
+            116.34662,
+            30.7706
+          ],
+          [
+            113.68877,
+            33.54436
+          ],
+          [
+            110.85657,
+            36.25761
+          ],
+          [
+            107.82327,
+            38.89933
+          ],
+          [
+            104.55941,
+            41.45658
+          ],
+          [
+            101.03303,
+            43.91411
+          ],
+          [
+            97.21046,
+            46.25402
+          ],
+          [
+            93.05777,
+            48.45541
+          ],
+          [
+            88.54334,
+            50.49421
+          ],
+          [
+            83.64174,
+            52.34317
+          ],
+          [
+            78.3392,
+            53.97232
+          ],
+          [
+            72.64024,
+            55.35004
+          ],
+          [
+            66.5746,
+            56.4448
+          ],
+          [
+            60.20223,
+            57.22785
+          ],
+          [
+            53.61397,
+            57.67624
+          ],
+          [
+            46.92559,
+            57.77585
+          ],
+          [
+            40.26538,
+            57.52344
+          ],
+          [
+            33.75807,
+            56.92714
+          ],
+          [
+            27.50974,
+            56.00524
+          ],
+          [
+            21.5981,
+            54.78362
+          ],
+          [
+            16.06958,
+            53.29259
+          ],
+          [
+            10.94214,
+            51.56399
+          ],
+          [
+            6.2115,
+            49.6289
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "AIR-INT-07",
+        "name": "TPE - Tokyo Narita Northeast Asia Air Cargo Shuttle",
+        "chinese_name": "桃園 - 東京成田 東北亞空運貨運快線",
+        "mode": "Air Freight",
+        "scope": "International",
+        "corridor_type": "Intra-Asia All-Cargo & Belly",
+        "origin_code": "TPE",
+        "origin_name": "Taiwan Taoyuan International Airport",
+        "destination_code": "NRT",
+        "destination_name": "Tokyo Narita International Airport",
+        "via": "Direct",
+        "carriers": "China Airlines Cargo, EVA Air Cargo, JAL, ANA, Nippon Cargo",
+        "cargo_profile": "Semiconductor Wafers, Optical Components, Fresh Produce"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.2328,
+            25.0777
+          ],
+          [
+            121.95154,
+            25.57414
+          ],
+          [
+            122.67624,
+            26.06704
+          ],
+          [
+            123.40704,
+            26.55629
+          ],
+          [
+            124.14409,
+            27.04178
+          ],
+          [
+            124.88751,
+            27.52339
+          ],
+          [
+            125.63744,
+            28.00102
+          ],
+          [
+            126.39403,
+            28.47455
+          ],
+          [
+            127.1574,
+            28.94385
+          ],
+          [
+            127.92768,
+            29.4088
+          ],
+          [
+            128.70501,
+            29.86929
+          ],
+          [
+            129.48951,
+            30.32518
+          ],
+          [
+            130.28131,
+            30.77634
+          ],
+          [
+            131.08053,
+            31.22265
+          ],
+          [
+            131.88729,
+            31.66396
+          ],
+          [
+            132.70171,
+            32.10016
+          ],
+          [
+            133.52389,
+            32.53109
+          ],
+          [
+            134.35395,
+            32.95662
+          ],
+          [
+            135.192,
+            33.37662
+          ],
+          [
+            136.03812,
+            33.79092
+          ],
+          [
+            136.89241,
+            34.1994
+          ],
+          [
+            137.75495,
+            34.60189
+          ],
+          [
+            138.62584,
+            34.99826
+          ],
+          [
+            139.50513,
+            35.38834
+          ],
+          [
+            140.3929,
+            35.772
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "AIR-INT-08",
+        "name": "TPE - Seoul Incheon Northeast Asia Air Cargo Shuttle",
+        "chinese_name": "桃園 - 首爾仁川 東北亞空運貨運快線",
+        "mode": "Air Freight",
+        "scope": "International",
+        "corridor_type": "Intra-Asia All-Cargo & Belly",
+        "origin_code": "TPE",
+        "origin_name": "Taiwan Taoyuan International Airport",
+        "destination_code": "ICN",
+        "destination_name": "Incheon International Airport",
+        "via": "Direct",
+        "carriers": "Korean Air Cargo, Asiana Cargo, China Airlines, EVA Air",
+        "cargo_profile": "Memory Chips, Display Panels, Electronics"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.2328,
+            25.0777
+          ],
+          [
+            121.42521,
+            25.59737
+          ],
+          [
+            121.6193,
+            26.1168
+          ],
+          [
+            121.81512,
+            26.63595
+          ],
+          [
+            122.01274,
+            27.15484
+          ],
+          [
+            122.21219,
+            27.67345
+          ],
+          [
+            122.41355,
+            28.19177
+          ],
+          [
+            122.61686,
+            28.70979
+          ],
+          [
+            122.82221,
+            29.22751
+          ],
+          [
+            123.02963,
+            29.74491
+          ],
+          [
+            123.23921,
+            30.26198
+          ],
+          [
+            123.45101,
+            30.77872
+          ],
+          [
+            123.66509,
+            31.2951
+          ],
+          [
+            123.88154,
+            31.81113
+          ],
+          [
+            124.10041,
+            32.32679
+          ],
+          [
+            124.32179,
+            32.84206
+          ],
+          [
+            124.54575,
+            33.35695
+          ],
+          [
+            124.77238,
+            33.87142
+          ],
+          [
+            125.00176,
+            34.38547
+          ],
+          [
+            125.23396,
+            34.8991
+          ],
+          [
+            125.4691,
+            35.41227
+          ],
+          [
+            125.70724,
+            35.92498
+          ],
+          [
+            125.94849,
+            36.43722
+          ],
+          [
+            126.19294,
+            36.94896
+          ],
+          [
+            126.4407,
+            37.4602
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "AIR-INT-09",
+        "name": "TPE - Hong Kong High-Frequency Air Cargo Shuttle",
+        "chinese_name": "桃園 - 香港 高密度空運貨運航線",
+        "mode": "Air Freight",
+        "scope": "International",
+        "corridor_type": "Intra-Asia High-Frequency",
+        "origin_code": "TPE",
+        "origin_name": "Taiwan Taoyuan International Airport",
+        "destination_code": "HKG",
+        "destination_name": "Hong Kong International Airport",
+        "via": "Direct",
+        "carriers": "Cathay Cargo, China Airlines Cargo, EVA Air Cargo, DHL",
+        "cargo_profile": "Express E-Commerce, Electronics, Transshipment Cargo"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.2328,
+            25.0777
+          ],
+          [
+            120.92179,
+            24.96935
+          ],
+          [
+            120.61133,
+            24.86035
+          ],
+          [
+            120.30142,
+            24.75071
+          ],
+          [
+            119.99206,
+            24.64043
+          ],
+          [
+            119.68325,
+            24.52953
+          ],
+          [
+            119.37498,
+            24.41799
+          ],
+          [
+            119.06725,
+            24.30584
+          ],
+          [
+            118.76008,
+            24.19306
+          ],
+          [
+            118.45344,
+            24.07967
+          ],
+          [
+            118.14735,
+            23.96567
+          ],
+          [
+            117.84181,
+            23.85106
+          ],
+          [
+            117.5368,
+            23.73585
+          ],
+          [
+            117.23233,
+            23.62005
+          ],
+          [
+            116.92841,
+            23.50365
+          ],
+          [
+            116.62502,
+            23.38666
+          ],
+          [
+            116.32217,
+            23.26909
+          ],
+          [
+            116.01985,
+            23.15094
+          ],
+          [
+            115.71807,
+            23.03221
+          ],
+          [
+            115.41682,
+            22.91291
+          ],
+          [
+            115.1161,
+            22.79305
+          ],
+          [
+            114.81591,
+            22.67262
+          ],
+          [
+            114.51625,
+            22.55163
+          ],
+          [
+            114.21711,
+            22.43009
+          ],
+          [
+            113.9185,
+            22.308
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "AIR-INT-10",
+        "name": "TPE - Shanghai Pudong Cross-Strait Air Cargo Trunk",
+        "chinese_name": "桃園 - 上海浦東 兩岸空運貨運主幹線",
+        "mode": "Air Freight",
+        "scope": "International",
+        "corridor_type": "Cross-Strait All-Cargo",
+        "origin_code": "TPE",
+        "origin_name": "Taiwan Taoyuan International Airport",
+        "destination_code": "PVG",
+        "destination_name": "Shanghai Pudong International Airport",
+        "via": "Direct",
+        "carriers": "China Airlines Cargo, EVA Air Cargo, China Cargo Airlines, SF Airlines",
+        "cargo_profile": "ICT Supply Chain Components, Semiconductors, Express Mail"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.2328,
+            25.0777
+          ],
+          [
+            121.25555,
+            25.33052
+          ],
+          [
+            121.27839,
+            25.58334
+          ],
+          [
+            121.30133,
+            25.83615
+          ],
+          [
+            121.32437,
+            26.08896
+          ],
+          [
+            121.34751,
+            26.34177
+          ],
+          [
+            121.37075,
+            26.59457
+          ],
+          [
+            121.39409,
+            26.84737
+          ],
+          [
+            121.41754,
+            27.10016
+          ],
+          [
+            121.44109,
+            27.35295
+          ],
+          [
+            121.46475,
+            27.60574
+          ],
+          [
+            121.48852,
+            27.85852
+          ],
+          [
+            121.5124,
+            28.1113
+          ],
+          [
+            121.5364,
+            28.36407
+          ],
+          [
+            121.56051,
+            28.61684
+          ],
+          [
+            121.58473,
+            28.86961
+          ],
+          [
+            121.60908,
+            29.12237
+          ],
+          [
+            121.63354,
+            29.37513
+          ],
+          [
+            121.65812,
+            29.62788
+          ],
+          [
+            121.68283,
+            29.88063
+          ],
+          [
+            121.70767,
+            30.13337
+          ],
+          [
+            121.73263,
+            30.38611
+          ],
+          [
+            121.75772,
+            30.63885
+          ],
+          [
+            121.78294,
+            30.89158
+          ],
+          [
+            121.8083,
+            31.1443
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "AIR-INT-11",
+        "name": "TPE - Singapore Changi Southeast Asia Air Cargo Trunk",
+        "chinese_name": "桃園 - 新加坡樟宜 東南亞空運貨運主幹線",
+        "mode": "Air Freight",
+        "scope": "International",
+        "corridor_type": "Intra-Asia All-Cargo & Belly",
+        "origin_code": "TPE",
+        "origin_name": "Taiwan Taoyuan International Airport",
+        "destination_code": "SIN",
+        "destination_name": "Singapore Changi Airport",
+        "via": "Direct",
+        "carriers": "Singapore Airlines Cargo, China Airlines Cargo, EVA Air Cargo",
+        "cargo_profile": "Semiconductors, Aerospace Parts, Pharmaceuticals"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.2328,
+            25.0777
+          ],
+          [
+            120.42373,
+            24.12072
+          ],
+          [
+            119.6267,
+            23.15954
+          ],
+          [
+            118.84105,
+            22.19442
+          ],
+          [
+            118.06615,
+            21.22557
+          ],
+          [
+            117.30137,
+            20.25324
+          ],
+          [
+            116.54613,
+            19.27763
+          ],
+          [
+            115.79985,
+            18.29895
+          ],
+          [
+            115.06197,
+            17.31741
+          ],
+          [
+            114.33193,
+            16.3332
+          ],
+          [
+            113.60922,
+            15.3465
+          ],
+          [
+            112.89332,
+            14.3575
+          ],
+          [
+            112.18372,
+            13.36637
+          ],
+          [
+            111.47994,
+            12.37328
+          ],
+          [
+            110.7815,
+            11.37839
+          ],
+          [
+            110.08792,
+            10.38187
+          ],
+          [
+            109.39876,
+            9.38387
+          ],
+          [
+            108.71355,
+            8.38454
+          ],
+          [
+            108.03186,
+            7.38404
+          ],
+          [
+            107.35325,
+            6.3825
+          ],
+          [
+            106.67729,
+            5.38009
+          ],
+          [
+            106.00355,
+            4.37693
+          ],
+          [
+            105.33162,
+            3.37317
+          ],
+          [
+            104.66107,
+            2.36895
+          ],
+          [
+            103.9915,
+            1.3644
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "AIR-INT-12",
+        "name": "TPE - Clark Express Integrator Hub Route",
+        "chinese_name": "桃園 - 菲律賓克拉克 國際快遞轉運航線",
+        "mode": "Air Freight",
+        "scope": "International",
+        "corridor_type": "Express Integrator Network",
+        "origin_code": "TPE",
+        "origin_name": "Taiwan Taoyuan International Airport",
+        "destination_code": "CRK",
+        "destination_name": "Clark International Airport",
+        "via": "Direct",
+        "carriers": "FedEx Express, UPS",
+        "cargo_profile": "Time-Definite Express Parcels, Electronics"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.2328,
+            25.0777
+          ],
+          [
+            121.20287,
+            24.6656
+          ],
+          [
+            121.17313,
+            24.2535
+          ],
+          [
+            121.14359,
+            23.84139
+          ],
+          [
+            121.11423,
+            23.42927
+          ],
+          [
+            121.08506,
+            23.01715
+          ],
+          [
+            121.05607,
+            22.60503
+          ],
+          [
+            121.02724,
+            22.1929
+          ],
+          [
+            120.99859,
+            21.78076
+          ],
+          [
+            120.9701,
+            21.36862
+          ],
+          [
+            120.94177,
+            20.95647
+          ],
+          [
+            120.9136,
+            20.54432
+          ],
+          [
+            120.88557,
+            20.13217
+          ],
+          [
+            120.8577,
+            19.72001
+          ],
+          [
+            120.82997,
+            19.30785
+          ],
+          [
+            120.80237,
+            18.89568
+          ],
+          [
+            120.77492,
+            18.48351
+          ],
+          [
+            120.74759,
+            18.07133
+          ],
+          [
+            120.7204,
+            17.65915
+          ],
+          [
+            120.69332,
+            17.24697
+          ],
+          [
+            120.66637,
+            16.83478
+          ],
+          [
+            120.63954,
+            16.42259
+          ],
+          [
+            120.61282,
+            16.0104
+          ],
+          [
+            120.5862,
+            15.5982
+          ],
+          [
+            120.5597,
+            15.186
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "AIR-INT-13",
+        "name": "TPE - Hanoi / Ho Chi Minh Vietnam Tech Supply Chain Route",
+        "chinese_name": "桃園 - 河內/胡志明市 越南電子供應鏈貨運航線",
+        "mode": "Air Freight",
+        "scope": "International",
+        "corridor_type": "Intra-Asia All-Cargo & Belly",
+        "origin_code": "TPE",
+        "origin_name": "Taiwan Taoyuan International Airport",
+        "destination_code": "HAN",
+        "destination_name": "Noi Bai International Airport (Hanoi)",
+        "via": "Direct",
+        "carriers": "China Airlines Cargo, EVA Air Cargo, Vietnam Airlines",
+        "cargo_profile": "Consumer Electronics Assembly Components, Textiles"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.2328,
+            25.0777
+          ],
+          [
+            120.57274,
+            24.94826
+          ],
+          [
+            119.91407,
+            24.81591
+          ],
+          [
+            119.25683,
+            24.68069
+          ],
+          [
+            118.60103,
+            24.54261
+          ],
+          [
+            117.94668,
+            24.4017
+          ],
+          [
+            117.29381,
+            24.25799
+          ],
+          [
+            116.64242,
+            24.1115
+          ],
+          [
+            115.99254,
+            23.96225
+          ],
+          [
+            115.34418,
+            23.81027
+          ],
+          [
+            114.69734,
+            23.65559
+          ],
+          [
+            114.05204,
+            23.49823
+          ],
+          [
+            113.4083,
+            23.33822
+          ],
+          [
+            112.76612,
+            23.17559
+          ],
+          [
+            112.12551,
+            23.01036
+          ],
+          [
+            111.48648,
+            22.84255
+          ],
+          [
+            110.84904,
+            22.67221
+          ],
+          [
+            110.21319,
+            22.49935
+          ],
+          [
+            109.57894,
+            22.324
+          ],
+          [
+            108.94629,
+            22.14619
+          ],
+          [
+            108.31525,
+            21.96594
+          ],
+          [
+            107.68582,
+            21.78329
+          ],
+          [
+            107.058,
+            21.59827
+          ],
+          [
+            106.43179,
+            21.41089
+          ],
+          [
+            105.8072,
+            21.2212
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "AIR-INT-14",
+        "name": "KHH - Hong Kong Southern Taiwan International Air Cargo Link",
+        "chinese_name": "高雄小港 - 香港 南臺灣國際空運貨運航線",
+        "mode": "Air Freight",
+        "scope": "International",
+        "corridor_type": "Regional Air Cargo",
+        "origin_code": "KHH",
+        "origin_name": "Kaohsiung International Airport",
+        "destination_code": "HKG",
+        "destination_name": "Hong Kong International Airport",
+        "via": "Direct",
+        "carriers": "Cathay Pacific, China Airlines, EVA Air",
+        "cargo_profile": "Southern Science Park Electronics, Seafood, Precision Parts"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.3497,
+            22.5771
+          ],
+          [
+            120.08131,
+            22.57099
+          ],
+          [
+            119.81294,
+            22.56443
+          ],
+          [
+            119.54459,
+            22.55743
+          ],
+          [
+            119.27628,
+            22.54999
+          ],
+          [
+            119.00799,
+            22.5421
+          ],
+          [
+            118.73974,
+            22.53376
+          ],
+          [
+            118.47152,
+            22.52498
+          ],
+          [
+            118.20334,
+            22.51576
+          ],
+          [
+            117.93519,
+            22.50609
+          ],
+          [
+            117.66708,
+            22.49598
+          ],
+          [
+            117.39901,
+            22.48542
+          ],
+          [
+            117.13098,
+            22.47442
+          ],
+          [
+            116.86299,
+            22.46298
+          ],
+          [
+            116.59505,
+            22.4511
+          ],
+          [
+            116.32716,
+            22.43877
+          ],
+          [
+            116.05931,
+            22.426
+          ],
+          [
+            115.79152,
+            22.41279
+          ],
+          [
+            115.52378,
+            22.39914
+          ],
+          [
+            115.25609,
+            22.38505
+          ],
+          [
+            114.98845,
+            22.37052
+          ],
+          [
+            114.72088,
+            22.35555
+          ],
+          [
+            114.45336,
+            22.34014
+          ],
+          [
+            114.1859,
+            22.32429
+          ],
+          [
+            113.9185,
+            22.308
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "AIR-INT-15",
+        "name": "KHH - Tokyo Narita Southern Taiwan Air Cargo Link",
+        "chinese_name": "高雄小港 - 東京成田 南臺灣對日空運航線",
+        "mode": "Air Freight",
+        "scope": "International",
+        "corridor_type": "Regional Belly Cargo",
+        "origin_code": "KHH",
+        "origin_name": "Kaohsiung International Airport",
+        "destination_code": "NRT",
+        "destination_name": "Tokyo Narita International Airport",
+        "via": "Direct",
+        "carriers": "China Airlines, EVA Air, Tigerair Taiwan",
+        "cargo_profile": "Semiconductor Materials, Fresh Fruits, Seafood"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.3497,
+            22.5771
+          ],
+          [
+            121.08962,
+            23.17991
+          ],
+          [
+            121.83623,
+            23.77924
+          ],
+          [
+            122.58972,
+            24.37494
+          ],
+          [
+            123.35033,
+            24.96688
+          ],
+          [
+            124.11826,
+            25.55492
+          ],
+          [
+            124.89374,
+            26.13891
+          ],
+          [
+            125.67699,
+            26.71872
+          ],
+          [
+            126.46823,
+            27.29418
+          ],
+          [
+            127.26769,
+            27.86514
+          ],
+          [
+            128.07557,
+            28.43144
+          ],
+          [
+            128.89211,
+            28.99292
+          ],
+          [
+            129.71753,
+            29.54941
+          ],
+          [
+            130.55205,
+            30.10075
+          ],
+          [
+            131.39588,
+            30.64675
+          ],
+          [
+            132.24925,
+            31.18724
+          ],
+          [
+            133.11236,
+            31.72204
+          ],
+          [
+            133.98544,
+            32.25095
+          ],
+          [
+            134.86869,
+            32.77379
+          ],
+          [
+            135.76232,
+            33.29036
+          ],
+          [
+            136.66652,
+            33.80046
+          ],
+          [
+            137.5815,
+            34.30389
+          ],
+          [
+            138.50743,
+            34.80043
+          ],
+          [
+            139.44451,
+            35.28987
+          ],
+          [
+            140.3929,
+            35.772
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "AIR-DOM-01",
+        "name": "Taipei Songshan (TSA) - Penghu (MZG) Domestic Air Cargo Corridor",
+        "chinese_name": "臺北松山 - 澎湖 國內空運貨運航線",
+        "mode": "Air Freight",
+        "scope": "Domestic",
+        "corridor_type": "Mainland-Offshore Island Air Cargo",
+        "origin_code": "TSA",
+        "origin_name": "Taipei Songshan Airport",
+        "destination_code": "MZG",
+        "destination_name": "Penghu Airport",
+        "via": "Direct",
+        "carriers": "UNI Air, Mandarin Airlines",
+        "cargo_profile": "Express Parcels, Fresh Seafood, Perishables, Mail"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.5525,
+            25.0694
+          ],
+          [
+            121.30946,
+            24.88315
+          ],
+          [
+            121.06715,
+            24.69652
+          ],
+          [
+            120.82557,
+            24.50949
+          ],
+          [
+            120.58471,
+            24.32208
+          ],
+          [
+            120.34455,
+            24.13429
+          ],
+          [
+            120.10511,
+            23.94613
+          ],
+          [
+            119.86636,
+            23.7576
+          ],
+          [
+            119.6283,
+            23.5687
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "AIR-DOM-02",
+        "name": "Taipei Songshan (TSA) - Kinmen (KNH) Domestic Air Cargo Corridor",
+        "chinese_name": "臺北松山 - 金門 國內空運貨運航線",
+        "mode": "Air Freight",
+        "scope": "Domestic",
+        "corridor_type": "Mainland-Offshore Island Air Cargo",
+        "origin_code": "TSA",
+        "origin_name": "Taipei Songshan Airport",
+        "destination_code": "KNH",
+        "destination_name": "Kinmen Airport",
+        "via": "Direct",
+        "carriers": "UNI Air, Mandarin Airlines",
+        "cargo_profile": "Express Parcels, Agricultural Specialties, Mail"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.5525,
+            25.0694
+          ],
+          [
+            121.15155,
+            24.99293
+          ],
+          [
+            120.7511,
+            24.91539
+          ],
+          [
+            120.35116,
+            24.83678
+          ],
+          [
+            119.95173,
+            24.75711
+          ],
+          [
+            119.55281,
+            24.67638
+          ],
+          [
+            119.15442,
+            24.5946
+          ],
+          [
+            118.75654,
+            24.51177
+          ],
+          [
+            118.3592,
+            24.4279
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "AIR-DOM-03",
+        "name": "Taipei Songshan (TSA) - Matsu Nangan (LZN) Domestic Air Cargo Corridor",
+        "chinese_name": "臺北松山 - 馬祖南竿 國內空運貨運航線",
+        "mode": "Air Freight",
+        "scope": "Domestic",
+        "corridor_type": "Mainland-Offshore Island Air Cargo",
+        "origin_code": "TSA",
+        "origin_name": "Taipei Songshan Airport",
+        "destination_code": "LZN",
+        "destination_name": "Matsu Nangan Airport",
+        "via": "Direct",
+        "carriers": "UNI Air, Mandarin Airlines",
+        "cargo_profile": "Express Parcels, Fresh Food, Medical Supplies, Mail"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.5525,
+            25.0694
+          ],
+          [
+            121.35481,
+            25.20664
+          ],
+          [
+            121.15667,
+            25.34361
+          ],
+          [
+            120.95808,
+            25.48032
+          ],
+          [
+            120.75904,
+            25.61676
+          ],
+          [
+            120.55954,
+            25.75293
+          ],
+          [
+            120.35959,
+            25.88883
+          ],
+          [
+            120.15918,
+            26.02445
+          ],
+          [
+            119.9583,
+            26.1598
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "AIR-DOM-04",
+        "name": "Taipei Songshan (TSA) - Matsu Beigan (MFK) Domestic Air Cargo Corridor",
+        "chinese_name": "臺北松山 - 馬祖北竿 國內空運貨運航線",
+        "mode": "Air Freight",
+        "scope": "Domestic",
+        "corridor_type": "Mainland-Offshore Island Air Cargo",
+        "origin_code": "TSA",
+        "origin_name": "Taipei Songshan Airport",
+        "destination_code": "MFK",
+        "destination_name": "Matsu Beigan Airport",
+        "via": "Direct",
+        "carriers": "UNI Air",
+        "cargo_profile": "Express Parcels, Daily Supplies, Mail"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.5525,
+            25.0694
+          ],
+          [
+            121.36042,
+            25.21464
+          ],
+          [
+            121.16787,
+            25.35962
+          ],
+          [
+            120.97487,
+            25.50436
+          ],
+          [
+            120.7814,
+            25.64884
+          ],
+          [
+            120.58746,
+            25.79307
+          ],
+          [
+            120.39305,
+            25.93704
+          ],
+          [
+            120.19816,
+            26.08075
+          ],
+          [
+            120.0028,
+            26.2242
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 20,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "AIR-DOM-05",
+        "name": "Taipei Songshan (TSA) - Hualien (HUN) East Coast Air Cargo Route",
+        "chinese_name": "臺北松山 - 花蓮 國內東線空運貨運航線",
+        "mode": "Air Freight",
+        "scope": "Domestic",
+        "corridor_type": "East Coast Domestic Air Cargo",
+        "origin_code": "TSA",
+        "origin_name": "Taipei Songshan Airport",
+        "destination_code": "HUN",
+        "destination_name": "Hualien Airport",
+        "via": "Direct",
+        "carriers": "UNI Air",
+        "cargo_profile": "Urgent Parcels, Perishables, Medical Cargo"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.5525,
+            25.0694
+          ],
+          [
+            121.56072,
+            24.93861
+          ],
+          [
+            121.56893,
+            24.80783
+          ],
+          [
+            121.57712,
+            24.67704
+          ],
+          [
+            121.58529,
+            24.54625
+          ],
+          [
+            121.59344,
+            24.41547
+          ],
+          [
+            121.60158,
+            24.28468
+          ],
+          [
+            121.6097,
+            24.15389
+          ],
+          [
+            121.6178,
+            24.0231
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 21,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "AIR-DOM-06",
+        "name": "Taipei Songshan (TSA) - Taitung (TTT) East Coast Air Cargo Route",
+        "chinese_name": "臺北松山 - 臺東 國內東線空運貨運航線",
+        "mode": "Air Freight",
+        "scope": "Domestic",
+        "corridor_type": "East Coast Domestic Air Cargo",
+        "origin_code": "TSA",
+        "origin_name": "Taipei Songshan Airport",
+        "destination_code": "TTT",
+        "destination_name": "Taitung Airport",
+        "via": "Direct",
+        "carriers": "UNI Air, Mandarin Airlines",
+        "cargo_profile": "High-Value Fruits, Fresh Fish, Urgent Parcels"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.5525,
+            25.0694
+          ],
+          [
+            121.49525,
+            24.78017
+          ],
+          [
+            121.43827,
+            24.49092
+          ],
+          [
+            121.38155,
+            24.20165
+          ],
+          [
+            121.32508,
+            23.91236
+          ],
+          [
+            121.26887,
+            23.62305
+          ],
+          [
+            121.2129,
+            23.33372
+          ],
+          [
+            121.15718,
+            23.04437
+          ],
+          [
+            121.1017,
+            22.755
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 22,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "AIR-DOM-07",
+        "name": "Taichung (RMQ) - Kinmen (KNH) Central Taiwan Offshore Air Cargo",
+        "chinese_name": "臺中 - 金門 國內空運貨運航線",
+        "mode": "Air Freight",
+        "scope": "Domestic",
+        "corridor_type": "Mainland-Offshore Island Air Cargo",
+        "origin_code": "RMQ",
+        "origin_name": "Taichung International Airport",
+        "destination_code": "KNH",
+        "destination_name": "Kinmen Airport",
+        "via": "Direct",
+        "carriers": "UNI Air, Mandarin Airlines",
+        "cargo_profile": "Express Parcels, General Cargo"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6206,
+            24.2647
+          ],
+          [
+            120.33825,
+            24.28693
+          ],
+          [
+            120.05581,
+            24.30864
+          ],
+          [
+            119.77326,
+            24.32983
+          ],
+          [
+            119.49063,
+            24.35049
+          ],
+          [
+            119.2079,
+            24.37063
+          ],
+          [
+            118.92509,
+            24.39025
+          ],
+          [
+            118.64219,
+            24.40934
+          ],
+          [
+            118.3592,
+            24.4279
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 23,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "AIR-DOM-08",
+        "name": "Taichung (RMQ) - Penghu (MZG) Central Taiwan Offshore Air Cargo",
+        "chinese_name": "臺中 - 澎湖 國內空運貨運航線",
+        "mode": "Air Freight",
+        "scope": "Domestic",
+        "corridor_type": "Mainland-Offshore Island Air Cargo",
+        "origin_code": "RMQ",
+        "origin_name": "Taichung International Airport",
+        "destination_code": "MZG",
+        "destination_name": "Penghu Airport",
+        "via": "Direct",
+        "carriers": "UNI Air, Mandarin Airlines",
+        "cargo_profile": "Express Parcels, Fresh Seafood"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6206,
+            24.2647
+          ],
+          [
+            120.49598,
+            24.17805
+          ],
+          [
+            120.37152,
+            24.0913
+          ],
+          [
+            120.24723,
+            24.00445
+          ],
+          [
+            120.12311,
+            23.9175
+          ],
+          [
+            119.99916,
+            23.83045
+          ],
+          [
+            119.87538,
+            23.74329
+          ],
+          [
+            119.75176,
+            23.65605
+          ],
+          [
+            119.6283,
+            23.5687
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 24,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "AIR-DOM-09",
+        "name": "Taichung (RMQ) - Matsu Nangan (LZN) Central Taiwan Offshore Air Cargo",
+        "chinese_name": "臺中 - 馬祖南竿 國內空運貨運航線",
+        "mode": "Air Freight",
+        "scope": "Domestic",
+        "corridor_type": "Mainland-Offshore Island Air Cargo",
+        "origin_code": "RMQ",
+        "origin_name": "Taichung International Airport",
+        "destination_code": "LZN",
+        "destination_name": "Matsu Nangan Airport",
+        "via": "Direct",
+        "carriers": "UNI Air",
+        "cargo_profile": "Express Parcels, General Cargo"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.6206,
+            24.2647
+          ],
+          [
+            120.53892,
+            24.50175
+          ],
+          [
+            120.45694,
+            24.73875
+          ],
+          [
+            120.37464,
+            24.97571
+          ],
+          [
+            120.29203,
+            25.21262
+          ],
+          [
+            120.20909,
+            25.44948
+          ],
+          [
+            120.12583,
+            25.6863
+          ],
+          [
+            120.04223,
+            25.92308
+          ],
+          [
+            119.9583,
+            26.1598
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 25,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "AIR-DOM-10",
+        "name": "Kaohsiung (KHH) - Penghu (MZG) Southern Taiwan Offshore Air Cargo",
+        "chinese_name": "高雄 - 澎湖 國內空運貨運航線",
+        "mode": "Air Freight",
+        "scope": "Domestic",
+        "corridor_type": "Mainland-Offshore Island Air Cargo",
+        "origin_code": "KHH",
+        "origin_name": "Kaohsiung International Airport",
+        "destination_code": "MZG",
+        "destination_name": "Penghu Airport",
+        "via": "Direct",
+        "carriers": "UNI Air, Mandarin Airlines",
+        "cargo_profile": "Express Parcels, Fresh Seafood, Perishables"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.3497,
+            22.5771
+          ],
+          [
+            120.2601,
+            22.70123
+          ],
+          [
+            120.17034,
+            22.82531
+          ],
+          [
+            120.08042,
+            22.94933
+          ],
+          [
+            119.99033,
+            23.07331
+          ],
+          [
+            119.90007,
+            23.19723
+          ],
+          [
+            119.80965,
+            23.32111
+          ],
+          [
+            119.71906,
+            23.44493
+          ],
+          [
+            119.6283,
+            23.5687
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 26,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "AIR-DOM-11",
+        "name": "Kaohsiung (KHH) - Kinmen (KNH) Southern Taiwan Offshore Air Cargo",
+        "chinese_name": "高雄 - 金門 國內空運貨運航線",
+        "mode": "Air Freight",
+        "scope": "Domestic",
+        "corridor_type": "Mainland-Offshore Island Air Cargo",
+        "origin_code": "KHH",
+        "origin_name": "Kaohsiung International Airport",
+        "destination_code": "KNH",
+        "destination_name": "Kinmen Airport",
+        "via": "Direct",
+        "carriers": "UNI Air, Mandarin Airlines",
+        "cargo_profile": "Express Parcels, General Cargo"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.3497,
+            22.5771
+          ],
+          [
+            120.10391,
+            22.80981
+          ],
+          [
+            119.85727,
+            23.04215
+          ],
+          [
+            119.60979,
+            23.2741
+          ],
+          [
+            119.36144,
+            23.50566
+          ],
+          [
+            119.11222,
+            23.73683
+          ],
+          [
+            118.86211,
+            23.96759
+          ],
+          [
+            118.61111,
+            24.19795
+          ],
+          [
+            118.3592,
+            24.4279
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 27,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "AIR-DOM-12",
+        "name": "Kaohsiung (KHH) - Hualien (HUN) Southern-Eastern Air Cargo Link",
+        "chinese_name": "高雄 - 花蓮 國內空運貨運航線",
+        "mode": "Air Freight",
+        "scope": "Domestic",
+        "corridor_type": "Regional Domestic Air Cargo",
+        "origin_code": "KHH",
+        "origin_name": "Kaohsiung International Airport",
+        "destination_code": "HUN",
+        "destination_name": "Hualien Airport",
+        "via": "Direct",
+        "carriers": "UNI Air",
+        "cargo_profile": "Urgent Parcels, Perishables"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.3497,
+            22.5771
+          ],
+          [
+            120.50672,
+            22.7584
+          ],
+          [
+            120.66416,
+            22.93955
+          ],
+          [
+            120.82202,
+            23.12054
+          ],
+          [
+            120.9803,
+            23.30137
+          ],
+          [
+            121.13902,
+            23.48205
+          ],
+          [
+            121.29817,
+            23.66256
+          ],
+          [
+            121.45776,
+            23.84291
+          ],
+          [
+            121.6178,
+            24.0231
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 28,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "AIR-DOM-13",
+        "name": "Tainan (TNN) / Chiayi (CYI) - Penghu (MZG) & Kinmen (KNH) Feeder Air Cargo",
+        "chinese_name": "臺南/嘉義 - 澎湖/金門 國內空運貨運航線",
+        "mode": "Air Freight",
+        "scope": "Domestic",
+        "corridor_type": "Mainland-Offshore Island Air Cargo",
+        "origin_code": "TNN",
+        "origin_name": "Tainan Airport",
+        "destination_code": "MZG",
+        "destination_name": "Penghu Airport",
+        "via": "Direct",
+        "carriers": "UNI Air",
+        "cargo_profile": "Express Parcels, Fresh Seafood"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.2058,
+            22.9504
+          ],
+          [
+            120.1339,
+            23.0278
+          ],
+          [
+            120.06193,
+            23.10517
+          ],
+          [
+            119.98986,
+            23.18251
+          ],
+          [
+            119.91772,
+            23.25981
+          ],
+          [
+            119.84549,
+            23.33709
+          ],
+          [
+            119.77318,
+            23.41432
+          ],
+          [
+            119.70078,
+            23.49153
+          ],
+          [
+            119.6283,
+            23.5687
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 29,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "AIR-DOM-14",
+        "name": "Taitung (TTT) - Ludao (GNI) & Lanyu (KYD) Remote Island Lifeline Air Cargo",
+        "chinese_name": "臺東 - 綠島/蘭嶼 離島民生空運貨運航線",
+        "mode": "Air Freight",
+        "scope": "Domestic",
+        "corridor_type": "Remote Island Lifeline Air Cargo",
+        "origin_code": "TTT",
+        "origin_name": "Taitung Airport",
+        "destination_code": "KYD",
+        "destination_name": "Lanyu (Orchid Island) Airport",
+        "via": "Direct",
+        "carriers": "Daily Air Corporation",
+        "cargo_profile": "Fresh Groceries, Medical Supplies, Mail, Parcels"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.1017,
+            22.755
+          ],
+          [
+            121.15615,
+            22.66406
+          ],
+          [
+            121.21053,
+            22.57311
+          ],
+          [
+            121.26483,
+            22.48214
+          ],
+          [
+            121.31907,
+            22.39114
+          ],
+          [
+            121.37323,
+            22.30014
+          ],
+          [
+            121.42732,
+            22.20911
+          ],
+          [
+            121.48135,
+            22.11806
+          ],
+          [
+            121.5353,
+            22.027
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 30,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "AIR-DOM-15",
+        "name": "Taitung (TTT) - Ludao (GNI) Remote Island Lifeline Air Cargo",
+        "chinese_name": "臺東 - 綠島 離島民生空運貨運航線",
+        "mode": "Air Freight",
+        "scope": "Domestic",
+        "corridor_type": "Remote Island Lifeline Air Cargo",
+        "origin_code": "TTT",
+        "origin_name": "Taitung Airport",
+        "destination_code": "GNI",
+        "destination_name": "Ludao (Green Island) Airport",
+        "via": "Direct",
+        "carriers": "Daily Air Corporation",
+        "cargo_profile": "Fresh Groceries, Medical Supplies, Mail, Parcels"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.1017,
+            22.755
+          ],
+          [
+            121.14735,
+            22.74491
+          ],
+          [
+            121.19299,
+            22.7348
+          ],
+          [
+            121.23863,
+            22.72468
+          ],
+          [
+            121.28425,
+            22.71455
+          ],
+          [
+            121.32988,
+            22.70441
+          ],
+          [
+            121.37549,
+            22.69425
+          ],
+          [
+            121.4211,
+            22.68408
+          ],
+          [
+            121.4667,
+            22.6739
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 31,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "SEA-INT-01",
+        "name": "Trans-Pacific Eastbound Container Corridor (Kaohsiung - Los Angeles/Long Beach)",
+        "chinese_name": "跨太平洋東向貨櫃航線 (高雄港 - 洛杉磯/長堤港)",
+        "mode": "Ocean Freight",
+        "scope": "International",
+        "corridor_type": "Trans-Pacific Mainline",
+        "origin_code": "TWKHH",
+        "origin_name": "Port of Kaohsiung",
+        "destination_code": "USLAX",
+        "destination_name": "Port of Los Angeles / Long Beach",
+        "via": "Maritime Sea Lane",
+        "carriers": "Evergreen, Yang Ming, Wan Hai, Maersk, ONE",
+        "cargo_profile": "Electronics, Machinery, Auto Parts, Consumer Goods"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.285,
+            22.555
+          ],
+          [
+            120.85,
+            21.8
+          ],
+          [
+            125.0,
+            23.5
+          ],
+          [
+            138.0,
+            32.0
+          ],
+          [
+            155.0,
+            41.0
+          ],
+          [
+            175.0,
+            45.0
+          ],
+          [
+            -165.0,
+            45.5
+          ],
+          [
+            -145.0,
+            42.0
+          ],
+          [
+            -128.0,
+            36.5
+          ],
+          [
+            -118.264,
+            33.74
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 32,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "SEA-INT-02",
+        "name": "Trans-Pacific All-Water US East Coast Corridor (Kaohsiung - Savannah via Panama Canal)",
+        "chinese_name": "遠東-美東巴拿馬運河全水路航線 (高雄港 - 薩凡納港)",
+        "mode": "Ocean Freight",
+        "scope": "International",
+        "corridor_type": "Trans-Pacific / Panama Canal Mainline",
+        "origin_code": "TWKHH",
+        "origin_name": "Port of Kaohsiung",
+        "destination_code": "USSAV",
+        "destination_name": "Port of Savannah (via Panama Canal)",
+        "via": "Maritime Sea Lane",
+        "carriers": "Evergreen, Yang Ming, CMA CGM, COSCO",
+        "cargo_profile": "Containerized Industrial Goods, Hardware, Retail Cargo"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.285,
+            22.555
+          ],
+          [
+            121.0,
+            21.7
+          ],
+          [
+            135.0,
+            20.0
+          ],
+          [
+            160.0,
+            18.0
+          ],
+          [
+            -170.0,
+            15.0
+          ],
+          [
+            -140.0,
+            12.0
+          ],
+          [
+            -110.0,
+            10.0
+          ],
+          [
+            -85.0,
+            8.0
+          ],
+          [
+            -79.55,
+            8.95
+          ],
+          [
+            -79.92,
+            9.38
+          ],
+          [
+            -77.0,
+            19.0
+          ],
+          [
+            -79.5,
+            25.5
+          ],
+          [
+            -81.14,
+            32.13
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 33,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "SEA-INT-03",
+        "name": "Asia-Europe Trunk Route (Kaohsiung - Singapore - Suez - Rotterdam)",
+        "chinese_name": "遠東-歐洲主幹貨櫃航線 (高雄港 - 新加坡 - 蘇伊士 - 鹿特丹港)",
+        "mode": "Ocean Freight",
+        "scope": "International",
+        "corridor_type": "Asia-Europe Mainline",
+        "origin_code": "TWKHH",
+        "origin_name": "Port of Kaohsiung",
+        "destination_code": "NLRTM",
+        "destination_name": "Port of Rotterdam",
+        "via": "Maritime Sea Lane",
+        "carriers": "Evergreen, Yang Ming, MSC, Maersk, CMA CGM",
+        "cargo_profile": "Semiconductor Equipment, ICT Hardware, Petrochemicals, Bicycles"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.285,
+            22.555
+          ],
+          [
+            116.0,
+            16.0
+          ],
+          [
+            109.5,
+            8.5
+          ],
+          [
+            103.78,
+            1.265
+          ],
+          [
+            100.5,
+            4.0
+          ],
+          [
+            95.0,
+            6.2
+          ],
+          [
+            80.0,
+            5.5
+          ],
+          [
+            65.0,
+            11.0
+          ],
+          [
+            51.5,
+            12.5
+          ],
+          [
+            43.3,
+            12.7
+          ],
+          [
+            34.0,
+            27.5
+          ],
+          [
+            32.35,
+            31.25
+          ],
+          [
+            25.0,
+            34.5
+          ],
+          [
+            14.0,
+            36.5
+          ],
+          [
+            -5.6,
+            35.95
+          ],
+          [
+            -9.8,
+            38.5
+          ],
+          [
+            -5.0,
+            48.5
+          ],
+          [
+            1.5,
+            51.0
+          ],
+          [
+            4.13,
+            51.95
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 34,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "SEA-INT-04",
+        "name": "Northeast Asia Express Corridor (Keelung / Taipei - Busan - Tokyo)",
+        "chinese_name": "東北亞近洋貨櫃快線 (基隆/臺北港 - 釜山港 - 東京港)",
+        "mode": "Ocean Freight",
+        "scope": "International",
+        "corridor_type": "Intra-Asia Short-Sea",
+        "origin_code": "TWKEL",
+        "origin_name": "Port of Keelung",
+        "destination_code": "JPTYO",
+        "destination_name": "Port of Tokyo / Yokohama",
+        "via": "Maritime Sea Lane",
+        "carriers": "Wan Hai, Evergreen, Yang Ming, TS Lines",
+        "cargo_profile": "Electronic Components, Precision Machinery, Chemicals, Steel"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.745,
+            25.145
+          ],
+          [
+            123.5,
+            28.0
+          ],
+          [
+            126.5,
+            32.5
+          ],
+          [
+            129.04,
+            35.1
+          ],
+          [
+            131.0,
+            33.8
+          ],
+          [
+            135.0,
+            33.2
+          ],
+          [
+            139.78,
+            35.62
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 35,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "SEA-INT-05",
+        "name": "South China / Pearl River Delta Feeder (Kaohsiung - Hong Kong)",
+        "chinese_name": "臺港珠三角貨櫃駁船航線 (高雄港 - 香港)",
+        "mode": "Ocean Freight",
+        "scope": "International",
+        "corridor_type": "Intra-Asia Feeder",
+        "origin_code": "TWKHH",
+        "origin_name": "Port of Kaohsiung",
+        "destination_code": "HKHKG",
+        "destination_name": "Port of Hong Kong",
+        "via": "Maritime Sea Lane",
+        "carriers": "Wan Hai, TS Lines, OOCL, Evergreen",
+        "cargo_profile": "Transshipment Containers, Electronics, Textiles"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.285,
+            22.555
+          ],
+          [
+            118.0,
+            22.1
+          ],
+          [
+            115.5,
+            22.05
+          ],
+          [
+            114.12,
+            22.33
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "SEA-INT-06",
+        "name": "Southeast Asia / ASEAN Trunk Corridor (Taichung / Kaohsiung - Manila - Ho Chi Minh - Singapore)",
+        "chinese_name": "東南亞東協主幹航線 (臺中/高雄港 - 馬尼拉 - 胡志明 - 新加坡)",
+        "mode": "Ocean Freight",
+        "scope": "International",
+        "corridor_type": "Intra-Asia Mainline",
+        "origin_code": "TWTXG",
+        "origin_name": "Port of Taichung",
+        "destination_code": "SGSIN",
+        "destination_name": "Port of Singapore",
+        "via": "Maritime Sea Lane",
+        "carriers": "Wan Hai, Evergreen, Yang Ming, CNC",
+        "cargo_profile": "New Southbound Supply Chain Cargo, Plastics, Footwear Materials, Electronics"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.5167,
+            24.2833
+          ],
+          [
+            119.8,
+            22.5
+          ],
+          [
+            119.8,
+            18.0
+          ],
+          [
+            120.955,
+            14.585
+          ],
+          [
+            115.0,
+            12.0
+          ],
+          [
+            108.5,
+            10.2
+          ],
+          [
+            106.79,
+            10.76
+          ],
+          [
+            105.0,
+            6.5
+          ],
+          [
+            103.78,
+            1.265
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 37,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "SEA-INT-07",
+        "name": "Cross-Strait Direct Shipping Corridor (Port of Taipei - Port of Shanghai)",
+        "chinese_name": "兩岸海運直航貨櫃航線 (臺北港 - 上海洋山港)",
+        "mode": "Ocean Freight",
+        "scope": "Cross-Strait / Regional",
+        "corridor_type": "Cross-Strait Direct Link",
+        "origin_code": "TWTPE",
+        "origin_name": "Port of Taipei",
+        "destination_code": "CNSHA",
+        "destination_name": "Port of Shanghai (Yangshan)",
+        "via": "Maritime Sea Lane",
+        "carriers": "Evergreen, Yang Ming, COSCO, SITC",
+        "cargo_profile": "Cross-Strait Express Cargo, Auto Parts, Electronics"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.375,
+            25.158
+          ],
+          [
+            121.8,
+            27.2
+          ],
+          [
+            122.3,
+            29.2
+          ],
+          [
+            122.06,
+            30.63
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 38,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "SEA-INT-08",
+        "name": "Mini-Three-Links Kinmen-Xiamen Freight Corridor (Kinmen - Xiamen)",
+        "chinese_name": "小三通金廈海運貨運航線 (金門港 - 廈門港)",
+        "mode": "Ocean Freight",
+        "scope": "Cross-Strait / Regional",
+        "corridor_type": "Mini-Three-Links Freight",
+        "origin_code": "TWKNH",
+        "origin_name": "Port of Kinmen (Liaoluo / Shuitou)",
+        "destination_code": "CNXMN",
+        "destination_name": "Port of Xiamen",
+        "via": "Maritime Sea Lane",
+        "carriers": "Cross-Strait Short-Sea Cargo Operators",
+        "cargo_profile": "Cross-Border E-Commerce, Agricultural & Specialty Goods"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.425,
+            24.415
+          ],
+          [
+            118.22,
+            24.43
+          ],
+          [
+            118.06,
+            24.49
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 39,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "SEA-INT-09",
+        "name": "Mini-Three-Links Matsu-Fuzhou Freight Corridor (Matsu Fuao - Fuzhou Mawei)",
+        "chinese_name": "小三通馬尾海運貨運航線 (馬祖福澳港 - 福州馬尾港)",
+        "mode": "Ocean Freight",
+        "scope": "Cross-Strait / Regional",
+        "corridor_type": "Mini-Three-Links Freight",
+        "origin_code": "TWLZN",
+        "origin_name": "Port of Matsu (Fuao)",
+        "destination_code": "CNFOC",
+        "destination_name": "Port of Fuzhou (Mawei / Huangqi)",
+        "via": "Maritime Sea Lane",
+        "carriers": "Cross-Strait Short-Sea Cargo Operators",
+        "cargo_profile": "Regional Trade & Cross-Border E-Commerce"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            119.942,
+            26.161
+          ],
+          [
+            119.72,
+            26.1
+          ],
+          [
+            119.45,
+            25.99
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "SEA-INT-10",
+        "name": "Kaohsiung-Xiamen Direct Cross-Strait Liner (Kaohsiung - Xiamen)",
+        "chinese_name": "高雄-廈門兩岸直航貨櫃航線",
+        "mode": "Ocean Freight",
+        "scope": "Cross-Strait / Regional",
+        "corridor_type": "Cross-Strait Direct Link",
+        "origin_code": "TWKHH",
+        "origin_name": "Port of Kaohsiung",
+        "destination_code": "CNXMN",
+        "destination_name": "Port of Xiamen",
+        "via": "Maritime Sea Lane",
+        "carriers": "Yang Ming, Wan Hai, COSCO",
+        "cargo_profile": "Containerized Industrial & Agricultural Cargo"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.285,
+            22.555
+          ],
+          [
+            119.3,
+            23.4
+          ],
+          [
+            118.06,
+            24.49
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 41,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "SEA-DOM-01",
+        "name": "Keelung - Matsu Offshore Freight & Ro-Ro Ferry Route",
+        "chinese_name": "基隆-馬祖國內離島海運貨運航線 (臺馬輪/新臺馬輪)",
+        "mode": "Ocean Freight",
+        "scope": "Domestic",
+        "corridor_type": "Mainland-Offshore Island Lifeline",
+        "origin_code": "TWKEL",
+        "origin_name": "Port of Keelung",
+        "destination_code": "TWLZN",
+        "destination_name": "Port of Matsu (Fuao)",
+        "via": "Maritime Sea Lane",
+        "carriers": "Taiwan-Matsu Shipping Co.",
+        "cargo_profile": "Daily Necessities, Construction Materials, Vehicles, Mail"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.745,
+            25.145
+          ],
+          [
+            121.3,
+            25.45
+          ],
+          [
+            120.6,
+            25.85
+          ],
+          [
+            119.942,
+            26.161
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 42,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "SEA-DOM-02",
+        "name": "Kaohsiung - Penghu (Magong) Domestic Freight & Ro-Ro Route",
+        "chinese_name": "高雄-澎湖馬公國內海運貨運航線 (澎湖輪)",
+        "mode": "Ocean Freight",
+        "scope": "Domestic",
+        "corridor_type": "Mainland-Offshore Island Lifeline",
+        "origin_code": "TWKHH",
+        "origin_name": "Port of Kaohsiung",
+        "destination_code": "TWMZG",
+        "destination_name": "Port of Magong (Penghu)",
+        "via": "Maritime Sea Lane",
+        "carriers": "Taiwan Navigation Co. (Penghu Ferry)",
+        "cargo_profile": "General Cargo, Fresh Produce, Vehicles, Construction Supplies"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.285,
+            22.555
+          ],
+          [
+            119.95,
+            23.0
+          ],
+          [
+            119.563,
+            23.562
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "SEA-DOM-03",
+        "name": "Budai - Penghu (Magong) Short-Sea Freight Route",
+        "chinese_name": "嘉義布袋-澎湖馬公國內貨運航線",
+        "mode": "Ocean Freight",
+        "scope": "Domestic",
+        "corridor_type": "Mainland-Offshore Island Feeder",
+        "origin_code": "TWBUD",
+        "origin_name": "Port of Budai",
+        "destination_code": "TWMZG",
+        "destination_name": "Port of Magong (Penghu)",
+        "via": "Maritime Sea Lane",
+        "carriers": "Domestic Coastal Cargo Operators",
+        "cargo_profile": "Perishables, Express Freight, Building Materials"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.135,
+            23.382
+          ],
+          [
+            119.85,
+            23.47
+          ],
+          [
+            119.563,
+            23.562
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 44,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "SEA-DOM-04",
+        "name": "Kaohsiung - Kinmen (Liaoluo) Domestic Freight Route",
+        "chinese_name": "高雄-金門料羅國內離島貨運航線",
+        "mode": "Ocean Freight",
+        "scope": "Domestic",
+        "corridor_type": "Mainland-Offshore Island Lifeline",
+        "origin_code": "TWKHH",
+        "origin_name": "Port of Kaohsiung",
+        "destination_code": "TWKNH",
+        "destination_name": "Port of Kinmen (Liaoluo / Shuitou)",
+        "via": "Maritime Sea Lane",
+        "carriers": "Domestic Offshore Cargo Liners",
+        "cargo_profile": "Bulk Supplies, Kaoliang Liquor Shipments, Construction Cargo"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.285,
+            22.555
+          ],
+          [
+            119.4,
+            23.45
+          ],
+          [
+            118.425,
+            24.415
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 45,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "SEA-DOM-05",
+        "name": "Taichung - Kinmen (Liaoluo) Domestic Freight Route",
+        "chinese_name": "臺中-金門料羅國內離島貨運航線",
+        "mode": "Ocean Freight",
+        "scope": "Domestic",
+        "corridor_type": "Mainland-Offshore Island Lifeline",
+        "origin_code": "TWTXG",
+        "origin_name": "Port of Taichung",
+        "destination_code": "TWKNH",
+        "destination_name": "Port of Kinmen (Liaoluo / Shuitou)",
+        "via": "Maritime Sea Lane",
+        "carriers": "Domestic Offshore Cargo Liners",
+        "cargo_profile": "General Merchandise, Industrial & Construction Cargo"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.5167,
+            24.2833
+          ],
+          [
+            119.5,
+            24.35
+          ],
+          [
+            118.425,
+            24.415
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 46,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "SEA-DOM-06",
+        "name": "East-West Coast Cement & Bulk Coastal Route (Hualien - Taipei / Taichung / Kaohsiung)",
+        "chinese_name": "東砂西運/水泥環島國內散裝海運航線 (花蓮港 - 臺北港/臺中港/高雄港)",
+        "mode": "Ocean Freight",
+        "scope": "Domestic",
+        "corridor_type": "Coastal Bulk Corridor",
+        "origin_code": "TWHUN",
+        "origin_name": "Port of Hualien",
+        "destination_code": "TWTPE",
+        "destination_name": "Port of Taipei",
+        "via": "Maritime Sea Lane",
+        "carriers": "U-Ming Marine, Taiwan Cement, Asia Cement",
+        "cargo_profile": "Cement, Clinker, Gravel, Industrial Aggregates"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.628,
+            23.992
+          ],
+          [
+            122.02,
+            24.6
+          ],
+          [
+            122.05,
+            25.15
+          ],
+          [
+            121.65,
+            25.33
+          ],
+          [
+            121.375,
+            25.158
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 47,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "SEA-DOM-07",
+        "name": "Hualien - Kaohsiung Southern Coastal Bulk Corridor",
+        "chinese_name": "花蓮-高雄南向環島散裝海運航線",
+        "mode": "Ocean Freight",
+        "scope": "Domestic",
+        "corridor_type": "Coastal Bulk Corridor",
+        "origin_code": "TWHUN",
+        "origin_name": "Port of Hualien",
+        "destination_code": "TWKHH",
+        "destination_name": "Port of Kaohsiung",
+        "via": "Maritime Sea Lane",
+        "carriers": "Domestic Bulk Carriers",
+        "cargo_profile": "Cement, Marble, Bulk Aggregates"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.628,
+            23.992
+          ],
+          [
+            121.55,
+            22.8
+          ],
+          [
+            120.85,
+            21.82
+          ],
+          [
+            120.285,
+            22.555
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 48,
+      "properties": {
+        "feature_category": "Freight Corridor",
+        "route_id": "SEA-DOM-08",
+        "name": "Mailiao - Kaohsiung / Taichung Coastal Petrochemical Feeder",
+        "chinese_name": "麥寮-高雄/臺中沿海石化原料海運航線",
+        "mode": "Ocean Freight",
+        "scope": "Domestic",
+        "corridor_type": "Coastal Tanker & Feeder",
+        "origin_code": "TWMLO",
+        "origin_name": "Mailiao Industrial Port",
+        "destination_code": "TWKHH",
+        "destination_name": "Port of Kaohsiung",
+        "via": "Maritime Sea Lane",
+        "carriers": "Formosa Plastics Marine",
+        "cargo_profile": "Refined Petroleum Products, Petrochemical Feedstocks"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            120.175,
+            23.785
+          ],
+          [
+            119.95,
+            23.1
+          ],
+          [
+            120.285,
+            22.555
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 49,
+      "properties": {
+        "feature_category": "Multimodal Connector",
+        "route_id": "MULTI-SEA-AIR-01",
+        "name": "Port of Taipei - Taoyuan International Airport Sea-Air Express Corridor",
+        "chinese_name": "臺北港 - 桃園國際機場 海空聯運快速通道",
+        "mode": "Sea-Air Multimodal",
+        "scope": "International / Domestic Transfer",
+        "corridor_type": "Free Trade Zone Sea-Air Corridor",
+        "origin_code": "TWTPE",
+        "origin_name": "Port of Taipei",
+        "destination_code": "TPE",
+        "destination_name": "Taiwan Taoyuan International Airport",
+        "via": "Provincial Highway 61 / 64",
+        "carriers": "TIPC / TIAC Free Trade Zone Logistics",
+        "cargo_profile": "Sea-Air Transshipment Cargo, E-Commerce, High-Tech Components"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.375,
+            25.158
+          ],
+          [
+            121.335,
+            25.135
+          ],
+          [
+            121.28,
+            25.11
+          ],
+          [
+            121.2328,
+            25.0777
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 50,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "TPE",
+        "name": "Taiwan Taoyuan International Airport",
+        "chinese_name": "臺灣桃園國際機場",
+        "node_type": "International Air Hub",
+        "region": "Taiwan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.2328,
+          25.0777
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 51,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "KHH",
+        "name": "Kaohsiung International Airport",
+        "chinese_name": "高雄國際機場",
+        "node_type": "International & Domestic Air Hub",
+        "region": "Taiwan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.3497,
+          22.5771
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 52,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "TSA",
+        "name": "Taipei Songshan Airport",
+        "chinese_name": "臺北松山機場",
+        "node_type": "Domestic & Regional Air Hub",
+        "region": "Taiwan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5525,
+          25.0694
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 53,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "RMQ",
+        "name": "Taichung International Airport",
+        "chinese_name": "臺中國際機場",
+        "node_type": "Domestic & Regional Air Hub",
+        "region": "Taiwan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.6206,
+          24.2647
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 54,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "TNN",
+        "name": "Tainan Airport",
+        "chinese_name": "臺南機場",
+        "node_type": "Domestic Air Hub",
+        "region": "Taiwan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.2058,
+          22.9504
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 55,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "CYI",
+        "name": "Chiayi Airport",
+        "chinese_name": "嘉義機場",
+        "node_type": "Domestic Air Hub",
+        "region": "Taiwan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.3928,
+          23.4618
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 56,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "HUN",
+        "name": "Hualien Airport",
+        "chinese_name": "花蓮機場",
+        "node_type": "Domestic Air Hub",
+        "region": "Taiwan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6178,
+          24.0231
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 57,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "TTT",
+        "name": "Taitung Airport",
+        "chinese_name": "臺東機場",
+        "node_type": "Domestic Air Hub",
+        "region": "Taiwan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.1017,
+          22.755
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 58,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "MZG",
+        "name": "Penghu Airport",
+        "chinese_name": "澎湖機場",
+        "node_type": "Offshore Domestic Air Hub",
+        "region": "Taiwan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.6283,
+          23.5687
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 59,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "KNH",
+        "name": "Kinmen Airport",
+        "chinese_name": "金門機場",
+        "node_type": "Offshore Domestic Air Hub",
+        "region": "Taiwan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.3592,
+          24.4279
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 60,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "LZN",
+        "name": "Matsu Nangan Airport",
+        "chinese_name": "馬祖南竿機場",
+        "node_type": "Offshore Domestic Air Hub",
+        "region": "Taiwan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.9583,
+          26.1598
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 61,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "MFK",
+        "name": "Matsu Beigan Airport",
+        "chinese_name": "馬祖北竿機場",
+        "node_type": "Offshore Domestic Air Hub",
+        "region": "Taiwan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0028,
+          26.2242
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 62,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "GNI",
+        "name": "Ludao (Green Island) Airport",
+        "chinese_name": "綠島機場",
+        "node_type": "Offshore Domestic Air Hub",
+        "region": "Taiwan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4667,
+          22.6739
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 63,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "KYD",
+        "name": "Lanyu (Orchid Island) Airport",
+        "chinese_name": "蘭嶼機場",
+        "node_type": "Offshore Domestic Air Hub",
+        "region": "Taiwan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5353,
+          22.027
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 64,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "CMJ",
+        "name": "Qimei Airport",
+        "chinese_name": "七美機場",
+        "node_type": "Offshore Domestic Air Hub",
+        "region": "Taiwan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.4181,
+          23.2131
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 65,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "TWKHH",
+        "name": "Port of Kaohsiung",
+        "chinese_name": "高雄港",
+        "node_type": "International Container & Bulk Seaport",
+        "region": "Taiwan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.285,
+          22.555
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 66,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "TWTXG",
+        "name": "Port of Taichung",
+        "chinese_name": "臺中港",
+        "node_type": "International Industrial & Bulk Seaport",
+        "region": "Taiwan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.5167,
+          24.2833
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 67,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "TWKEL",
+        "name": "Port of Keelung",
+        "chinese_name": "基隆港",
+        "node_type": "International & Domestic Seaport",
+        "region": "Taiwan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.745,
+          25.145
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 68,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "TWTPE",
+        "name": "Port of Taipei",
+        "chinese_name": "臺北港",
+        "node_type": "International Container & Sea-Air Seaport",
+        "region": "Taiwan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.375,
+          25.158
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 69,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "TWHUN",
+        "name": "Port of Hualien",
+        "chinese_name": "花蓮港",
+        "node_type": "International Bulk & Domestic Coastal Port",
+        "region": "Taiwan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.628,
+          23.992
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 70,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "TWSUO",
+        "name": "Port of Suao",
+        "chinese_name": "蘇澳港",
+        "node_type": "Auxiliary Bulk & Coastal Seaport",
+        "region": "Taiwan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.868,
+          24.596
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "TWAPG",
+        "name": "Port of Anping",
+        "chinese_name": "安平港",
+        "node_type": "Auxiliary & Cross-Strait Seaport",
+        "region": "Taiwan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.145,
+          22.988
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "TWMLO",
+        "name": "Mailiao Industrial Port",
+        "chinese_name": "麥寮工業專用港",
+        "node_type": "Industrial Bulk & Petrochemical Port",
+        "region": "Taiwan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.175,
+          23.785
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "TWBUD",
+        "name": "Port of Budai",
+        "chinese_name": "布袋港",
+        "node_type": "Domestic & Cross-Strait Feeder Port",
+        "region": "Taiwan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.135,
+          23.382
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "TWMZG",
+        "name": "Port of Magong (Penghu)",
+        "chinese_name": "馬公港",
+        "node_type": "Offshore Domestic Seaport",
+        "region": "Taiwan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.563,
+          23.562
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 75,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "TWKNH",
+        "name": "Port of Kinmen (Liaoluo / Shuitou)",
+        "chinese_name": "金門港(料羅/水頭)",
+        "node_type": "Offshore & Mini-Three-Links Seaport",
+        "region": "Taiwan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.425,
+          24.415
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 76,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "TWLZN",
+        "name": "Port of Matsu (Fuao)",
+        "chinese_name": "馬祖福澳港",
+        "node_type": "Offshore & Mini-Three-Links Seaport",
+        "region": "Taiwan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.942,
+          26.161
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 77,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "ANC",
+        "name": "Ted Stevens Anchorage International Airport",
+        "chinese_name": "安克拉治國際機場 (北美貨運中轉站)",
+        "node_type": "Global Air Cargo Hub",
+        "region": "International Gateway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -149.9964,
+          61.1743
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 78,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "LAX",
+        "name": "Los Angeles International Airport",
+        "chinese_name": "洛杉磯國際機場",
+        "node_type": "Global Air Cargo Hub",
+        "region": "International Gateway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.4085,
+          33.9416
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 79,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "ORD",
+        "name": "Chicago O'Hare International Airport",
+        "chinese_name": "芝加哥歐海爾國際機場",
+        "node_type": "Global Air Cargo Hub",
+        "region": "International Gateway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.9073,
+          41.9742
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 80,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "DFW",
+        "name": "Dallas Fort Worth International Airport",
+        "chinese_name": "達拉斯-沃斯堡國際機場",
+        "node_type": "Global Air Cargo Hub",
+        "region": "International Gateway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.0403,
+          32.8998
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 81,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "FRA",
+        "name": "Frankfurt Airport",
+        "chinese_name": "法蘭克福機場",
+        "node_type": "Global Air Cargo Hub",
+        "region": "International Gateway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5622,
+          50.0379
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 82,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "AMS",
+        "name": "Amsterdam Airport Schiphol",
+        "chinese_name": "阿姆斯特丹史基浦機場",
+        "node_type": "Global Air Cargo Hub",
+        "region": "International Gateway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.7683,
+          52.3105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 83,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "LUX",
+        "name": "Luxembourg Airport",
+        "chinese_name": "盧森堡機場",
+        "node_type": "Global Air Cargo Hub",
+        "region": "International Gateway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.2115,
+          49.6289
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 84,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "NRT",
+        "name": "Tokyo Narita International Airport",
+        "chinese_name": "東京成田國際機場",
+        "node_type": "Regional Air Cargo Hub",
+        "region": "International Gateway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.3929,
+          35.772
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 85,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "ICN",
+        "name": "Incheon International Airport",
+        "chinese_name": "仁川國際機場",
+        "node_type": "Regional Air Cargo Hub",
+        "region": "International Gateway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4407,
+          37.4602
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 86,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "HKG",
+        "name": "Hong Kong International Airport",
+        "chinese_name": "香港國際機場",
+        "node_type": "Regional Air Cargo Hub",
+        "region": "International Gateway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.9185,
+          22.308
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 87,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "PVG",
+        "name": "Shanghai Pudong International Airport",
+        "chinese_name": "上海浦東國際機場",
+        "node_type": "Regional Air Cargo Hub",
+        "region": "International Gateway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.8083,
+          31.1443
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 88,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "SIN",
+        "name": "Singapore Changi Airport",
+        "chinese_name": "新加坡樟宜機場",
+        "node_type": "Regional Air Cargo Hub",
+        "region": "International Gateway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.9915,
+          1.3644
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 89,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "CRK",
+        "name": "Clark International Airport",
+        "chinese_name": "克拉克國際機場",
+        "node_type": "Regional Express Cargo Hub",
+        "region": "International Gateway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.5597,
+          15.186
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 90,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "HAN",
+        "name": "Noi Bai International Airport (Hanoi)",
+        "chinese_name": "河內內排國際機場",
+        "node_type": "Regional Air Cargo Hub",
+        "region": "International Gateway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8072,
+          21.2212
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 91,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "SGN",
+        "name": "Tan Son Nhat International Airport (Ho Chi Minh)",
+        "chinese_name": "胡志明市新山一國際機場",
+        "node_type": "Regional Air Cargo Hub",
+        "region": "International Gateway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.6519,
+          10.8188
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 92,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "USLAX",
+        "name": "Port of Los Angeles / Long Beach",
+        "chinese_name": "洛杉磯/長堤港",
+        "node_type": "Global Container Seaport",
+        "region": "International Gateway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.264,
+          33.74
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 93,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "USSAV",
+        "name": "Port of Savannah (via Panama Canal)",
+        "chinese_name": "薩凡納港 (美東航線)",
+        "node_type": "Global Container Seaport",
+        "region": "International Gateway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.14,
+          32.13
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 94,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "NLRTM",
+        "name": "Port of Rotterdam",
+        "chinese_name": "鹿特丹港",
+        "node_type": "Global Container Seaport",
+        "region": "International Gateway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.13,
+          51.95
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 95,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "DEHAM",
+        "name": "Port of Hamburg",
+        "chinese_name": "漢堡港",
+        "node_type": "Global Container Seaport",
+        "region": "International Gateway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.96,
+          53.54
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 96,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "SGSIN",
+        "name": "Port of Singapore",
+        "chinese_name": "新加坡港",
+        "node_type": "Global Transshipment Seaport",
+        "region": "International Gateway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.78,
+          1.265
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 97,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "HKHKG",
+        "name": "Port of Hong Kong",
+        "chinese_name": "香港葵青貨櫃碼頭",
+        "node_type": "Regional Transshipment Seaport",
+        "region": "International Gateway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.12,
+          22.33
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 98,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "KRPUS",
+        "name": "Port of Busan",
+        "chinese_name": "釜山港",
+        "node_type": "Regional Transshipment Seaport",
+        "region": "International Gateway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.04,
+          35.1
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 99,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "JPTYO",
+        "name": "Port of Tokyo / Yokohama",
+        "chinese_name": "東京/橫濱港",
+        "node_type": "Regional Container Seaport",
+        "region": "International Gateway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.78,
+          35.62
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 100,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "CNSHA",
+        "name": "Port of Shanghai (Yangshan)",
+        "chinese_name": "上海洋山港",
+        "node_type": "Regional Container Seaport",
+        "region": "International Gateway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          122.06,
+          30.63
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 101,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "CNXMN",
+        "name": "Port of Xiamen",
+        "chinese_name": "廈門港",
+        "node_type": "Cross-Strait & Mini-Three-Links Seaport",
+        "region": "International Gateway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.06,
+          24.49
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 102,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "CNFOC",
+        "name": "Port of Fuzhou (Mawei / Huangqi)",
+        "chinese_name": "福州港(馬尾/黃岐)",
+        "node_type": "Cross-Strait & Mini-Three-Links Seaport",
+        "region": "International Gateway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.45,
+          25.99
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 103,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "PHMNL",
+        "name": "Port of Manila",
+        "chinese_name": "馬尼拉港",
+        "node_type": "Intra-Asia Container Seaport",
+        "region": "International Gateway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.955,
+          14.585
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 104,
+      "properties": {
+        "feature_category": "Freight Hub Node",
+        "node_code": "VNSGN",
+        "name": "Port of Ho Chi Minh City (Cat Lai)",
+        "chinese_name": "胡志明市凱萊港",
+        "node_type": "Intra-Asia Container Seaport",
+        "region": "International Gateway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.79,
+          10.76
+        ]
+      }
+    }
+  ]
+}

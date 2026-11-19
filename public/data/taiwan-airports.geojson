@@ -1,0 +1,362 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.223889,
+          25.076389
+        ]
+      },
+      "properties": {
+        "name": "Taiwan Taoyuan International Airport",
+        "iata": "TPE",
+        "icao": "RCTP",
+        "category": "Major International",
+        "location": "Dayuan District, Taoyuan City"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.35,
+          22.576944
+        ]
+      },
+      "properties": {
+        "name": "Kaohsiung International Airport",
+        "iata": "KHH",
+        "icao": "RCKH",
+        "category": "Major International",
+        "location": "Xiaogang District, Kaohsiung City"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.551667,
+          25.069444
+        ]
+      },
+      "properties": {
+        "name": "Taipei Songshan Airport",
+        "iata": "TSA",
+        "icao": "RCSS",
+        "category": "Major International",
+        "location": "Songshan District, Taipei City"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.620556,
+          24.264444
+        ]
+      },
+      "properties": {
+        "name": "Taichung International Airport",
+        "iata": "RMQ",
+        "icao": "RCMQ",
+        "category": "Major International",
+        "location": "Shalu District, Taichung City"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.63,
+          23.566667
+        ]
+      },
+      "properties": {
+        "name": "Penghu Airport",
+        "iata": "MZG",
+        "icao": "RCQC",
+        "category": "Domestic & Regional",
+        "location": "Magong City, Penghu County"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.359167,
+          24.427778
+        ]
+      },
+      "properties": {
+        "name": "Kinmen Airport",
+        "iata": "KNH",
+        "icao": "RCBS",
+        "category": "Domestic & Regional",
+        "location": "Jinhu Township, Kinmen County"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.958333,
+          26.159722
+        ]
+      },
+      "properties": {
+        "name": "Matsu Nangan Airport",
+        "iata": "LZN",
+        "icao": "RCFG",
+        "category": "Domestic & Regional",
+        "location": "Nangan Township, Lienchiang County"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0025,
+          26.223889
+        ]
+      },
+      "properties": {
+        "name": "Matsu Beigan Airport",
+        "iata": "MFK",
+        "icao": "RCMT",
+        "category": "Domestic & Regional",
+        "location": "Beigan Township, Lienchiang County"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.205556,
+          22.950278
+        ]
+      },
+      "properties": {
+        "name": "Tainan Airport",
+        "iata": "TNN",
+        "icao": "RCNN",
+        "category": "Domestic & Regional",
+        "location": "South District, Tainan City"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.102,
+          22.755
+        ]
+      },
+      "properties": {
+        "name": "Taitung Airport",
+        "iata": "TTT",
+        "icao": "RCFN",
+        "category": "Domestic & Regional",
+        "location": "Taitung City, Taitung County"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.617778,
+          24.023056
+        ]
+      },
+      "properties": {
+        "name": "Hualien Airport",
+        "iata": "HUN",
+        "icao": "RCYU",
+        "category": "Domestic & Regional",
+        "location": "Xincheng Township, Hualien County"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.393,
+          23.462
+        ]
+      },
+      "properties": {
+        "name": "Chiayi Airport",
+        "iata": "CYI",
+        "icao": "RCKU",
+        "category": "Domestic & Regional",
+        "location": "Shuishang Township, Chiayi County"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.527222,
+          22.029444
+        ]
+      },
+      "properties": {
+        "name": "Lanyu Airport",
+        "iata": "KYD",
+        "icao": "RCLY",
+        "category": "Domestic & Regional",
+        "location": "Lanyu Township, Taitung County"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.4175,
+          23.213056
+        ]
+      },
+      "properties": {
+        "name": "Qimei Airport",
+        "iata": "CMJ",
+        "icao": "RCCM",
+        "category": "Domestic & Regional",
+        "location": "Qimei Township, Penghu County"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.466389,
+          22.673611
+        ]
+      },
+      "properties": {
+        "name": "Lüdao Airport",
+        "iata": "GNI",
+        "icao": "RCGI",
+        "category": "Domestic & Regional",
+        "location": "Lüdao Township, Taitung County"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.501667,
+          23.366667
+        ]
+      },
+      "properties": {
+        "name": "Wang'an Airport",
+        "iata": "WOT",
+        "icao": "RCWA",
+        "category": "Domestic & Regional",
+        "location": "Wang'an Township, Penghu County"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.730278,
+          22.038056
+        ]
+      },
+      "properties": {
+        "name": "Hengchun Airport",
+        "iata": "HCN",
+        "icao": "RCKW",
+        "category": "Inactive or Military-Only",
+        "location": "Checheng Township, Pingtung County"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.939167,
+          24.818056
+        ]
+      },
+      "properties": {
+        "name": "Hsinchu Air Base",
+        "iata": "HSZ",
+        "icao": "RCPO",
+        "category": "Inactive or Military-Only",
+        "location": "North District, Hsinchu City"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.461667,
+          22.672222
+        ]
+      },
+      "properties": {
+        "name": "Pingtung Airport",
+        "iata": "PIF",
+        "icao": "RCSQ",
+        "category": "Inactive or Military-Only",
+        "location": "Pingtung City, Pingtung County"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.716667,
+          20.7
+        ]
+      },
+      "properties": {
+        "name": "Dongsha Airport",
+        "iata": "DSX",
+        "icao": "RCLM",
+        "category": "Inactive or Military-Only",
+        "location": "Pratas Island (South China Sea)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.366389,
+          10.377222
+        ]
+      },
+      "properties": {
+        "name": "Taiping Island Airport",
+        "iata": null,
+        "icao": "RCSP",
+        "category": "Inactive or Military-Only",
+        "location": "Taiping Island (Spratly Islands)"
+      }
+    }
+  ]
+}

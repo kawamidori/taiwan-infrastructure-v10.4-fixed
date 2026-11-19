@@ -1,0 +1,362 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "properties": {
+        "name": "Heping Island Water Resources Recycling Center",
+        "chinese_name": "和平島水資源回收中心",
+        "system_type": "Wastewater Treatment System",
+        "sub_category": "Public Sewage Treatment Plant",
+        "operator": "Keelung City Government",
+        "design_capacity_cmd": 18000,
+        "treatment_level": "Secondary",
+        "location": "Zhongzheng District, Keelung City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.773292,
+          25.157783
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "properties": {
+        "name": "Liudu Water Resources Recycling Center",
+        "chinese_name": "基隆市六堵水資源回收中心",
+        "system_type": "Wastewater Treatment System",
+        "sub_category": "Public Sewage Treatment Plant",
+        "operator": "Keelung City Government",
+        "design_capacity_cmd": 22000,
+        "treatment_level": "Secondary (A2O)",
+        "location": "Qidu District, Keelung City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.702742,
+          25.083219
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "properties": {
+        "name": "Dihua Sewage Treatment Plant",
+        "chinese_name": "迪化污水處理廠",
+        "system_type": "Wastewater Treatment System",
+        "sub_category": "Public Sewage Treatment Plant",
+        "operator": "Taipei City Government (SSO)",
+        "design_capacity_cmd": 500000,
+        "treatment_level": "Secondary",
+        "location": "Datong District, Taipei City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.510586,
+          25.072233
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "properties": {
+        "name": "Neihu Sewage Treatment Plant",
+        "chinese_name": "內湖污水處理廠",
+        "system_type": "Wastewater Treatment System",
+        "sub_category": "Public Sewage Treatment Plant",
+        "operator": "Taipei City Government (SSO)",
+        "design_capacity_cmd": 240000,
+        "treatment_level": "Secondary",
+        "location": "Neihu District, Taipei City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.573763,
+          25.0663
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "properties": {
+        "name": "Minsheng Water Resources Recycling Center",
+        "chinese_name": "民生水資源再生廠",
+        "system_type": "Wastewater Treatment System",
+        "sub_category": "Public Sewage Treatment Plant",
+        "operator": "Taipei City Government (SSO)",
+        "design_capacity_cmd": 40000,
+        "treatment_level": "Tertiary",
+        "location": "Songshan District, Taipei City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.56982,
+          25.06725
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "properties": {
+        "name": "Bali Sewage Treatment Plant",
+        "chinese_name": "八里污水處理廠",
+        "system_type": "Wastewater Treatment System",
+        "sub_category": "Public Sewage Treatment Plant",
+        "operator": "New Taipei City Government (Tamsui River System)",
+        "design_capacity_cmd": 1320000,
+        "treatment_level": "Primary",
+        "location": "Bali District, New Taipei City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.410685,
+          25.162454
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "properties": {
+        "name": "Tamsui Water Resources Recycling Center",
+        "chinese_name": "淡水水資源回收中心",
+        "system_type": "Wastewater Treatment System",
+        "sub_category": "Public Sewage Treatment Plant",
+        "operator": "New Taipei City Government",
+        "design_capacity_cmd": 56000,
+        "treatment_level": "Secondary",
+        "location": "Tamsui District, New Taipei City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.417851,
+          25.194107
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "properties": {
+        "name": "Linkou Water Resources Recycling Center",
+        "chinese_name": "林口水資源回收中心",
+        "system_type": "Wastewater Treatment System",
+        "sub_category": "Public Sewage Treatment Plant",
+        "operator": "New Taipei City Government",
+        "design_capacity_cmd": 36500,
+        "treatment_level": "Secondary",
+        "location": "Linkou District, New Taipei City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.399854,
+          25.085534
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "properties": {
+        "name": "Sanying Water Resources Recycling Center",
+        "chinese_name": "三鶯水資源回收中心",
+        "system_type": "Wastewater Treatment System",
+        "sub_category": "Public Sewage Treatment Plant",
+        "operator": "New Taipei City Government",
+        "design_capacity_cmd": 56000,
+        "treatment_level": "Secondary",
+        "location": "Yingge District, New Taipei City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.360095,
+          24.954785
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "properties": {
+        "name": "Zhitan Sewage Treatment Plant",
+        "chinese_name": "直潭污水處理廠",
+        "system_type": "Wastewater Treatment System",
+        "sub_category": "Water Protection Zone Sewage Plant",
+        "operator": "Taipei Water Management Office (WRA)",
+        "design_capacity_cmd": 4200,
+        "treatment_level": "Tertiary",
+        "location": "Xindian District, New Taipei City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.534109,
+          24.91892
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "properties": {
+        "name": "Wulai Sewage Treatment Plant",
+        "chinese_name": "烏來污水處理廠",
+        "system_type": "Wastewater Treatment System",
+        "sub_category": "Water Protection Zone Sewage Plant",
+        "operator": "Taipei Water Management Office (WRA)",
+        "design_capacity_cmd": 3000,
+        "treatment_level": "Tertiary",
+        "location": "Wulai District, New Taipei City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.545687,
+          24.86841
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "properties": {
+        "name": "Taoyuan North District Water Resources Recycling Center",
+        "chinese_name": "桃園北區水資源回收中心",
+        "system_type": "Wastewater Treatment System",
+        "sub_category": "Public Sewage Treatment Plant",
+        "operator": "Taoyuan City Government",
+        "design_capacity_cmd": 100000,
+        "treatment_level": "Secondary + RO Reclamation",
+        "location": "Luzhu District, Taoyuan City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.26201,
+          25.05383
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "properties": {
+        "name": "Guishan Water Resources Recycling Center",
+        "chinese_name": "龜山水資源回收中心",
+        "system_type": "Wastewater Treatment System",
+        "sub_category": "Public Sewage Treatment Plant",
+        "operator": "Taoyuan City Government",
+        "design_capacity_cmd": 23000,
+        "treatment_level": "Secondary",
+        "location": "Guishan District, Taoyuan City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.369271,
+          25.045617
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "properties": {
+        "name": "Daxi Water Resources Recycling Center",
+        "chinese_name": "大溪水資源回收中心",
+        "system_type": "Wastewater Treatment System",
+        "sub_category": "Public Sewage Treatment Plant",
+        "operator": "Taoyuan City Government",
+        "design_capacity_cmd": 7500,
+        "treatment_level": "Secondary",
+        "location": "Daxi District, Taoyuan City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.296416,
+          24.895505
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "properties": {
+        "name": "Zhongli Water Resources Recycling Center",
+        "chinese_name": "中壢水資源回收中心",
+        "system_type": "Wastewater Treatment System",
+        "sub_category": "Public Sewage Treatment Plant",
+        "operator": "Taoyuan City Government",
+        "design_capacity_cmd": 39200,
+        "treatment_level": "Secondary",
+        "location": "Zhongli District, Taoyuan City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.23952,
+          24.99124
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "properties": {
+        "name": "Keya Water Resources Recycling Center",
+        "chinese_name": "新竹市客雅水資源回收中心",
+        "system_type": "Wastewater Treatment System",
+        "sub_category": "Public Sewage Treatment Plant",
+        "operator": "Hsinchu City Government",
+        "design_capacity_cmd": 65000,
+        "treatment_level": "Secondary",
+        "location": "Xiangshan District, Hsinchu City"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.919212,
+          24.798294
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "properties": {
+        "name": "Zhubei Water Resources Recycling Center",
+        "chinese_name": "竹北水資源回收中心",
+        "system_type": "Wastewater Treatment System",
+        "sub_category": "Public Sewage Treatment Plant",
+        "operator": "Hsinchu County Government",
+        "design_capacity_cmd": 45000,
+        "treatment_level": "Secondary",
+        "location": "Zhubei City, Hsinchu County"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.954521,
+          24.855356
+        ]
+      }
+    }
+  ]
+}

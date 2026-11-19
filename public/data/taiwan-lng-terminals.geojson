@@ -1,0 +1,152 @@
+{
+  "type": "FeatureCollection",
+  "name": "Taiwan_LNG_Receiving_Terminals",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.2054,
+          22.80928
+        ]
+      },
+      "properties": {
+        "terminal_number": "1st (一接)",
+        "name_en": "Yung-An LNG Receiving Terminal",
+        "name_zh": "永安液化天然氣接收站",
+        "operator": "CPC Corporation (台灣中油)",
+        "status": "Operational",
+        "commissioned_year": "1990",
+        "city_county": "Kaohsiung City",
+        "district_township": "Yong'an District"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.49586,
+          24.25304
+        ]
+      },
+      "properties": {
+        "terminal_number": "2nd (二接)",
+        "name_en": "Taichung LNG Receiving Terminal (CPC)",
+        "name_zh": "台中液化天然氣接收站",
+        "operator": "CPC Corporation (台灣中油)",
+        "status": "Operational",
+        "commissioned_year": "2009",
+        "city_county": "Taichung City",
+        "district_township": "Wuqi District"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.061146,
+          25.045107
+        ]
+      },
+      "properties": {
+        "terminal_number": "3rd (三接)",
+        "name_en": "Guantang (Taoyuan) LNG Receiving Terminal",
+        "name_zh": "觀塘液化天然氣接收站（桃園）",
+        "operator": "CPC Corporation (台灣中油)",
+        "status": "Operational",
+        "commissioned_year": "2025",
+        "city_county": "Taoyuan City",
+        "district_township": "Guanyin District"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.736264,
+          25.160827
+        ]
+      },
+      "properties": {
+        "terminal_number": "4th (四接)",
+        "name_en": "Hsieh-Ho (Keelung) LNG Receiving Terminal",
+        "name_zh": "協和液化天然氣接收站（基隆）",
+        "operator": "Taiwan Power Company (台灣電力)",
+        "status": "Planned / Under Development",
+        "commissioned_year": "2032 (Expected)",
+        "city_county": "Keelung City",
+        "district_township": "Zhongshan District"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.474833,
+          24.238667
+        ]
+      },
+      "properties": {
+        "terminal_number": "5th (五接)",
+        "name_en": "Taichung Harbor LNG Receiving Terminal (Taipower)",
+        "name_zh": "臺中港液化天然氣接收站（台電）",
+        "operator": "Taiwan Power Company (台灣電力)",
+        "status": "Under Construction / Commissioning",
+        "commissioned_year": "2026 (Expected)",
+        "city_county": "Taichung City",
+        "district_township": "Longjing District"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.168057,
+          23.765018
+        ]
+      },
+      "properties": {
+        "terminal_number": "6th (六接)",
+        "name_en": "Mailiao LNG Receiving Terminal",
+        "name_zh": "麥寮液化天然氣接收站",
+        "operator": "Mai-Liao Power Corp / Formosa Plastics Group (台塑企業)",
+        "status": "Under Construction",
+        "commissioned_year": "2028-2029 (Expected)",
+        "city_county": "Yunlin County",
+        "district_township": "Mailiao Township"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.313611,
+          22.51825
+        ]
+      },
+      "properties": {
+        "terminal_number": "7th (七接)",
+        "name_en": "Kaohsiung Intercontinental (Zhouji) LNG Receiving Terminal",
+        "name_zh": "高雄港洲際液化天然氣接收站",
+        "operator": "CPC Corporation (台灣中油)",
+        "status": "Under Construction",
+        "commissioned_year": "2030-2031 (Expected)",
+        "city_county": "Kaohsiung City",
+        "district_township": "Xiaogang District"
+      }
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "updated_at": "2026-11-19T00:00:00Z",
+  "formula": "Height (m) = Amount (Billion TWD) * 2.2",
+  "nodes": [
+    {
+      "name": "竹科寶山（2nm擴建基地）",
+      "coordinates": [
+        121.007,
+        24.777
+      ],
+      "capex_billion": 8000,
+      "subsidy_billion": 1200,
+      "source_doc": "國科會竹科寶山二期環評書 & 水利署新竹海淡廠計畫",
+      "amount_desc": "企業 CapEx 8,000 億 vs. 公共補貼 1,200 億",
+      "squeeze_summary": "單廠日耗 3,800 萬公升水，依賴寶二水庫與新竹海淡廠，推升竹北/寶山居住成本外溢"
+    },
+    {
+      "name": "中科臺中園區（二期擴建）",
+      "coordinates": [
+        120.615,
+        24.215
+      ],
+      "capex_billion": 10000,
+      "subsidy_billion": 1800,
+      "source_doc": "中科擴建二期都計變更案 & 臺中水資源回收中心專管計畫",
+      "amount_desc": "企業 CapEx 10,000 億 vs. 公共補貼 1,800 億",
+      "squeeze_summary": "農業與綠地轉工業科技區，水湳/福田再生水專管優先供應園區"
+    },
+    {
+      "name": "嘉義科學園區（CoWoS基地）",
+      "coordinates": [
+        120.285,
+        23.463
+      ],
+      "capex_billion": 5000,
+      "subsidy_billion": 1500,
+      "source_doc": "行政院嘉科籌設計畫 & 嘉義海淡廠／再生水前瞻預算",
+      "amount_desc": "企業 CapEx 5,000 億 vs. 公共補貼 1,500 億",
+      "squeeze_summary": "農地大規模徵收轉型，高鐵太保特區生活成本與聯外道路負荷急遽上升"
+    },
+    {
+      "name": "南科臺南園區（三期擴建）",
+      "coordinates": [
+        120.27,
+        23.107
+      ],
+      "capex_billion": 15000,
+      "subsidy_billion": 3500,
+      "source_doc": "南科三期環評 & 永康/安平/仁德再生水廠及北外環道預算",
+      "amount_desc": "企業 CapEx 15,000 億 vs. 公共補貼 3,500 億",
+      "squeeze_summary": "三座再生水廠日供 8.3 萬噸專供園區，北外環快速道路因應尖峰通勤飽和"
+    },
+    {
+      "name": "高雄楠梓／橋頭科學園區",
+      "coordinates": [
+        120.31,
+        22.713
+      ],
+      "capex_billion": 12000,
+      "subsidy_billion": 4200,
+      "source_doc": "高市府楠梓產業園區計畫 & 楠梓/橋頭再生水廠建設案",
+      "amount_desc": "企業 CapEx 12,000 億 vs. 公共補貼 4,200 億",
+      "squeeze_summary": "中油五輕舊址轉型，日需 10.5 萬噸再生水並高度依賴永安 LNG 一接與興達電廠"
+    },
+    {
+      "name": "桃園航空城／遠雄自貿港",
+      "coordinates": [
+        121.23,
+        25.077
+      ],
+      "capex_billion": 3000,
+      "subsidy_billion": 6000,
+      "source_doc": "交通部桃園航空城核心計畫 & 民航局貨運園區擴建預算",
+      "amount_desc": "企業 CapEx 3,000 億 vs. 公共補貼 6,000 億",
+      "squeeze_summary": "支撐 2025 輸美 860 億美元晶片與 AI 伺服器空運走廊，大規模區段徵收重塑空間"
+    },
+    {
+      "name": "觀塘三接LNG與大潭電廠",
+      "coordinates": [
+        121.06,
+        25.045
+      ],
+      "capex_billion": 500,
+      "subsidy_billion": 3200,
+      "source_doc": "中油第三天然氣接收站投資計畫 & 台電大潭燃氣機組擴建案",
+      "amount_desc": "民間投資 500 億 vs. 國營事業公共基建 3,200 億",
+      "squeeze_summary": "北部半導體聚落供電命脈，海岸生態空間與 LNG 11 天安全存量雙重壓力"
+    }
+  ]
+}
