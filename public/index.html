@@ -686,11 +686,33 @@
 
       let dynamicBudgetData = { type: 'FeatureCollection', features: [] };
 
-      try {
+try {
         const infraRes = await fetch('/api/infra-dynamic');
         if (infraRes.ok) {
           const infraPayload = await infraRes.json();
-          document.getElementById('api-status-box').innerHTML = '🟢 自動化交通・電力・海空運 API 已連線';
+          const live = infraPayload.live_status || {};
+
+          // 1. 頂部狀態列顯示目前是否為即時連線
+          document.getElementById('api-status-box').innerHTML = (live.power || live.water)
+            ? `🟢 即時遙測已連線（電力${live.power ? '即時' : '基準'}・水情${live.water ? '即時' : '基準'}）`
+            : '🟢 自動化交通・電力・海空運 API 已連線';
+
+          // 2. 若台電即時發電量打通，把電力長條圖標題切換成 Live MW
+          if (live.power) {
+            const energyTitle = document.querySelector('#sec-etl > div:nth-child(1) > div');
+            if (energyTitle) {
+              energyTitle.innerHTML = '全臺電力即時發電結構 <span style="color:#10b981;font-weight:bold;">(Live MW)</span>';
+            }
+          }
+
+          // 3. 若水利署水庫水情打通，在水利標題旁顯示全臺即時有效蓄水量
+          if (live.water && infraPayload.waterMix?.live_reservoir_mcm) {
+            const waterTitle = document.querySelector('#sec-etl > div:nth-child(2) > div');
+            if (waterTitle) {
+              waterTitle.innerHTML = `關鍵水資源供給結構 <span style="color:#0284c7;font-weight:bold;">(水庫即時蓄水 ${infraPayload.waterMix.live_reservoir_mcm} MCM)</span>`;
+            }
+          }
+
           const m = infraPayload.metrics;
           if (m) {
             document.getElementById('m-renew').textContent = `${m.power_and_energy.total_renewable_mw} MW`;
