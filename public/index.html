@@ -329,7 +329,6 @@
     });
 
     map.addControl(new maplibregl.NavigationControl(), 'bottom-left');
-    map.setLight({ anchor: 'viewport', color: '#ffffff', intensity: 0.45, position: [1.5, 180, 45] });
 
     let allOsintData = { type: 'FeatureCollection', features: [] };
 
@@ -439,6 +438,10 @@
     }
 
     map.on('load', async () => {
+      try {
+        map.setLight({ anchor: 'viewport', color: '#ffffff', intensity: 0.45, position: [1.5, 180, 45] });
+      } catch (e) {}
+
       // === 0. 非破壞性「描圖紙半透明遮罩層」 ===
       map.addSource('tracing-veil-src', {
         type: 'geojson',
@@ -1003,7 +1006,7 @@
               'line-color': ['match', ['get', 'mode'], 'Air Freight', '#0284c7', 'Ocean Freight', '#0d9488', '#64748b'],
               'line-width': 2.2,
               'line-opacity': 0.35,
-              'line-dasharray': ['match', ['get', 'mode'], 'Air Freight', [2, 2], ['literal', [1]]]
+              'line-dasharray': ['match', ['get', 'mode'], 'Air Freight', ['literal', [2, 2]], ['literal', [1]]]
             }
           }, 'tracing-paper-veil');
 
@@ -1084,11 +1087,13 @@
           allOsintData = await liveRes.json();
         } else {
           const staticRes = await fetch('/data/osint-intelligence.geojson');
-          allOsintData = await staticRes.json();
+          if (staticRes.ok) allOsintData = await staticRes.json();
         }
       } catch (e) {
-        const staticRes = await fetch('/data/osint-intelligence.geojson');
-        allOsintData = await staticRes.json();
+        try {
+          const staticRes = await fetch('/data/osint-intelligence.geojson');
+          if (staticRes.ok) allOsintData = await staticRes.json();
+        } catch (err) {}
       }
 
       map.addSource('osint-events', { type: 'geojson', data: allOsintData });
