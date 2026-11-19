@@ -310,7 +310,7 @@
   <div id="validation-bar">
     <div class="val-header">
       <span>📐 外溢預算 3D 描圖紙：資料來源與公共空間擠壓驗證公式</span>
-      <span style="font-size:10.5px; color:#94a3b8;">非寫死數據 • 動態讀取 spillover-budget-ledger.json</span>
+      <span style="font-size:10.5px; color:#94a3b8;">動態讀取 spillover-budget-ledger.json</span>
     </div>
     <div class="val-formula">
       柱體高度 (m) = 核定預算金額 (億 TWD) × 2.2 ｜ 財政外部化比 = 公共基建補貼 (藍柱) ÷ 企業私人 CapEx (紅柱)
@@ -362,6 +362,39 @@
       if (t.includes('infra_status') || t.includes('公共基建') || t.includes('承載')) return 'infra';
       if (t.includes('spillover') || t.includes('城市擴張') || t.includes('居住')) return 'spillover';
       return 'risk';
+    }
+
+    function buildBudgetPillarsFromLedger(budgetLedger) {
+      const SCALE_FACTOR = 2.2;
+      const features = [];
+      (budgetLedger?.nodes || []).forEach(n => {
+        if (!Array.isArray(n.coordinates) || n.coordinates.length < 2) return;
+        const [lon, lat] = n.coordinates;
+        const capex = Number(n.capex_billion) || 0;
+        const subsidy = Number(n.subsidy_billion) || 0;
+        const ratio = ((subsidy / (capex || 1)) * 100).toFixed(1);
+        const sharedProps = {
+          name: n.name,
+          node: n.name,
+          capex_billion: capex,
+          subsidy_billion: subsidy,
+          subsidy_ratio_pct: ratio,
+          source_doc: n.source_doc || 'spillover-budget-ledger.json',
+          formula_desc: `${n.amount_desc || `企業 CapEx ${capex} 億 vs. 公共補貼 ${subsidy} 億`} × ${SCALE_FACTOR}m/億`,
+          squeeze_summary: n.squeeze_summary || '空間資源排擠追蹤'
+        };
+        features.push({
+          type: 'Feature',
+          properties: { ...sharedProps, type: 'capex', amount: capex, height: capex * SCALE_FACTOR },
+          geometry: { type: 'Polygon', coordinates: [[[lon - 0.008, lat - 0.005], [lon - 0.001, lat - 0.005], [lon - 0.001, lat + 0.005], [lon - 0.008, lat + 0.005], [lon - 0.008, lat - 0.005]]] }
+        });
+        features.push({
+          type: 'Feature',
+          properties: { ...sharedProps, type: 'public', amount: subsidy, height: subsidy * SCALE_FACTOR },
+          geometry: { type: 'Polygon', coordinates: [[[lon + 0.001, lat - 0.005], [lon + 0.008, lat - 0.005], [lon + 0.008, lat + 0.005], [lon + 0.001, lat + 0.005], [lon + 0.001, lat - 0.005]]] }
+        });
+      });
+      return { type: 'FeatureCollection', features };
     }
 
     function createPulsingDot(rgbColor) {
@@ -455,7 +488,7 @@
         paint: { 'fill-color': '#ffffff', 'fill-opacity': 0.72 }
       });
 
-      // === 0.5 全臺 21 處自來水供水系統轄區範圍面 (taiwan-water-supply-systems.geojson) ===
+      // === 0.5 全臺 21 處自來水供水系統轄區範圍面 ===
       map.addSource('water-supply-zones', { type: 'geojson', data: '/data/taiwan-water-supply-systems.geojson' });
       map.addLayer({
         id: 'water-supply-zones-fill',
@@ -472,7 +505,7 @@
         paint: { 'line-color': '#0284c7', 'line-width': 1.5, 'line-dasharray': [3, 2] }
       }, 'tracing-paper-veil');
 
-      // === 1. 土地使用分區色彩分層基準（22,642 筆 2D 建物底圖） ===
+      // === 1. 土地使用分區色彩分層基準（2D 建物底圖） ===
       map.addSource('buildings-2d', { type: 'geojson', data: '/data/buildings-landuse-2d.geojson' });
       map.addLayer({
         id: 'buildings-fill-layer',
@@ -519,7 +552,7 @@
         paint: { 'line-color': '#64748b', 'line-width': 0.5, 'line-opacity': 0.45 }
       }, 'tracing-paper-veil');
 
-      // === 2. 高壓輸電幹線與變電所 (1,875 段 / 791 座) ===
+      // === 2. 高壓輸電幹線與變電所 ===
       map.addSource('power-lines', { type: 'geojson', data: '/data/official-power-lines.geojson' });
       map.addLayer({
         id: 'power-lines-layer',
@@ -548,7 +581,7 @@
         }
       }, 'tracing-paper-veil');
 
-      // === 3. 再生能源設施（太陽能 71、風力 26、地熱 1） ===
+      // === 3. 再生能源設施 ===
       map.addSource('solar-power', { type: 'geojson', data: '/data/official-solar-power.geojson' });
       map.addSource('wind-power', { type: 'geojson', data: '/data/official-wind-power.geojson' });
       map.addSource('geothermal-power', { type: 'geojson', data: '/data/official-geothermal-power.geojson' });
@@ -572,7 +605,7 @@
         paint: { 'circle-color': '#ea580c', 'circle-radius': 6.5, 'circle-stroke-width': 1.5, 'circle-stroke-color': '#ffffff' }
       }, 'tracing-paper-veil');
 
-      // === 4. 全臺國道、快速公路與省道公路網 (5,482 段) ===
+      // === 4. 全臺國道、快速公路與省道公路網 ===
       map.addSource('highways', { type: 'geojson', data: '/data/official-highways.geojson' });
       map.addLayer({
         id: 'highways-layer',
@@ -600,7 +633,7 @@
         }
       }, 'highways-layer');
 
-      // === 5. 臺鐵全線鐵路網 (2,607 段) ===
+      // === 5. 臺鐵全線鐵路網 ===
       map.addSource('tra-rail', { type: 'geojson', data: '/data/official-rail.geojson' });
       map.addLayer({
         id: 'tra-rail-layer',
@@ -652,7 +685,7 @@
         }
       }, 'tracing-paper-veil');
 
-      // === 7. 商港、工業專用港與漁港 (192 座) ===
+      // === 7. 商港、工業專用港與漁港 ===
       map.addSource('ports', { type: 'geojson', data: '/data/official-ports.geojson' });
       map.addLayer({
         id: 'ports-major-layer',
@@ -675,7 +708,7 @@
         paint: { 'circle-color': '#38bdf8', 'circle-radius': 3.5, 'circle-opacity': 0.75 }
       }, 'tracing-paper-veil');
 
-      // === 8. 離島航空站 (8) ＋ API 動態海空貨運走廊 ===
+      // === 8. 離島航空站 ＋ API 動態海空貨運走廊 ＋ 3D 預算柱資料 ===
       map.addSource('offshore-airports', { type: 'geojson', data: '/data/official-airports-offshore.geojson' });
       map.addLayer({
         id: 'offshore-airports-layer',
@@ -686,18 +719,16 @@
 
       let dynamicBudgetData = { type: 'FeatureCollection', features: [] };
 
-try {
+      try {
         const infraRes = await fetch('/api/infra-dynamic');
         if (infraRes.ok) {
           const infraPayload = await infraRes.json();
           const live = infraPayload.live_status || {};
 
-          // 1. 頂部狀態列顯示目前是否為即時連線
           document.getElementById('api-status-box').innerHTML = (live.power || live.water)
             ? `🟢 即時遙測已連線（電力${live.power ? '即時' : '基準'}・水情${live.water ? '即時' : '基準'}）`
             : '🟢 自動化交通・電力・海空運 API 已連線';
 
-          // 2. 若台電即時發電量打通，把電力長條圖標題切換成 Live MW
           if (live.power) {
             const energyTitle = document.querySelector('#sec-etl > div:nth-child(1) > div');
             if (energyTitle) {
@@ -705,7 +736,6 @@ try {
             }
           }
 
-          // 3. 若水利署水庫水情打通，在水利標題旁顯示全臺即時有效蓄水量
           if (live.water && infraPayload.waterMix?.live_reservoir_mcm) {
             const waterTitle = document.querySelector('#sec-etl > div:nth-child(2) > div');
             if (waterTitle) {
@@ -722,37 +752,52 @@ try {
           if (infraPayload.budget_pillars_geojson) {
             dynamicBudgetData = infraPayload.budget_pillars_geojson;
           }
-          map.addSource('air-sea-corridors', { type: 'geojson', data: infraPayload.air_and_maritime_corridors });
-          map.addLayer({
-            id: 'air-sea-lines-layer',
-            type: 'line',
-            source: 'air-sea-corridors',
-            filter: ['==', ['geometry-type'], 'LineString'],
-            paint: {
-              'line-color': ['match', ['get', 'category'], 'air_freight_line', '#0284c7', '#0d9488'],
-              'line-width': 3,
-              'line-dasharray': [2, 1.5],
-              'line-opacity': 0.9
-            }
-          }, 'tracing-paper-veil');
-          map.addLayer({
-            id: 'main-air-hubs-layer',
-            type: 'circle',
-            source: 'air-sea-corridors',
-            filter: ['==', ['geometry-type'], 'Point'],
-            paint: {
-              'circle-color': '#0369a1',
-              'circle-radius': 7,
-              'circle-stroke-width': 2,
-              'circle-stroke-color': '#ffffff'
-            }
-          }, 'tracing-paper-veil');
+          if (infraPayload.air_and_maritime_corridors) {
+            map.addSource('air-sea-corridors', { type: 'geojson', data: infraPayload.air_and_maritime_corridors });
+            map.addLayer({
+              id: 'air-sea-lines-layer',
+              type: 'line',
+              source: 'air-sea-corridors',
+              filter: ['==', ['geometry-type'], 'LineString'],
+              paint: {
+                'line-color': ['match', ['get', 'category'], 'air_freight_line', '#0284c7', '#0d9488'],
+                'line-width': 3,
+                'line-dasharray': [2, 1.5],
+                'line-opacity': 0.9
+              }
+            }, 'tracing-paper-veil');
+            map.addLayer({
+              id: 'main-air-hubs-layer',
+              type: 'circle',
+              source: 'air-sea-corridors',
+              filter: ['==', ['geometry-type'], 'Point'],
+              paint: {
+                'circle-color': '#0369a1',
+                'circle-radius': 7,
+                'circle-stroke-width': 2,
+                'circle-stroke-color': '#ffffff'
+              }
+            }, 'tracing-paper-veil');
+          }
         }
       } catch (e) {
         document.getElementById('api-status-box').innerHTML = '🟡 本地離線模式：已載入全臺實測圖資';
       }
 
-      // === 9. 實體基礎設施圖層（水資源 140 站 + 水資源回收中心 17 站 + LNG 7 站 + 主力電廠 48 廠 + 全臺機場 21 站） ===
+      // 直接備援：若 API 未回傳 3D 預算柱，自動改讀靜態 spillover-budget-ledger.json 確保描圖紙永不消失
+      if (!dynamicBudgetData.features || dynamicBudgetData.features.length === 0) {
+        try {
+          const ledgerRes = await fetch('/data/spillover-budget-ledger.json');
+          if (ledgerRes.ok) {
+            const ledgerJson = await ledgerRes.json();
+            dynamicBudgetData = buildBudgetPillarsFromLedger(ledgerJson);
+          }
+        } catch (err) {
+          console.warn('Budget ledger fallback warning:', err);
+        }
+      }
+
+      // === 9. 實體基礎設施圖層 ===
       map.addSource('water-systems', { type: 'geojson', data: '/data/taiwan-master-water-systems.geojson' });
       map.addLayer({
         id: 'water-systems-layer',
@@ -1012,7 +1057,7 @@ try {
         }
       })();
 
-      // 戰略走廊健康度狀態燈 & 國際海空運航線 (104 features)
+      // 戰略走廊健康度狀態燈 & 國際海空運航線
       (async () => {
         try {
           const routeRes = await fetch('/data/taiwan-air-ocean-freight-routes.geojson');
@@ -1068,7 +1113,7 @@ try {
         }
       })();
 
-      // === 12. 陸海空即時動態 API 與 WebGL 呼吸閃光節點 (Pulsing Dots) ===
+      // === 12. 陸海空即時動態 API 與 WebGL 呼吸閃光節點 ===
       map.addImage('pulse-land', createPulsingDot('234, 88, 12'), { pixelRatio: 2 });
       map.addImage('pulse-air', createPulsingDot('2, 132, 199'), { pixelRatio: 2 });
       map.addImage('pulse-sea', createPulsingDot('13, 148, 136'), { pixelRatio: 2 });
